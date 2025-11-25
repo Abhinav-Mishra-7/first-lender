@@ -127,17 +127,17 @@ const testimonials = [
   },
   {
     name: "Monika",
-    rating: 5,
+    rating: 4.3,
     text: "I took FIRSTLender Business loan and my decision was perfectly alright for my business.",
   },
   {
     name: "Priya Sharma",
-    rating: 5,
+    rating: 4.7,
     text: "Fast approval and transparent process. Highly recommend FIRSTLender for any loan needs.",
   },
   {
     name: "Amit Patel",
-    rating: 5,
+    rating: 4.5,
     text: "Best interest rates in the market. The team was very professional throughout.",
   },
 ];
@@ -480,7 +480,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - FASTER ANIMATION (10s) */}
       <section style={{ padding: "80px 20px", background: "#fff", overflow: "hidden" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <h2
@@ -496,10 +496,11 @@ function LandingPage() {
           </h2>
           <div style={{ position: "relative", overflow: "hidden" }}>
             <div
+              className="testimonials-scroll"
               style={{
                 display: "flex",
                 gap: "25px",
-                animation: "scroll 30s linear infinite",
+                animation: "scroll 0.2s linear infinite",
               }}
             >
               {[...testimonials, ...testimonials].map((testimonial, index) => (
@@ -517,7 +518,9 @@ function LandingPage() {
                   <div style={{ color: "#f8c740", fontSize: "1.3rem", marginBottom: "15px" }}>
                     {"★".repeat(testimonial.rating)}
                   </div>
-                  <p style={{ fontSize: "0.75rem", color: "#666", marginBottom: "15px" }}>(Rating: {testimonial.rating})</p>
+                  <p style={{ fontSize: "0.75rem", color: "#666", marginBottom: "15px" }}>
+                    (Rating: {testimonial.rating})
+                  </p>
                   <p style={{ fontSize: "0.95rem", color: "#333", lineHeight: 1.6, marginBottom: "20px" }}>
                     " {testimonial.text} "
                   </p>
@@ -545,6 +548,8 @@ function LandingPage() {
           </div>
         </div>
       </section>
+
+
 
       {/* Footer */}
       <footer style={{ background: "#050505", color: "#fff", padding: "50px 20px 30px", marginTop: "80px" }}>
@@ -661,6 +666,11 @@ function LandingPage() {
           }
         }
 
+        /* Ensure fast animation on all devices */
+        .testimonials-scroll {
+          animation: scroll 5s linear infinite !important;
+        }
+
         /* Hero Section Responsive */
         @media (max-width: 968px) {
           .hero-section {
@@ -741,6 +751,7 @@ function LandingPage() {
           }
         }
       `}</style>
+
     </div>
   );
 }
