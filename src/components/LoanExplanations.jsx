@@ -55,11 +55,12 @@ function LoanExplanations() {
           key={loan.id}
           style={{
             background: loan.bgColor,
-            padding: "80px 40px",
+            padding: "80px 20px",
           }}
         >
           <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
             <div
+              className="loan-explanation-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: loan.imagePosition === "right" ? "1fr 1fr" : "1fr 1fr",
@@ -68,7 +69,10 @@ function LoanExplanations() {
               }}
             >
               {/* Content Section */}
-              <div style={{ order: loan.imagePosition === "right" ? 1 : 2 }}>
+              <div 
+                className="loan-content"
+                style={{ order: loan.imagePosition === "right" ? 1 : 2 }}
+              >
                 <h2
                   style={{
                     fontSize: "2.5rem",
@@ -103,7 +107,6 @@ function LoanExplanations() {
                   {loan.description}
                 </p>
 
-                {/* Yellow Gradient Button */}
                 <Link
                   to="/apply"
                   style={{
@@ -138,7 +141,10 @@ function LoanExplanations() {
               </div>
 
               {/* Image Section */}
-              <div style={{ order: loan.imagePosition === "right" ? 2 : 1 }}>
+              <div 
+                className="loan-image"
+                style={{ order: loan.imagePosition === "right" ? 2 : 1 }}
+              >
                 <img
                   src={loan.image}
                   alt={loan.title}
@@ -156,14 +162,28 @@ function LoanExplanations() {
         </div>
       ))}
 
-      {/* Responsive Styles */}
+      {/* Responsive Styles - FIXED */}
       <style>{`
         @media (max-width: 968px) {
-          div[style*="gridTemplateColumns"] {
+          .loan-explanation-grid {
             grid-template-columns: 1fr !important;
+            gap: 30px !important;
           }
-          div[style*="order"] {
+          .loan-content,
+          .loan-image {
             order: 1 !important;
+          }
+          .loan-image {
+            order: 0 !important;
+          }
+          .loan-image img {
+            height: 250px !important;
+          }
+          .loan-content h2 {
+            font-size: 1.8rem !important;
+          }
+          .loan-content p {
+            font-size: 0.9rem !important;
           }
         }
       `}</style>

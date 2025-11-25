@@ -77,35 +77,35 @@ const loanTypes = [
 ];
 
 const whyChoose = [
-  { 
-    title: "Personalized Personal Loan", 
+  {
+    title: "Personalized Personal Loan",
     icon: <UserCheck size={32} color="#f8c740" />,
-    bgColor: "#f0f9ff"
+    bgColor: "#f0f9ff",
   },
-  { 
-    title: "One-day Approval and Disbursal", 
+  {
+    title: "One-day Approval and Disbursal",
     icon: <Clock size={32} color="#f8c740" />,
-    bgColor: "#fff7ed"
+    bgColor: "#fff7ed",
   },
-  { 
-    title: "Secured Database", 
+  {
+    title: "Secured Database",
     icon: <Database size={32} color="#f8c740" />,
-    bgColor: "#f0fdfa"
+    bgColor: "#f0fdfa",
   },
-  { 
-    title: "Minimal Documents", 
+  {
+    title: "Minimal Documents",
     icon: <FileText size={32} color="#f8c740" />,
-    bgColor: "#fef2f2"
+    bgColor: "#fef2f2",
   },
-  { 
-    title: "User-Friendly Experience", 
+  {
+    title: "User-Friendly Experience",
     icon: <Monitor size={32} color="#f8c740" />,
-    bgColor: "#faf5ff"
+    bgColor: "#faf5ff",
   },
-  { 
-    title: "Lowest Interest Rate", 
+  {
+    title: "Lowest Interest Rate",
     icon: <TrendingDown size={32} color="#f8c740" />,
-    bgColor: "#fff1f2"
+    bgColor: "#fff1f2",
   },
 ];
 
@@ -156,8 +156,16 @@ function LandingPage() {
     <div style={{ background: "#fff", minHeight: "100vh" }}>
       <Navbar />
 
-      {/* Hero Slider */}
-      <section style={{ background: "#f5f5f5", padding: "40px 40px 60px", position: "relative", overflow: "hidden" }}>
+      {/* Hero Slider - FIXED: No black gap on mobile */}
+      <section 
+        className="hero-section"
+        style={{ 
+          background: "#f5f5f5", 
+          padding: "40px 20px 60px", 
+          position: "relative", 
+          overflow: "hidden" 
+        }}
+      >
         <svg
           style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: "100px" }}
           viewBox="0 0 1440 320"
@@ -171,7 +179,7 @@ function LandingPage() {
         </svg>
 
         <div style={{ maxWidth: "1400px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px", alignItems: "center" }}>
+          <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "50px", alignItems: "center" }}>
             <div>
               <h1
                 style={{
@@ -199,7 +207,7 @@ function LandingPage() {
               <p style={{ fontSize: "1rem", color: "#333", marginBottom: "24px", marginTop: "24px", lineHeight: 1.6 }}>
                 {heroSlides[activeSlide].description}
               </p>
-              
+
               <Link
                 to="/apply"
                 style={{
@@ -231,7 +239,7 @@ function LandingPage() {
                 {heroSlides[activeSlide].buttonText}
               </Link>
             </div>
-            <div>
+            <div className="hero-image">
               <img
                 src={heroSlides[activeSlide].image}
                 alt="Hero"
@@ -260,21 +268,22 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section style={{ padding: "0 40px", marginTop: "80px", marginBottom: "80px" }}>
+      {/* Stats Bar - FIXED: Smaller and responsive on mobile */}
+      <section className="stats-section" style={{ padding: "0 20px", marginTop: "80px", marginBottom: "80px" }}>
         <div
+          className="stats-container"
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
             background: "#fff",
             border: "3px solid #f8c740",
             borderRadius: "15px",
-            padding: "30px 40px",
+            padding: "30px 20px",
             boxShadow: "0 8px 20px rgba(248, 199, 64, 0.2)",
           }}
         >
-          <div style={{ display: "grid", gridTemplateColumns: "auto repeat(5, 1fr)", gap: "30px", alignItems: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "auto repeat(5, 1fr)", gap: "30px", alignItems: "center" }}>
+            <div className="stats-icon-section" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <div
                 style={{
                   width: "50px",
@@ -295,11 +304,11 @@ function LandingPage() {
               </div>
             </div>
             {stats.map((stat, index) => (
-              <div key={index} style={{ textAlign: "center" }}>
-                <p style={{ fontSize: "1.8rem", fontWeight: 700, color: "#050505", margin: 0, marginBottom: "5px" }}>
+              <div key={index} className="stat-item" style={{ textAlign: "center" }}>
+                <p className="stat-value" style={{ fontSize: "1.8rem", fontWeight: 700, color: "#050505", margin: 0, marginBottom: "5px" }}>
                   {stat.value}
                 </p>
-                <p style={{ fontSize: "0.85rem", color: "#666", margin: 0, fontStyle: "italic" }}>{stat.label}</p>
+                <p className="stat-label" style={{ fontSize: "0.85rem", color: "#666", margin: 0, fontStyle: "italic" }}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -307,7 +316,7 @@ function LandingPage() {
       </section>
 
       {/* Trending Loans */}
-      <section style={{ padding: "0 40px", marginBottom: "80px" }}>
+      <section style={{ padding: "0 20px", marginBottom: "80px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <h2
             style={{
@@ -320,7 +329,7 @@ function LandingPage() {
           >
             Trending Loans & Offers
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "25px" }}>
+          <div className="loans-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "25px" }}>
             {loanTypes.map((loan, index) => (
               <div
                 key={index}
@@ -350,7 +359,7 @@ function LandingPage() {
                 <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#050505", marginBottom: "15px" }}>
                   {loan.title}
                 </h3>
-                
+
                 <button
                   style={{
                     background: "linear-gradient(135deg, #f8c740 0%, #e6ad01 100%)",
@@ -380,10 +389,11 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Loan Explanations - RESPONSIVE FIXED */}
       <LoanExplanations />
 
-      {/* Why Choose FIRSTLender - NEW 3D CARD DESIGN */}
-      <section style={{ padding: "80px 40px", background: "#fafafa" }}>
+      {/* Why Choose FIRSTLender */}
+      <section style={{ padding: "80px 20px", background: "#fafafa" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <h2
             style={{
@@ -396,7 +406,7 @@ function LandingPage() {
           >
             Why Choose <span style={{ color: "#f8c740" }}>FIRSTLender</span>
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "30px", marginTop: "60px" }}>
+          <div className="why-choose-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "30px", marginTop: "60px" }}>
             {whyChoose.map((item, index) => (
               <div
                 key={index}
@@ -422,7 +432,6 @@ function LandingPage() {
                   e.currentTarget.style.borderColor = "#e0e7ff";
                 }}
               >
-                {/* Top Left Corner */}
                 <div
                   style={{
                     position: "absolute",
@@ -433,8 +442,7 @@ function LandingPage() {
                     background: "#e0e7ff",
                   }}
                 />
-                
-                {/* Bottom Right Corner */}
+
                 <div
                   style={{
                     position: "absolute",
@@ -473,7 +481,7 @@ function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section style={{ padding: "80px 40px", background: "#fff", overflow: "hidden" }}>
+      <section style={{ padding: "80px 20px", background: "#fff", overflow: "hidden" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <h2
             style={{
@@ -539,11 +547,13 @@ function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: "#050505", color: "#fff", padding: "50px 40px 30px", marginTop: "80px" }}>
+      <footer style={{ background: "#050505", color: "#fff", padding: "50px 20px 30px", marginTop: "80px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "60px", marginBottom: "40px" }}>
+          <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "60px", marginBottom: "40px" }}>
             <div>
-              <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>FIRST<span style={{ color: "#f8c740" }}>Lender</span></h3>
+              <h3 style={{ fontSize: "1.8rem", marginBottom: "15px" }}>
+                FIRST<span style={{ color: "#f8c740" }}>Lender</span>
+              </h3>
               <p style={{ fontSize: "0.8rem", color: "#f8c740", marginBottom: "25px" }}>Bharose Ka Dusra Naam</p>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 <span style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -558,7 +568,7 @@ function LandingPage() {
               </div>
               <div style={{ marginTop: "25px" }}>
                 <p style={{ fontWeight: 600, marginBottom: "15px" }}>Follow Us On:</p>
-                <div style={{ display: "flex", gap: "15px" }}>
+                <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
                   {[Facebook, Instagram, Twitter, Linkedin, Youtube].map((Icon, i) => (
                     <div
                       key={i}
@@ -611,7 +621,7 @@ function LandingPage() {
               gap: "15px",
             }}
           >
-            <div style={{ display: "flex", gap: "25px", fontSize: "0.85rem", flexWrap: "wrap" }}>
+            <div className="footer-links" style={{ display: "flex", gap: "25px", fontSize: "0.85rem", flexWrap: "wrap" }}>
               {[
                 "About Us",
                 "Our Team",
@@ -640,6 +650,7 @@ function LandingPage() {
         </div>
       </footer>
 
+      {/* Responsive Styles */}
       <style>{`
         @keyframes scroll {
           0% {
@@ -650,9 +661,83 @@ function LandingPage() {
           }
         }
 
+        /* Hero Section Responsive */
         @media (max-width: 968px) {
-          section > div > div[style*="grid"] {
+          .hero-section {
+            padding: 30px 20px 50px !important;
+          }
+          .hero-grid {
             grid-template-columns: 1fr !important;
+            gap: 30px !important;
+          }
+          .hero-image {
+            order: -1;
+          }
+          .hero-grid h1 {
+            font-size: 1.8rem !important;
+          }
+          .hero-grid p {
+            font-size: 0.9rem !important;
+          }
+        }
+
+        /* Stats Section - Smaller on Mobile */
+        @media (max-width: 968px) {
+          .stats-section {
+            margin-top: 40px !important;
+            margin-bottom: 40px !important;
+          }
+          .stats-container {
+            padding: 20px 15px !important;
+          }
+          .stats-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+          .stats-icon-section {
+            justify-content: center !important;
+          }
+          .stat-item {
+            text-align: center !important;
+          }
+          .stat-value {
+            font-size: 1.4rem !important;
+          }
+          .stat-label {
+            font-size: 0.75rem !important;
+          }
+        }
+
+        /* Loans Grid Responsive */
+        @media (max-width: 968px) {
+          .loans-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+        @media (min-width: 969px) and (max-width: 1200px) {
+          .loans-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
+        /* Why Choose Responsive */
+        @media (max-width: 968px) {
+          .why-choose-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+        }
+
+        /* Footer Responsive */
+        @media (max-width: 968px) {
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+          }
+          .footer-links {
+            flex-direction: column !important;
+            gap: 12px !important;
           }
         }
       `}</style>
