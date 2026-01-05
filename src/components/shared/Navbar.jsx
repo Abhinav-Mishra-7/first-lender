@@ -3,16 +3,13 @@ import { Link } from "react-router";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   {
     href: "/loans",
     label: "Loans",
-    dropdown: true,
     subItems: [
       {
         label: "Personal Loan",
         href: "/loans/personal",
-        hasSubmenu: true,
         submenuItems: [
           { href: "/loans/personal/instant", label: "Instant Personal Loan" },
           { href: "/loans/personal/salary", label: "Salary Based Loan" },
@@ -22,7 +19,6 @@ const navLinks = [
       {
         label: "Business Loan",
         href: "/loans/business",
-        hasSubmenu: true,
         submenuItems: [
           { href: "/loans/business/msme", label: "MSME Loan" },
           { href: "/loans/business/working-capital", label: "Working Capital" },
@@ -32,51 +28,19 @@ const navLinks = [
       {
         label: "Professional Loan",
         href: "/loans/professional",
-        hasSubmenu: true,
         submenuItems: [
           { href: "/loans/professional/doctor", label: "Doctor Loan" },
           { href: "/loans/professional/ca", label: "CA Loan" },
           { href: "/loans/professional/practice", label: "Practice Expansion" },
         ],
       },
-      { label: "Home Loan", href: "/loans/home", hasSubmenu: false },
-      { label: "Loan Against Property", href: "/loans/property", hasSubmenu: false },
+      { label: "Home Loan", href: "/loans/home" },
+      { label: "Loan Against Property", href: "/loans/property" },
     ],
   },
-  { href: "/sip", label: "SIP" },
-  { href: "/bonds", label: "Bonds" },
-  {
-    href: "/insurance",
-    label: "Insurance",
-    dropdown: true,
-    subItems: [
-      { href: "/insurance/health", label: "Health Insurance", hasSubmenu: false },
-      { href: "/insurance/life", label: "Life Insurance", hasSubmenu: false },
-      { href: "/insurance/vehicle", label: "Vehicle Insurance", hasSubmenu: false },
-      { href: "/insurance/travel", label: "Travel Insurance", hasSubmenu: false },
-    ],
-  },
-  {
-    href: "/cards",
-    label: "Cards",
-    dropdown: true,
-    subItems: [
-      { href: "/cards/credit", label: "Credit Card", hasSubmenu: false },
-      { href: "/cards/debit", label: "Debit Card", hasSubmenu: false },
-    ],
-  },
-  {
-    href: "/resources",
-    label: "Resources",
-    dropdown: true,
-    subItems: [
-      { href: "/resources/gallery", label: "Gallery", hasSubmenu: false },
-      { href: "/resources/blogs", label: "Blogs", hasSubmenu: false },
-      { href: "/resources/news", label: "News", hasSubmenu: false },
-      { href: "/resources/emi-calculator", label: "EMI Calculator", hasSubmenu: false },
-      { href: "/resources/calculators", label: "Calculators", hasSubmenu: false },
-    ],
-  },
+  { href: "/about-us", label: "About Us" },
+  { href: "/emi-calculator", label: "EMI Calculator" },
+  { href: "/contact-us", label: "Contact Us" },
 ];
 
 export default function Navbar() {
@@ -98,416 +62,84 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleDropdownClick = (label, event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (activeDropdown === label) {
-      setActiveDropdown(null);
-      setActiveSubmenu(null);
-    } else {
-      setActiveDropdown(label);
-      setActiveSubmenu(null);
-    }
-  };
-
-  const handleSubmenuClick = (itemLabel, event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setActiveSubmenu(activeSubmenu === itemLabel ? null : itemLabel);
-  };
-
-  const handleMobileDropdownToggle = (label) => {
-    setMobileActiveDropdown(mobileActiveDropdown === label ? null : label);
-    setMobileActiveSubmenu(null);
-  };
-
-  const handleMobileSubmenuToggle = (label) => {
-    setMobileActiveSubmenu(mobileActiveSubmenu === label ? null : label);
-  };
-
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
     setActiveSubmenu(null);
     setIsMenuOpen(false);
+    setMobileActiveDropdown(null);
+    setMobileActiveSubmenu(null);
   };
 
   return (
-    <header
-      ref={navRef}
-      style={{
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-        padding: "16px clamp(16px, 3vw, 48px)",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "24px",
-          padding: "16px 32px",
-          background: "var(--color-white)",
-          border: "1px solid var(--color-border-light)",
-          borderRadius: "var(--radius-lg)",
-          boxShadow: "var(--shadow-md)",
-          maxWidth: "1400px",
-          margin: "0 auto",
-        }}
+    <div className="fixed top-4 left-0 right-0 z-50 px-3.5 pointer-events-none text-black">
+      <header
+        ref={navRef}
+        className="max-w-5xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 overflow-visible pointer-events-auto"
       >
-        {/* Brand */}
-        <Link
-          to="/"
-          onClick={closeAllDropdowns}
-          style={{
-            fontWeight: 800,
-            color: "var(--color-black)",
-            fontSize: "1.25rem",
-            whiteSpace: "nowrap",
-          }}
-        >
-          FIRST<span style={{ color: "var(--color-yellow-strong)" }}>Lender</span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav
-          style={{
-            display: "none",
-            gap: "24px",
-            alignItems: "center",
-            flex: 1,
-            justifyContent: "center",
-          }}
-          className="desktop-nav"
-        >
-          {navLinks.map((link) => (
-            <div key={link.href} style={{ position: "relative" }}>
-              {link.dropdown ? (
-                <>
-                  <button
-                    onClick={(e) => handleDropdownClick(link.label, e)}
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      color: "var(--color-black)",
-                      fontWeight: 600,
-                      fontSize: "0.95rem",
-                      background: "transparent",
-                      border: "none",
-                      cursor: "pointer",
-                      padding: 0,
-                      transition: "color 0.15s",
-                    }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-yellow-strong)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-black)")}
-                  >
-                    {link.label}
-                    <ChevronDown size={14} className={activeDropdown === link.label ? "rotate-180" : ""} style={{ transition: "transform 0.25s" }} />
-                  </button>
-                  {activeDropdown === link.label && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: "calc(100% + 16px)",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        minWidth: "240px",
-                        background: "var(--color-white)",
-                        border: "1px solid var(--color-border-light)",
-                        borderRadius: "var(--radius-md)",
-                        boxShadow: "var(--shadow-xl)",
-                        padding: "8px",
-                        zIndex: 2000,
-                      }}
-                    >
-                      {link.subItems.map((subItem) => (
-                        <div key={subItem.label} style={{ position: "relative" }}>
-                          {subItem.hasSubmenu ? (
-                            <>
-                              <button
-                                onClick={(e) => handleSubmenuClick(subItem.label, e)}
-                                style={{
-                                  width: "100%",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "space-between",
-                                  padding: "12px 16px",
-                                  color: "var(--color-black)",
-                                  fontWeight: 600,
-                                  fontSize: "0.9rem",
-                                  borderRadius: "var(--radius-sm)",
-                                  background: "transparent",
-                                  border: "none",
-                                  cursor: "pointer",
-                                  textAlign: "left",
-                                  transition: "all 0.15s",
-                                }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.background = "var(--color-yellow)";
-                                  e.currentTarget.style.boxShadow = "0 2px 8px rgba(247, 200, 67, 0.4)";
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.background = "transparent";
-                                  e.currentTarget.style.boxShadow = "none";
-                                }}
-                              >
-                                <span>{subItem.label}</span>
-                                <ChevronRight size={16} />
-                              </button>
-                              {activeSubmenu === subItem.label && (
-                                <div
-                                  style={{
-                                    position: "absolute",
-                                    left: "calc(100% + 8px)",
-                                    top: 0,
-                                    minWidth: "220px",
-                                    background: "var(--color-white)",
-                                    border: "1px solid var(--color-border-light)",
-                                    borderRadius: "var(--radius-md)",
-                                    boxShadow: "var(--shadow-xl)",
-                                    padding: "8px",
-                                    zIndex: 2001,
-                                  }}
-                                >
-                                  {subItem.submenuItems.map((submenuItem) => (
-                                    <Link
-                                      key={submenuItem.href}
-                                      to={submenuItem.href}
-                                      onClick={closeAllDropdowns}
-                                      style={{
-                                        display: "block",
-                                        padding: "12px 16px",
-                                        color: "var(--color-black)",
-                                        fontWeight: 600,
-                                        fontSize: "0.85rem",
-                                        borderRadius: "var(--radius-sm)",
-                                        transition: "all 0.15s",
-                                      }}
-                                      onMouseEnter={(e) => {
-                                        e.currentTarget.style.background = "var(--color-yellow)";
-                                        e.currentTarget.style.paddingLeft = "20px";
-                                      }}
-                                      onMouseLeave={(e) => {
-                                        e.currentTarget.style.background = "transparent";
-                                        e.currentTarget.style.paddingLeft = "16px";
-                                      }}
-                                    >
-                                      {submenuItem.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
-                            </>
-                          ) : (
-                            <Link
-                              to={subItem.href}
-                              onClick={closeAllDropdowns}
-                              style={{
-                                display: "block",
-                                padding: "12px 16px",
-                                color: "var(--color-black)",
-                                fontWeight: 600,
-                                fontSize: "0.9rem",
-                                borderRadius: "var(--radius-sm)",
-                                transition: "all 0.15s",
-                              }}
-                              onMouseEnter={(e) => {
-                                e.currentTarget.style.background = "var(--color-yellow)";
-                                e.currentTarget.style.transform = "translateX(2px)";
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.style.background = "transparent";
-                                e.currentTarget.style.transform = "translateX(0)";
-                              }}
-                            >
-                              {subItem.label}
-                            </Link>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Link
-                  to={link.href}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "6px",
-                    color: "var(--color-black)",
-                    fontWeight: 600,
-                    fontSize: "0.95rem",
-                    transition: "color 0.15s",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-yellow-strong)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-black)")}
-                >
-                  {link.label}
-                </Link>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Desktop Actions */}
-        <div style={{ display: "none", alignItems: "center", gap: "12px" }} className="desktop-actions">
-          <Link
-            to="/partner"
-            style={{
-              padding: "0.65em 1.3em",
-              fontWeight: 600,
-              borderRadius: "var(--radius-pill)",
-              background: "transparent",
-              color: "var(--color-black)",
-              transition: "all 0.25s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = "var(--color-yellow-strong)";
-              e.currentTarget.style.background = "rgba(247, 200, 67, 0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = "var(--color-black)";
-              e.currentTarget.style.background = "transparent";
-            }}
-          >
-            Become our partner
+        <div className="flex items-center justify-between px-6 md:px-10 py-3 md:py-3.5">
+          {/* Brand */}
+          <Link to="/" onClick={closeAllDropdowns} className="flex items-baseline gap-0 shrink-0">
+            <span className="text-xl md:text-2xl text-black">FIRST</span>
+            <span className="text-xl md:text-2xl text-yellow-500">Lender</span>
           </Link>
-          <Link
-            to="/pay"
-            style={{
-              padding: "0.65em 1.3em",
-              fontWeight: 600,
-              borderRadius: "var(--radius-pill)",
-              background: "var(--gradient-yellow)",
-              color: "var(--color-black)",
-              boxShadow: "var(--shadow-md)",
-              transition: "all 0.25s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "var(--shadow-glow-yellow)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "var(--shadow-md)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            Pay bill
-          </Link>
-        </div>
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "40px",
-            height: "40px",
-            borderRadius: "var(--radius-md)",
-            border: "1px solid var(--color-border-light)",
-            background: "transparent",
-            color: "var(--color-black)",
-            cursor: "pointer",
-          }}
-          className="mobile-toggle"
-        >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div
-          style={{
-            position: "absolute",
-            top: "calc(100% + 12px)",
-            left: "clamp(16px, 3vw, 48px)",
-            right: "clamp(16px, 3vw, 48px)",
-            background: "var(--color-white)",
-            border: "1px solid var(--color-border-light)",
-            borderRadius: "var(--radius-lg)",
-            padding: "20px",
-            boxShadow: "var(--shadow-xl)",
-            zIndex: 999,
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-1 ml-auto">
             {navLinks.map((link) => (
-              <div key={link.href} style={{ display: "flex", flexDirection: "column" }}>
-                {link.dropdown ? (
+              <div key={link.href} className="relative font-medium">
+                {link.subItems ? (
                   <>
                     <button
-                      onClick={() => handleMobileDropdownToggle(link.label)}
-                      style={{
-                        width: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: "12px 16px",
-                        color: "var(--color-black)",
-                        fontWeight: 600,
-                        borderRadius: "var(--radius-md)",
-                        background: "transparent",
-                        border: "none",
-                        cursor: "pointer",
-                        textAlign: "left",
-                        fontSize: "1rem",
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveDropdown(activeDropdown === link.label ? null : link.label);
+                        setActiveSubmenu(null);
                       }}
+                      className="px-4 py-2 cursor-pointer text-sm md:text-base text-black hover:text-yellow-500 transition-colors duration-200 flex items-center gap-2 border border-gray-300 rounded-lg hover:border-yellow-500"
                     >
-                      <span>{link.label}</span>
-                      <ChevronDown size={14} className={mobileActiveDropdown === link.label ? "rotate-180" : ""} style={{ transition: "transform 0.3s" }} />
+                      {link.label}
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-300 ${
+                          activeDropdown === link.label ? "rotate-180" : ""
+                        }`}
+                      />
                     </button>
-                    {mobileActiveDropdown === link.label && (
-                      <div style={{ display: "flex", flexDirection: "column", gap: "4px", paddingLeft: "16px", marginTop: "8px" }}>
+
+                    {activeDropdown === link.label && (
+                      <div className="absolute top-full left-1/2 cursor-pointer transform -translate-x-1/2 mt-3 min-w-56 bg-white border border-gray-300 rounded-xl shadow-2xl p-2 z-50">
                         {link.subItems.map((subItem) => (
-                          <div key={subItem.label} style={{ display: "flex", flexDirection: "column" }}>
-                            {subItem.hasSubmenu ? (
+                          <div key={subItem.label} className="relative">
+                            {subItem.submenuItems ? (
                               <>
                                 <button
-                                  onClick={() => handleMobileSubmenuToggle(subItem.label)}
-                                  style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-between",
-                                    padding: "10px 16px",
-                                    color: "var(--color-black)",
-                                    fontWeight: 600,
-                                    fontSize: "0.9rem",
-                                    borderRadius: "var(--radius-sm)",
-                                    background: "transparent",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    borderLeft: "2px solid transparent",
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setActiveSubmenu(
+                                      activeSubmenu === subItem.label ? null : subItem.label
+                                    );
                                   }}
+                                  className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-black hover:bg-yellow-50 rounded-lg transition-colors duration-200 cursor-pointer"
                                 >
                                   <span>{subItem.label}</span>
-                                  <ChevronRight size={14} className={mobileActiveSubmenu === subItem.label ? "rotate-90" : ""} style={{ transition: "transform 0.3s" }} />
+                                  <ChevronRight
+                                    size={16}
+                                    className={`transition-transform duration-300 ${
+                                      activeSubmenu === subItem.label ? "rotate-90" : ""
+                                    }`}
+                                  />
                                 </button>
-                                {mobileActiveSubmenu === subItem.label && (
-                                  <div style={{ display: "flex", flexDirection: "column", gap: "4px", paddingLeft: "20px", marginTop: "8px" }}>
+
+                                {activeSubmenu === subItem.label && (
+                                  <div className="absolute left-full top-0 ml-2 min-w-56 bg-white border border-gray-300 rounded-xl shadow-2xl p-2 z-50">
                                     {subItem.submenuItems.map((submenuItem) => (
                                       <Link
                                         key={submenuItem.href}
                                         to={submenuItem.href}
                                         onClick={closeAllDropdowns}
-                                        style={{
-                                          display: "block",
-                                          padding: "10px 16px",
-                                          color: "var(--color-black)",
-                                          fontWeight: 600,
-                                          fontSize: "0.85rem",
-                                          borderRadius: "var(--radius-sm)",
-                                          borderLeft: "2px solid transparent",
-                                        }}
+                                        className="block px-4 py-2.5 text-sm text-black hover:bg-yellow-50 rounded-lg transition-colors duration-200"
                                       >
-                                        {submenuItem.label}
+                                        {submenuItem.label}                                      
                                       </Link>
                                     ))}
                                   </div>
@@ -517,15 +149,7 @@ export default function Navbar() {
                               <Link
                                 to={subItem.href}
                                 onClick={closeAllDropdowns}
-                                style={{
-                                  display: "block",
-                                  padding: "10px 16px",
-                                  color: "var(--color-black)",
-                                  fontWeight: 600,
-                                  fontSize: "0.9rem",
-                                  borderRadius: "var(--radius-sm)",
-                                  borderLeft: "2px solid transparent",
-                                }}
+                                className="block px-4 py-2.5 text-sm text-black hover:bg-yellow-50 rounded-lg transition-colors duration-200"
                               >
                                 {subItem.label}
                               </Link>
@@ -539,15 +163,106 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     onClick={closeAllDropdowns}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      padding: "12px 16px",
-                      color: "var(--color-black)",
-                      fontWeight: 600,
-                      borderRadius: "var(--radius-md)",
-                    }}
+                    className="px-4 py-2 text-sm md:text-base text-black hover:text-yellow-500 transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-black hover:bg-gray-100 rounded-lg transition-colors shrink-0"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden px-6 pb-4 pt-2 flex flex-col gap-2 border-t border-gray-200">
+            {navLinks.map((link) => (
+              <div key={link.href} className="flex flex-col">
+                {link.subItems ? (
+                  <>
+                    <button
+                      onClick={() =>
+                        setMobileActiveDropdown(
+                          mobileActiveDropdown === link.label ? null : link.label
+                        )
+                      }
+                      className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-300 ${
+                          mobileActiveDropdown === link.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {mobileActiveDropdown === link.label && (
+                      <div className="ml-4 mt-2 flex flex-col gap-1 pl-2 border-l border-gray-300">
+                        {link.subItems.map((subItem) => (
+                          <div key={subItem.label} className="flex flex-col">
+                            {subItem.submenuItems ? (
+                              <>
+                                <button
+                                  onClick={() =>
+                                    setMobileActiveSubmenu(
+                                      mobileActiveSubmenu === subItem.label ? null : subItem.label
+                                    )
+                                  }
+                                  className="w-full flex items-center justify-between px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-lg transition-colors"
+                                >
+                                  <span>{subItem.label}</span>
+                                  <ChevronRight
+                                    size={14}
+                                    className={`transition-transform duration-300 ${
+                                      mobileActiveSubmenu === subItem.label ? "rotate-90" : ""
+                                    }`}
+                                  />
+                                </button>
+
+                                {mobileActiveSubmenu === subItem.label && (
+                                  <div className="ml-4 mt-1 flex flex-col gap-1 pl-2 border-l border-gray-300">
+                                    {subItem.submenuItems.map((submenuItem) => (
+                                      <Link
+                                        key={submenuItem.href}
+                                        to={submenuItem.href}
+                                        onClick={closeAllDropdowns}
+                                        className="px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-lg transition-colors"
+                                      >
+                                        {submenuItem.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </>
+                            ) : (
+                              <Link
+                                to={subItem.href}
+                                onClick={closeAllDropdowns}
+                                className="px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-lg transition-colors"
+                              >
+                                {subItem.label}
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={link.href}
+                    onClick={closeAllDropdowns}
+                    className="px-4 py-2.5 text-sm text-black hover:bg-gray-100 rounded-lg transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -555,55 +270,8 @@ export default function Navbar() {
               </div>
             ))}
           </div>
-
-          <div style={{ height: "1px", background: "var(--color-border-light)", margin: "16px 0" }} />
-
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <Link
-              to="/partner"
-              onClick={closeAllDropdowns}
-              style={{
-                padding: "0.65em 1.3em",
-                fontWeight: 600,
-                borderRadius: "var(--radius-pill)",
-                background: "transparent",
-                color: "var(--color-black)",
-                border: "1px solid var(--color-border-light)",
-                textAlign: "center",
-              }}
-            >
-              Become our partner
-            </Link>
-            <Link
-              to="/pay"
-              onClick={closeAllDropdowns}
-              style={{
-                padding: "0.65em 1.3em",
-                fontWeight: 600,
-                borderRadius: "var(--radius-pill)",
-                background: "var(--gradient-yellow)",
-                color: "var(--color-black)",
-                boxShadow: "var(--shadow-md)",
-                textAlign: "center",
-              }}
-            >
-              Pay bill
-            </Link>
-          </div>
-        </div>
-      )}
-
-      {/* Media Query Styles */}
-      <style>{`
-        @media (min-width: 768px) {
-          .desktop-nav, .desktop-actions {
-            display: flex !important;
-          }
-          .mobile-toggle {
-            display: none !important;
-          }
-        }
-      `}</style>
-    </header>
+        )}
+      </header>
+    </div>
   );
 }
