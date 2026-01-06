@@ -269,6 +269,7 @@ function LandingPage() {
       </section>
 
       {/* Loan Explanations */}
+      
       <LoanExplanations />
 
       {/* Why Choose FIRSTLender */}

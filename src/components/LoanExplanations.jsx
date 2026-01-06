@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 const loanData = [
   {
     id: 1,
-    title: "Professional Loans – FIRST LENDER",
+    title: "Professional Loans",
     titleColor: "#003d7a",
     underlineColor: "#17a2b8",
     tagline: "Specialised Financing. Tailored Advice. Empowering Every Professional.",
@@ -30,7 +30,7 @@ const loanData = [
   },
   {
     id: 2,
-    title: "Personal Loans – FIRST LENDER",
+    title: "Personal Loans",
     titleColor: "#c41e3a",
     underlineColor: "#ef4444",
     tagline: "Smart Advice. Fast Approval. Complete Peace of Mind.",
@@ -56,7 +56,7 @@ const loanData = [
   },
   {
     id: 3,
-    title: "Business Loans – FIRST LENDER",
+    title: "Business Loans",
     titleColor: "#003d7a",
     underlineColor: "#f8c740",
     tagline: "Smart Financing. Clear Guidance. Faster Growth.",
@@ -82,7 +82,7 @@ const loanData = [
   },
   {
     id: 4,
-    title: "Home Loans – FIRST LENDER",
+    title: "Home Loans",
     titleColor: "#059669",
     underlineColor: "#10b981",
     tagline: "Expert Guidance. Better Rates. Your Dream Home Made Simple.",
@@ -111,8 +111,11 @@ const loanData = [
 function LoanExplanations() {
   return (
     <section className="mt-20 md:mt-32 mb-10 md:mb-16">
-      {loanData.map((loan) => (
-        <div key={loan.id} style={{ backgroundColor: loan.bgColor }} className="px-5 py-15 md:py-20" >
+      <h1 style={{backgroundColor : loanData[0].bgColor}} className="text-black text-center font-bold text-4xl sm:text-2xl md:text-4xl w-full max-w-[90vw] mx-auto text-shadow-lg">Services - FIRST<span className="text-yellow-500">LENDER</span>
+      </h1>
+      <div>
+        {loanData.map((loan) => (
+        <div key={loan.id} style={{ backgroundColor: loan.bgColor }} className="px-5 py-10 md:py-15" >
           <div className="w-full max-w-[90vw] mx-auto">
             <div
               className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center ${
@@ -200,6 +203,7 @@ function LoanExplanations() {
           </div>
         </div>
       ))}
+      </div>
     </section>
   );
 }
