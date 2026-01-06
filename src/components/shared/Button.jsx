@@ -41,6 +41,19 @@ export default function CTAButton({
         transform: "translateY(-2px) scale(1.01)",
       }
     },
+    ternary: {
+        default: {
+            background: "linear-gradient(135deg, #f8c740 0%, #e6ad01 100%)",
+            color: "white",
+            boxShadow: "0 6px 16px rgba(248, 199, 64, 0.4), 0 3px 8px rgba(0, 0, 0, 0.15)",
+            transform: "translateY(0)",
+          },
+        hover: {
+            background: "linear-gradient(135deg, #ffd966 0%, #f8c740 100%)",
+            boxShadow: "0 10px 24px rgba(248, 199, 64, 0.5), 0 6px 14px rgba(0, 0, 0, 0.2)",
+            transform: "translateY(-3px) scale(1.02)",
+        }
+      },
     dark: {
       default: {
         background: "#050505",
@@ -57,6 +70,11 @@ export default function CTAButton({
   };
 
   const sizes = {
+    xs: {
+        padding: "0.4rem 1rem",
+        fontSize: "0.75rem",
+        letterSpacing: "0.3px",
+    },
     sm: {
       padding: "0.5rem 1.5rem",
       fontSize: "0.875rem",

@@ -38,8 +38,8 @@ const navLinks = [
       { label: "Loan Against Property", href: "/loans/property" },
     ],
   },
-  { href: "/about-us", label: "About Us" },
   { href: "/emi-calculator", label: "EMI Calculator" },
+  { href: "/about-us", label: "About Us" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
@@ -76,7 +76,7 @@ export default function Navbar() {
         ref={navRef}
         className="max-w-5xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 overflow-visible pointer-events-auto"
       >
-        <div className="flex items-center justify-between px-6 md:px-10 py-3 md:py-3.5">
+        <div className="flex items-center justify-between px-6 md:px-10 py-3 md:py-3">
           {/* Brand */}
           <Link to="/" onClick={closeAllDropdowns} className="flex items-baseline gap-0 shrink-0">
             <span className="text-xl md:text-2xl text-black">FIRST</span>
@@ -95,7 +95,7 @@ export default function Navbar() {
                         setActiveDropdown(activeDropdown === link.label ? null : link.label);
                         setActiveSubmenu(null);
                       }}
-                      className="px-4 py-2 cursor-pointer text-sm md:text-base text-black hover:text-yellow-500 transition-colors duration-200 flex items-center gap-2 border border-gray-300 rounded-lg hover:border-yellow-500"
+                      className="px-3 py-1 cursor-pointer text-sm md:text-base text-black hover:text-yellow-400 transition-colors duration-200 flex items-center gap-2 border border-gray-300 rounded-lg hover:border-yellow-400"
                     >
                       {link.label}
                       <ChevronDown

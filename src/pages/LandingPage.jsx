@@ -210,50 +210,50 @@ function LandingPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="px-4 sm:px-5 my-16 md:my-24">
-  <div className="max-w-6xl mx-auto bg-white border-3 sm:border-4 border-yellow-400 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 shadow-lg shadow-yellow-200/50">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-4 lg:gap-6">
-      {/* First Stat Item - Special */}
-      <div className="sm:col-span-2 md:col-span-3 lg:col-span-2 flex items-center sm:items-start gap-3 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-200">
-        <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-yellow-400 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
-          <CheckCircle size={28} className="text-black sm:w-8 sm:h-8" />
-        </div>
-        <div className="flex flex-col gap-0.5">
-          <p className="text-xs sm:text-sm font-medium text-gray-600">
-            Trusted by
-          </p>
-          <p className="text-sm sm:text-base font-bold text-black">
-            our customers
-          </p>
-        </div>
-      </div>
+      <section className="px-4 sm:px-5 my-10 md:my-20">
+        <div className="max-w-5xl mx-auto bg-white border-3 sm:border-4 border-yellow-400 rounded-2xl sm:rounded-3xl p-4 sm:p-2 md:p-3 shadow-lg shadow-yellow-200/50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-4 md:gap-5 lg:gap-6">
+            {/* First Stat Item - Special */}
+            <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-center sm:items-start gap-2 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-200">
+              <div className="w-14 h-14 sm:w-12 sm:h-12 shrink-0 bg-yellow-400 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                <CheckCircle size={26} className="text-black sm:w-8 sm:h-8" />
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <p className="text-xs sm:text-sm font-medium text-gray-600">
+                  Trusted by
+                </p>
+                <p className="text-sm sm:text-base font-bold text-black">
+                  our customers
+                </p>
+              </div>
+            </div>
 
-      {/* Stat Items */}
-      {stats.map((stat, index) => (
-        <div key={index} className="flex flex-col items-center justify-center py-3 sm:py-4 md:py-2 px-2">
-          <p className="text-2xl sm:text-3xl lg:text-3xl font-bold text-black leading-tight text-center">
-            {stat.value}
-          </p>
-          <p className="text-xs sm:text-sm text-gray-600 leading-snug text-center mt-2 sm:mt-3 h-8 sm:h-10 flex items-center justify-center">
-            {stat.label}
-          </p>
+            {/* Stat Items */}
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center justify-center py-3 sm:py-4 md:py-2 px-2">
+                <p className="text-lg sm:text-md lg:text-xl font-bold text-black leading-tight text-center">
+                  {stat.value}
+                </p>
+                <p className="text-xs sm:text-xs text-gray-600 leading-snug text-center mt-2 sm:mt-3 h-6 sm:h-8 flex items-center justify-center">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
       </section>
 
       {/* Trending Loans */}
       <section className="px-5 mb-20 md:mb-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-12 pb-2.5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-12 pb-2.5">
             Trending Loans & Offers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {loanTypes.map((loan, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-yellow-400 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md"
+                className="bg-white border-0 border-yellow-400 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-yellow-400/50 shadow-yellow-600/50 shadow-lg"
               >
                 <img
                   src={loan.image}
@@ -261,9 +261,7 @@ function LandingPage() {
                   className="w-full h-40 object-cover rounded-xl mb-4"
                 />
                 <h3 className="text-lg font-bold text-black mb-4">{loan.title}</h3>
-                <button className="bg-linear-to-br from-yellow-400 to-yellow-600 text-black font-semibold py-2 px-8 rounded-full text-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 shadow-md">
-                  Apply Now
-                </button>
+                <CTAButton to="/apply" variant="ternary" size="xs">Apply Now</CTAButton>
               </div>
             ))}
           </div>
