@@ -25,26 +25,28 @@ import {
   TrendingDown,
 } from "lucide-react";
 import { Link } from "react-router";
+import LoanTabs from "../components/LoanTabs";
+
 
 const heroSlides = [
   {
     title: "Looking for Business Loan?",
-    description: "What are you waiting for? Grow your business to the next level by applying for a business loan on FIRSTLender.",
+    description: "Fuel your business growth with instant business loans.Low interest rates, fast approval, and simple paperwork.Your trusted financial partner at every step.",
     buttonText: "Apply Now",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    image: "public/firstlender1.png",
   },
-  {
-    title: "Secure Loan",
-    description: "With a secured loan, the borrower is eligible for a low-interest rate since the lender bears less risk by having property pledged as security.",
-    buttonText: "Apply Now",
-    image: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Apply for Personal Loan!",
-    description: "A desirable personal loan at such a low interest rate is just a few clicks away. Don't miss out on this incredible opportunity.",
-    buttonText: "Apply Now",
-    image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&w=800&q=80",
-  },
+  // {
+  //   title: "Secure Loan",
+  //   description: "With a secured loan, the borrower is eligible for a low-interest rate since the lender bears less risk by having property pledged as security.",
+  //   buttonText: "Apply Now",
+  //   image: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=800&q=80",
+  // },
+  // {
+  //   title: "Apply for Personal Loan!",
+  //   description: "A desirable personal loan at such a low interest rate is just a few clicks away. Don't miss out on this incredible opportunity.",
+  //   buttonText: "Apply Now",
+  //   image: "public/generated-image%20(1).png",
+  // },
 ];
 
 const stats = [
@@ -154,29 +156,24 @@ function LandingPage() {
       <Navbar/>
 
       {/* Hero Slider */}
-      <section className="relative bg-gray-100 px-5 py-32 md:px-6 md:py-35 overflow-hidden w-full ">
-        <svg
-          className="absolute bottom-0 left-0 w-full h-24 md:h-32"
-          viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#f8c740"
-            fillOpacity="0.2"
-            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          />
-        </svg>
+      <section className=" bg-linear-to-r from-[#f0db93] via-[#FEFCE8] to-yellow-100 px-10 py-20  md:mt-23 overflow-hidden w-full"
+      // style={{
+      //   backgroundImage: `url(${heroSlides[activeSlide].image})`,
+      //   backgroundSize: 'cover',
+      //   backgroundRepeat: 'no-repeat'
+      // }}
+      >
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className=" mx-auto relative z-10 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Content */}
             <div>
               <div className="h-42">
-                <h1 className="text-3xl md:text-4xl font-bold text-black mb-4 relative inline-block pb-6 ">
+                <h1 className="text-3xl md:text-4xl font-semibold text-black mb-4 relative inline-block pb-6 ">
                   {heroSlides[activeSlide].title}
                   <div className="absolute bottom-0 left-0 h-1 w-3/5 bg-linear-to-r from-yellow-400 to-yellow-600" />
                 </h1>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-md lg:text-base text-gray-700 leading-relaxed mt-5">
                   {heroSlides[activeSlide].description}
                 </p>
               </div>
@@ -189,7 +186,7 @@ function LandingPage() {
               <img
                 src={heroSlides[activeSlide].image}
                 alt="Hero"
-                className="w-full h-56 md:h-65 lg:h-72 object-cover rounded-3xl shadow-lg"
+                className="w-full h-35 md:h-40 lg:h-50 object-cover mix-blend-screen"
               />
             </div>
           </div>
@@ -209,12 +206,16 @@ function LandingPage() {
         </div>
       </section>
 
+      <div className="relative -mt-16 md:-mt-20 z-20 px-8">
+        <LoanTabs />
+      </div>
+
       {/* Stats Bar */}
       <section className="px-4 sm:px-5 my-10 md:my-20">
         <div className="max-w-5xl mx-auto bg-white border-3 sm:border-4 border-yellow-400 rounded-2xl sm:rounded-3xl p-4 sm:p-2 md:p-3 shadow-lg shadow-yellow-200/50">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-4 md:gap-5 lg:gap-6">
             {/* First Stat Item - Special */}
-            <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-center sm:items-start gap-2 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-200">
+            <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-center sm:items-start gap-2 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-400">
               <div className="w-14 h-14 sm:w-12 sm:h-12 shrink-0 bg-yellow-400 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
                 <CheckCircle size={26} className="text-black sm:w-8 sm:h-8" />
               </div>
@@ -268,15 +269,16 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Loan Explanations */}
+      {/* Loan Explanations */}      
+      {/* <LoanExplanations />
+       */}
       
-      <LoanExplanations />
 
       {/* Why Choose FIRSTLender */}
-      <section className="px-5 py-15 md:py-24 bg-gray-50">
+      <section className="px-5 py-10 md:py-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black">
-            Why Choose <span className="text-yellow-400 px-1">FIRSTLender</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black text-shadow-lg">
+            Why Choose FIRST<span className="text-yellow-400">LENDER</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12">
             {whyChoose.map((item, index) => (
@@ -304,11 +306,12 @@ function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-5 py-20 md:py-28 bg-white overflow-hidden">
+      <section className="px-8 py-15 md:py-10 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl py-2 font-bold text-black text-center mb-12">
-            Feedbacks
+          <h2 className="text-3xl md:text-4xl pb-4 font-bold text-black text-center mb-10 text-shadow-lg">
+            What they say <span className="text-yellow-400">about us</span>
           </h2>
+          <p className="text-black/70 text-center pb-12">FEEDBACKS FROM OUR GREATEST CLIENTS</p>
           <div className="overflow-hidden">
             <div className="flex gap-6 animate-scroll">
               {[...testimonials, ...testimonials].map((testimonial, index) => (

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Phone, Smartphone , Handshake } from "lucide-react";
 
 const navLinks = [
   {
@@ -38,7 +38,19 @@ const navLinks = [
       { label: "Loan Against Property", href: "/loans/property" },
     ],
   },
-  { href: "/emi-calculator", label: "EMI Calculator" },
+  { href: "/emi-calculator", 
+    label: "Resources",
+    subItems: [
+      {
+        label: "Gallery",
+        href: "/resources/gallery",
+      },
+      {
+        label: "EMI Calculator",
+        href: "/resources/emi-calculator",
+      },
+    ]
+   },
   { href: "/about-us", label: "About Us" },
   { href: "/contact-us", label: "Contact Us" },
 ];
@@ -71,20 +83,20 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-4 left-0 right-0 z-50 px-3.5 pointer-events-none text-black">
+    <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none text-black">
       <header
         ref={navRef}
-        className="max-w-5xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 overflow-visible pointer-events-auto"
+        className="w-full mx-auto bg-white/80 backdrop-blur-lg shadow-md transition-all duration-300 overflow-visible pointer-events-auto"
       >
-        <div className="flex items-center justify-between px-6 md:px-10 py-3 md:py-3">
+        <div className="flex items-center justify-between px-6 md:px-10 py-4 md:py-5">
           {/* Brand */}
           <Link to="/" onClick={closeAllDropdowns} className="flex items-baseline gap-0 shrink-0">
             <span className="text-xl md:text-2xl text-black">FIRST</span>
-            <span className="text-xl md:text-2xl text-yellow-500">Lender</span>
+            <span className="text-xl md:text-2xl text-yellow-500">LENDER</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 ml-auto">
+          <nav className="hidden md:flex items-center md:gap-12 lg:gap-15 ml-auto">
             {navLinks.map((link) => (
               <div key={link.href} className="relative font-medium">
                 {link.subItems ? (
@@ -95,7 +107,7 @@ export default function Navbar() {
                         setActiveDropdown(activeDropdown === link.label ? null : link.label);
                         setActiveSubmenu(null);
                       }}
-                      className="px-3 py-1 cursor-pointer text-sm md:text-base text-black hover:text-yellow-400 transition-colors duration-200 flex items-center gap-2 border border-gray-300 rounded-lg hover:border-yellow-400"
+                      className="px-3 py-1 cursor-pointer text-sm md:text-md text-black transition-colors duration-200 flex items-center gap-2 border border-gray-300 rounded-lg hover:border-yellow-400"
                     >
                       {link.label}
                       <ChevronDown
@@ -163,7 +175,7 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     onClick={closeAllDropdowns}
-                    className="px-4 py-2 text-sm md:text-base text-black hover:text-yellow-500 transition-colors duration-200"
+                    className="px-4 py-2 text-sm md:text-md text-black hover:text-yellow-500 transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -181,6 +193,22 @@ export default function Navbar() {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+
+        <div className="w-full bg-yellow-400 shadow-[0_4px_10px_rgba(0,0,0,0.15)] flex justify-end md:px-4 px-3 py-1 md:gap-6 gap-3 lg:gap-8 md:text-sm text-xs lg:text-md font-medium">          
+            <a href="#" className="flex items-center gap-2">
+              <Handshake className="h-4 w-4" />
+              <span>Become Our Partner</span>
+            </a>
+            <a href="tel:+917291919151" className="flex items-center gap-2">
+              <Phone className="h-4 w-4" />
+              <span>+91-82878 30373</span>
+            </a>
+            <a href="https://wa.me/917291919151" className="flex items-center gap-2">
+              <Smartphone className="h-4 w-4" />
+              <span>+91-81144 66003</span>
+            </a>
+        </div>
+        
 
         {/* Mobile Menu */}
         {isMenuOpen && (
