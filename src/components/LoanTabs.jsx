@@ -136,7 +136,7 @@ const loanData = [
   },
   {
     id: 8,
-    title: "PID",
+    title: "Personal Instant Loan",
     titleColor: "#003d7a",
     tagline: "Empowering Farmers with Reliable Financial Support.",
     svgName : "PID" , 
@@ -165,6 +165,7 @@ const loanData = [
     title: "Loan Against Property",
     titleColor: "#003d7a",
     tagline: "Unlock Your Property Value. Quick Liquidity Solutions.",
+    svgName : 'loanAgainstProperty' ,
     description:
       "Leverage your property as collateral to get instant liquidity for various financial needs with competitive interest rates.",
     items: [
@@ -293,7 +294,7 @@ function LoanTabs() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  flex flex-col items-center justify-between gap-2 px-4 md:px-1.5 py-6.5
+                  flex flex-col items-center justify-between gap-2 px-4 md:px-1 py-6.5
                   transition-all duration-300 cursor-pointer relative
                   border-b-4 border-b-transparent whitespace-nowrap shrink-0
                   min-w-[140px] md:min-w-[150px] border-r-1 border-r-gray-300

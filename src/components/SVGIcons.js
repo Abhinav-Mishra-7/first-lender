@@ -710,31 +710,31 @@ export const SVGIcons = {
  ,
   usedCarLoan: `<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
   <defs>
-
-    <!-- Car body gradient (red) -->
-    <linearGradient id="carBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ff4444"/>
-      <stop offset="100%" stop-color="#cc0000"/>
+    <!-- Gray car gradient -->
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a8a8a8"/>
+      <stop offset="50%" stop-color="#808080"/>
+      <stop offset="100%" stop-color="#666666"/>
     </linearGradient>
 
-    <!-- Chrome gradient -->
-    <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e8e8e8"/>
-      <stop offset="50%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#d0d0d0"/>
+    <!-- Light gray accent -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c0c0c0"/>
+      <stop offset="50%" stop-color="#d3d3d3"/>
+      <stop offset="100%" stop-color="#a9a9a9"/>
     </linearGradient>
 
-    <!-- Glass gradient -->
+    <!-- Glass gradient (dark tint) -->
     <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b3e5fc" opacity="0.7"/>
-      <stop offset="100%" stop-color="#0277bd" opacity="0.5"/>
+      <stop offset="0%" stop-color="#666666" opacity="0.8"/>
+      <stop offset="100%" stop-color="#444444" opacity="0.6"/>
     </linearGradient>
 
     <!-- Wheel gradient -->
     <radialGradient id="wheelGrad">
-      <stop offset="0%" stop-color="#444444"/>
-      <stop offset="70%" stop-color="#222222"/>
-      <stop offset="100%" stop-color="#111111"/>
+      <stop offset="0%" stop-color="#555555"/>
+      <stop offset="70%" stop-color="#333333"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
     </radialGradient>
 
     <!-- Money gradient -->
@@ -742,120 +742,553 @@ export const SVGIcons = {
       <stop offset="0%" stop-color="#ffd700"/>
       <stop offset="100%" stop-color="#ffaa00"/>
     </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Main car body (modern sedan) -->
+  <g filter="url(#shadow)">
+    <!-- Lower body/chassis -->
+    <path d="M 80 220 L 400 220 L 410 240 L 70 240 Z" fill="url(#carGradient)" stroke="#333333" stroke-width="2"/>
+
+    <!-- Main car body (sleek design) -->
+    <path d="M 90 140 Q 100 120 240 110 Q 380 120 390 140 L 410 220 Q 400 230 240 235 Q 80 230 70 220 Z" fill="url(#carGradient)" stroke="#333333" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Roof line (modern) -->
+    <path d="M 140 140 Q 150 100 240 95 Q 330 100 340 140" fill="#6b6b6b" stroke="#333333" stroke-width="2"/>
+
+    <!-- Windshield (front) -->
+    <path d="M 145 138 L 180 105 L 300 100 L 335 138" fill="url(#glassGrad)" stroke="#555555" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Side window (left) -->
+    <rect x="160" y="120" width="70" height="30" fill="url(#glassGrad)" stroke="#555555" stroke-width="1" rx="4" opacity="0.7"/>
+
+    <!-- Side window (right) -->
+    <rect x="250" y="120" width="70" height="30" fill="url(#glassGrad)" stroke="#555555" stroke-width="1" rx="4" opacity="0.7"/>
+
+    <!-- Rear window -->
+    <path d="M 150 140 L 170 135 L 310 135 L 330 140" fill="url(#glassGrad)" stroke="#555555" stroke-width="1" opacity="0.6"/>
+
+    <!-- Front bumper/grille -->
+    <rect x="390" y="210" width="30" height="20" fill="url(#accentGrad)" stroke="#666666" stroke-width="1.5" rx="2"/>
+    
+    <!-- Grille details -->
+    <g stroke="#888888" stroke-width="1" opacity="0.6">
+      <line x1="395" y1="215" x2="415" y2="215"/>
+      <line x1="395" y1="222" x2="415" y2="222"/>
+      <line x1="395" y1="229" x2="415" y2="229"/>
+    </g>
+
+    <!-- Headlights (LED) -->
+    <g>
+      <rect x="365" y="200" width="12" height="12" fill="#ffcc00" stroke="#999999" stroke-width="1" rx="2" opacity="0.9"/>
+      <rect x="385" y="200" width="12" height="12" fill="#ffcc00" stroke="#999999" stroke-width="1" rx="2" opacity="0.9"/>
+    </g>
+
+    <!-- Door line -->
+    <line x1="240" y1="145" x2="240" y2="225" stroke="#333333" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Door handles -->
+    <circle cx="200" cy="180" r="2.5" fill="#777777"/>
+    <circle cx="280" cy="180" r="2.5" fill="#777777"/>
+
+    <!-- Side mirror (left) -->
+    <g>
+      <rect x="75" y="175" width="12" height="18" fill="#696969" stroke="#333333" stroke-width="1" rx="2"/>
+      <rect x="77" y="177" width="8" height="14" fill="#555555" opacity="0.8"/>
+    </g>
+
+    <!-- Side mirror (right) -->
+    <g>
+      <rect x="393" y="175" width="12" height="18" fill="#696969" stroke="#333333" stroke-width="1" rx="2"/>
+      <rect x="395" y="177" width="8" height="14" fill="#555555" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Wheels -->
+  <g>
+    <!-- Left wheel -->
+    <circle cx="160" cy="240" r="32" fill="url(#wheelGrad)" stroke="#333333" stroke-width="2.5"/>
+    <!-- Wheel rim -->
+    <circle cx="160" cy="240" r="22" fill="none" stroke="#666666" stroke-width="2.5" opacity="0.8"/>
+    <!-- Wheel center cap -->
+    <circle cx="160" cy="240" r="8" fill="#777777" stroke="#555555" stroke-width="1"/>
+    <!-- Wheel spokes -->
+    <g stroke="#555555" stroke-width="1" opacity="0.6">
+      <line x1="160" y1="210" x2="160" y2="270"/>
+      <line x1="130" y1="240" x2="190" y2="240"/>
+      <line x1="137" y1="213" x2="183" y2="267"/>
+      <line x1="183" y1="213" x2="137" y2="267"/>
+    </g>
+
+    <!-- Right wheel -->
+    <circle cx="320" cy="240" r="32" fill="url(#wheelGrad)" stroke="#333333" stroke-width="2.5"/>
+    <!-- Wheel rim -->
+    <circle cx="320" cy="240" r="22" fill="none" stroke="#666666" stroke-width="2.5" opacity="0.8"/>
+    <!-- Wheel center cap -->
+    <circle cx="320" cy="240" r="8" fill="#777777" stroke="#555555" stroke-width="1"/>
+    <!-- Wheel spokes -->
+    <g stroke="#555555" stroke-width="1" opacity="0.6">
+      <line x1="320" y1="210" x2="320" y2="270"/>
+      <line x1="290" y1="240" x2="350" y2="240"/>
+      <line x1="297" y1="213" x2="343" y2="267"/>
+      <line x1="343" y1="213" x2="297" y2="267"/>
+    </g>
+  </g>
+
+  <!-- Money elements -->
+  <g>
+    <!-- Flying rupee coin 1 (top left) -->
+    <circle cx="80" cy="80" r="14" fill="url(#moneyGrad)"/>
+    <circle cx="80" cy="80" r="10" stroke="#cc8800" stroke-width="2" fill="none"/>
+    <text x="80" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Flying rupee coin 2 (top center) -->
+    <circle cx="240" cy="50" r="12" fill="url(#moneyGrad)"/>
+    <circle cx="240" cy="50" r="9" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="240" y="57" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Flying rupee coin 3 (top right) -->
+    <circle cx="400" cy="85" r="13" fill="url(#moneyGrad)"/>
+    <circle cx="400" cy="85" r="9.5" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="400" y="92" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Money trail effect (bottom coins) -->
+    <circle cx="120" cy="290" r="11" fill="url(#moneyGrad)"/>
+    <circle cx="120" cy="290" r="8" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="120" y="296" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">₹</text>
+
+    <circle cx="360" cy="295" r="10" fill="url(#moneyGrad)"/>
+    <circle cx="360" cy="295" r="7" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="360" y="300" text-anchor="middle" font-size="8" font-weight="bold" fill="#000">₹</text>
+  </g>
+
+  <!-- Motion/speed lines -->
+  <g stroke="#cccccc" stroke-width="2" opacity="0.4" stroke-linecap="round">
+    <line x1="20" y1="180" x2="60" y2="180"/>
+    <line x1="10" y1="200" x2="50" y2="200"/>
+    <line x1="25" y1="220" x2="65" y2="220"/>
+  </g>
+
+  <!-- Brake/taillight glow (right back) -->
+  <circle cx="420" cy="220" r="8" fill="#ff4444" opacity="0.6"/>
+  <circle cx="420" cy="220" r="5" fill="#ff6666" opacity="0.8"/>
+</svg>`
+ ,
+  CGTMSE : `<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Orange/saffron gradient (Indian theme) -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+
+    <!-- Green gradient (prosperity) -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#388e3c"/>
+    </linearGradient>
+
+    <!-- Blue gradient (trust/guarantee) -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <!-- Gold gradient (certificate) -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffb700"/>
+    </linearGradient>
+
+    <!-- Light background -->
     
 
     <!-- Shadow filter -->
     <filter id="shadow">
-      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.25"/>
     </filter>
   </defs>
 
-  <!-- Gray curved ground -->
-  <ellipse cx="240" cy="260" rx="200" ry="25" fill="#c0c0c0" opacity="0.6"/>
+  <!-- Light background -->
+  <rect width="480" height="360" fill="url(#bgGrad)"/>
 
-  <!-- === MAIN CAR === -->
+  <!-- === CENTER: GUARANTEE SHIELD === -->
   <g filter="url(#shadow)">
-    <!-- Car shadow on ground -->
-    <ellipse cx="240" cy="270" rx="110" ry="18" fill="#000000" opacity="0.15"/>
+    <!-- Main shield shape -->
+    <path d="M 240 60 L 320 90 L 320 180 Q 320 240 240 280 Q 160 240 160 180 L 160 90 Z" fill="url(#blueGrad)" stroke="#0d47a1" stroke-width="2.5" stroke-linejoin="round"/>
 
-    <!-- Car body (main chassis) -->
-    <path d="M 100 190 L 380 190 Q 380 210 360 230 L 120 230 Q 100 210 100 190 Z" fill="url(#carBodyGrad)" stroke="#8b0000" stroke-width="2"/>
+    <!-- Shield shine/highlight -->
+    <ellipse cx="220" cy="130" rx="35" ry="45" fill="#ffffff" opacity="0.2"/>
 
-    <!-- Car roof (cabin) -->
-    <path d="M 140 190 Q 150 160 240 155 Q 330 160 340 190" fill="url(#carBodyGrad)" stroke="#8b0000" stroke-width="2"/>
-
-    <!-- Front bumper (chrome) -->
-    <rect x="380" y="205" width="35" height="18" fill="url(#chromeGrad)" stroke="#666" stroke-width="1" rx="3"/>
-
-    <!-- Bumper grille -->
-    <g stroke="#999" stroke-width="1" opacity="0.7">
-      <line x1="385" y1="210" x2="410" y2="210"/>
-      <line x1="385" y1="218" x2="410" y2="218"/>
+    <!-- Checkmark inside shield -->
+    <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <polyline points="210,175 240,205 280,155"/>
     </g>
 
-    <!-- Headlights -->
-    <g>
-      <circle cx="360" cy="198" r="8" fill="#ffff99" stroke="#d4a500" stroke-width="1.5"/>
-      <circle cx="375" cy="198" r="8" fill="#ffff99" stroke="#d4a500" stroke-width="1.5"/>
-    </g>
-
-    <!-- Front windshield (glass) -->
-    <path d="M 150 185 L 180 160 L 300 155 L 330 180" fill="url(#glassGrad)" stroke="#0277bd" stroke-width="1.5" opacity="0.8"/>
-
-    <!-- Side window (driver) -->
-    <rect x="160" y="170" width="60" height="25" fill="url(#glassGrad)" stroke="#0277bd" stroke-width="1" rx="3" opacity="0.75"/>
-
-    <!-- Side window (passenger) -->
-    <rect x="260" y="170" width="60" height="25" fill="url(#glassGrad)" stroke="#0277bd" stroke-width="1" rx="3" opacity="0.75"/>
-
-    <!-- Door line -->
-    <line x1="240" y1="195" x2="240" y2="228" stroke="#8b0000" stroke-width="1.5" opacity="0.7"/>
-
-    <!-- Handle -->
-    <circle cx="210" cy="210" r="2.5" fill="#666"/>
-    <circle cx="270" cy="210" r="2.5" fill="#666"/>
-
-    <!-- Left wheel -->
-    <g>
-      <circle cx="160" cy="230" r="30" fill="url(#wheelGrad)" stroke="#1a1a1a" stroke-width="2"/>
-      <circle cx="160" cy="230" r="12" fill="#333" stroke="#666" stroke-width="1"/>
-      <ellipse cx="155" cy="225" rx="8" ry="6" fill="#555" opacity="0.6"/>
-      <g stroke="#555" stroke-width="1" opacity="0.5">
-        <line x1="160" y1="205" x2="160" y2="255"/>
-        <line x1="135" y1="230" x2="185" y2="230"/>
-        <line x1="142" y1="208" x2="178" y2="252"/>
-        <line x1="178" y1="208" x2="142" y2="252"/>
-      </g>
-    </g>
-
-    <!-- Right wheel -->
-    <g>
-      <circle cx="320" cy="230" r="30" fill="url(#wheelGrad)" stroke="#1a1a1a" stroke-width="2"/>
-      <circle cx="320" cy="230" r="12" fill="#333" stroke="#666" stroke-width="1"/>
-      <ellipse cx="315" cy="225" rx="8" ry="6" fill="#555" opacity="0.6"/>
-      <g stroke="#555" stroke-width="1" opacity="0.5">
-        <line x1="320" y1="205" x2="320" y2="255"/>
-        <line x1="295" y1="230" x2="345" y2="230"/>
-        <line x1="302" y1="208" x2="338" y2="252"/>
-        <line x1="338" y1="208" x2="302" y2="252"/>
-      </g>
-    </g>
-
-    <!-- Exhaust smoke -->
-    <g fill="#cccccc" opacity="0.5">
-      <circle cx="105" cy="225" r="6"/>
-      <circle cx="100" cy="215" r="5"/>
-    </g>
+    <!-- Inner circle badge -->
+    <circle cx="240" cy="160" r="45" fill="none" stroke="#ffeb3b" stroke-width="2" opacity="0.8" stroke-dasharray="5,5"/>
+    
+    <!-- CGTMSE text on shield -->
+    <text x="240" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff" font-family="Arial, sans-serif">CGTMSE</text>
   </g>
 
-  <!-- Money trail (flying coins) -->
+  <!-- === LEFT: SMALL BUSINESS (SHOP) === -->
+  <g filter="url(#shadow)">
+    <!-- Shop building -->
+    <rect x="50" y="150" width="80" height="100" fill="#f5deb3" stroke="#8b6f47" stroke-width="2" rx="4"/>
+
+    <!-- Shop roof -->
+    <polygon points="50,150 130,150 90,110" fill="url(#orangeGrad)" stroke="#d97706" stroke-width="2"/>
+
+    <!-- Door -->
+    <rect x="75" y="190" width="30" height="60" fill="#8b4513" stroke="#654321" stroke-width="1.5" rx="2"/>
+    <!-- Door handle -->
+    <circle cx="100" cy="220" r="2" fill="#ffd700"/>
+
+    <!-- Window 1 -->
+    <rect x="60" y="165" width="20" height="20" fill="#87ceeb" stroke="#666" stroke-width="1" rx="2"/>
+    <!-- Window cross -->
+    <line x1="70" y1="165" x2="70" y2="185" stroke="#666" stroke-width="0.5"/>
+    <line x1="60" y1="175" x2="80" y2="175" stroke="#666" stroke-width="0.5"/>
+
+    <!-- Window 2 -->
+    <rect x="110" y="165" width="20" height="20" fill="#87ceeb" stroke="#666" stroke-width="1" rx="2"/>
+    <!-- Window cross -->
+    <line x1="120" y1="165" x2="120" y2="185" stroke="#666" stroke-width="0.5"/>
+    <line x1="110" y1="175" x2="130" y2="175" stroke="#666" stroke-width="0.5"/>
+
+    <!-- Flag/sign on top -->
+    <rect x="105" y="100" width="30" height="8" fill="url(#orangeGrad)" stroke="#d97706" stroke-width="1" rx="2"/>
+    <text x="120" y="106" text-anchor="middle" font-size="6" font-weight="bold" fill="#ffffff">SHOP</text>
+  </g>
+
+  <!-- === RIGHT: GROWTH ARROW/GRAPH === -->
+  <g filter="url(#shadow)">
+    <!-- Growth bars -->
+    <g fill="url(#greenGrad)" stroke="#2e7d32" stroke-width="1.5">
+      <!-- Bar 1 -->
+      <rect x="310" y="210" width="20" height="40"/>
+      <!-- Bar 2 -->
+      <rect x="340" y="190" width="20" height="60"/>
+      <!-- Bar 3 -->
+      <rect x="370" y="160" width="20" height="90"/>
+    </g>
+
+    <!-- Growth arrow -->
+    <g stroke="url(#greenGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <polyline points="315,230 340,200 365,170"/>
+    </g>
+    <!-- Arrow head -->
+    <polygon points="365,170 355,175 360,185" fill="url(#greenGrad)"/>
+
+    <!-- Percentage symbol -->
+    <circle cx="410" cy="120" r="8" fill="url(#goldGrad)" stroke="#d97706" stroke-width="1.5"/>
+    <text x="410" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#000">%</text>
+  </g>
+
+  <!-- === TOP: RUPEE COINS FLOW === -->
   <g>
-    <!-- Coin 1 (top left) -->
-    <circle cx="100" cy="100" r="12" fill="url(#moneyGrad)"/>
-    <circle cx="100" cy="100" r="9" stroke="#cc8800" stroke-width="1.5" fill="none"/>
-    <text x="100" y="106" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">₹</text>
+    <!-- Coin 1 -->
+    <circle cx="120" cy="80" r="12" fill="url(#goldGrad)"/>
+    <circle cx="120" cy="80" r="9" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+    <text x="120" y="87" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Coin 2 -->
+    <circle cx="240" cy="40" r="13" fill="url(#goldGrad)"/>
+    <circle cx="240" cy="40" r="10" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+    <text x="240" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Coin 3 -->
+    <circle cx="360" cy="75" r="11" fill="url(#goldGrad)"/>
+    <circle cx="360" cy="75" r="8" stroke="#b8860b" stroke-width="1.5" fill="none"/>
+    <text x="360" y="82" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">₹</text>
+  </g>
+
+  <!-- === BOTTOM: GUARANTEE CERTIFICATE === -->
+  <g filter="url(#shadow)">
+    <!-- Certificate paper -->
+    <rect x="140" y="270" width="200" height="70" fill="#fffacd" stroke="#8b6f47" stroke-width="2" rx="4"/>
+
+    <!-- Certificate border -->
+    <rect x="148" y="278" width="184" height="54" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Seal/badge -->
+    <circle cx="420" cy="295" r="18" fill="url(#goldGrad)" stroke="#d97706" stroke-width="2"/>
+    <text x="420" y="302" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">✓</text>
+
+    <!-- Certificate text -->
+    <text x="240" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1" font-family="Arial, sans-serif">GUARANTEE CERTIFICATE</text>
+    <text x="240" y="312" text-anchor="middle" font-size="9" fill="#2e7d32" font-family="Arial, sans-serif">Loan Protection Assured</text>
+    <text x="240" y="328" text-anchor="middle" font-size="8" fill="#555" font-family="Arial, sans-serif">100% Default Coverage</text>
+  </g>
+
+  <!-- Connection lines (flowing guarantee to business) -->
+  <g stroke="#2196f3" stroke-width="2" opacity="0.4" stroke-linecap="round" stroke-dasharray="5,5">
+    <!-- Shield to Shop -->
+    <path d="M 200 200 Q 150 180 130 200"/>
+    <!-- Shield to Growth -->
+    <path d="M 280 200 Q 330 180 350 200"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <g fill="#ff9800" opacity="0.6">
+    <!-- Spark 1 -->
+    <circle cx="100" cy="50" r="2"/>
+    <!-- Spark 2 -->
+    <circle cx="380" cy="100" r="2.5"/>
+    <!-- Spark 3 -->
+    <circle cx="60" cy="280" r="1.5"/>
+  </g>
+</svg>`,
+
+  loanAgainstProperty: `<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- House wall gradient (cream/tan) -->
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5e6d3"/>
+      <stop offset="100%" stop-color="#e8d5c0"/>
+    </linearGradient>
+
+    <!-- Roof gradient (terracotta) -->
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d45d3c"/>
+      <stop offset="100%" stop-color="#a03c20"/>
+    </linearGradient>
+
+    <!-- Door gradient (wood) -->
+    <linearGradient id="doorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b6f47"/>
+      <stop offset="100%" stop-color="#6b5537"/>
+    </linearGradient>
+
+    <!-- Window gradient (glass) -->
+    <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a8d8ea"/>
+      <stop offset="100%" stop-color="#7ec8e3"/>
+    </linearGradient>
+
+    <!-- Ground/grass gradient -->
+    <linearGradient id="grassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7cb342"/>
+      <stop offset="100%" stop-color="#558b2f"/>
+    </linearGradient>
+
+    <!-- Money gradient -->
+    <linearGradient id="moneyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+
+    <!-- Light bg -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#e8f1f7"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- === MAIN HOUSE === -->
+  <g filter="url(#shadow)">
+    <!-- House foundation/base -->
+    <rect x="100" y="200" width="280" height="70" fill="#d4b5a0" stroke="#8b6f47" stroke-width="1.5" opacity="0.8" rx="3"/>
+
+    <!-- Main house walls -->
+    <rect x="120" y="130" width="240" height="75" fill="url(#wallGrad)" stroke="#8b6f47" stroke-width="2" rx="4"/>
+
+    <!-- Roof - left side -->
+    <polygon points="100,130 240,60 380,130" fill="url(#roofGrad)" stroke="#6b4423" stroke-width="2.5"/>
+
+    <!-- Roof shadow/depth -->
+    <polygon points="260,65 385,130 400,130" fill="#8b3d1f" opacity="0.3"/>
+
+    <!-- Roof texture lines -->
+    <g stroke="#8b3d1f" stroke-width="0.5" opacity="0.4">
+      <line x1="140" y1="115" x2="150" y2="130"/>
+      <line x1="180" y1="95" x2="190" y2="130"/>
+      <line x1="220" y1="75" x2="230" y2="130"/>
+      <line x1="260" y1="65" x2="270" y2="130"/>
+      <line x1="300" y1="75" x2="310" y2="130"/>
+      <line x1="340" y1="95" x2="350" y2="130"/>
+      <line x1="380" y1="115" x2="390" y2="130"/>
+    </g>
+
+    <!-- Chimney -->
+    <rect x="310" y="90" width="20" height="50" fill="#9b6b47" stroke="#6b4423" stroke-width="1.5" rx="2"/>
+    <!-- Chimney top -->
+    <rect x="312" y="82" width="16" height="10" fill="#b87d56" stroke="#6b4423" stroke-width="1"/>
+
+    <!-- Door -->
+    <rect x="215" y="165" width="50" height="70" fill="url(#doorGrad)" stroke="#4a3728" stroke-width="1.5" rx="3"/>
+    <!-- Door frame -->
+    <rect x="217" y="167" width="46" height="66" fill="none" stroke="#3a2718" stroke-width="0.8" opacity="0.6" rx="2"/>
+    <!-- Door handle -->
+    <circle cx="258" cy="200" r="2.5" fill="#d4a574" opacity="0.8"/>
+    <!-- Door shadow -->
+    <rect x="240" y="165" width="8" height="70" fill="#000000" opacity="0.08" rx="1"/>
+
+    <!-- Window 3 (lower left) -->
+    <rect x="150" y="155" width="32" height="32" fill="url(#windowGrad)" stroke="#1565c0" stroke-width="1.2" rx="2"/>
+    <!-- Window muntins -->
+    <line x1="166" y1="155" x2="166" y2="187" stroke="#1565c0" stroke-width="0.6" opacity="0.6"/>
+    <line x1="150" y1="171" x2="182" y2="171" stroke="#1565c0" stroke-width="0.6" opacity="0.6"/>
+
+    <!-- Window 4 (lower right) -->
+    <rect x="298" y="155" width="32" height="32" fill="url(#windowGrad)" stroke="#1565c0" stroke-width="1.2" rx="2"/>
+    <!-- Window muntins -->
+    <line x1="314" y1="155" x2="314" y2="187" stroke="#1565c0" stroke-width="0.6" opacity="0.6"/>
+    <line x1="298" y1="171" x2="330" y2="171" stroke="#1565c0" stroke-width="0.6" opacity="0.6"/>
+
+    <!-- Wall texture (subtle mortar lines) -->
+    <g stroke="#8b6f47" stroke-width="0.5" opacity="0.2">
+      <line x1="120" y1="145" x2="360" y2="145"/>
+      <line x1="120" y1="160" x2="360" y2="160"/>
+      <line x1="120" y1="175" x2="360" y2="175"/>
+    </g>
+
+    <!-- House shadow on ground -->
+    <ellipse cx="240" cy="275" rx="145" ry="28" fill="#000000" opacity="0.1"/>
+  </g>
+
+  <!-- === MONEY COINS (flowing to house) === -->
+  <g>
+    <!-- Coin 1 (upper left) -->
+    <circle cx="70" cy="90" r="15" fill="url(#moneyGrad)"/>
+    <circle cx="70" cy="90" r="10" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="70" y="93" text-anchor="middle" font-size="12" font-weight="bold" fill="#000">₹</text>
 
     <!-- Coin 2 (top center) -->
-    <circle cx="240" cy="70" r="11" fill="url(#moneyGrad)"/>
-    <circle cx="240" cy="70" r="8" stroke="#cc8800" stroke-width="1.5" fill="none"/>
-    <text x="240" y="76" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">₹</text>
+    <circle cx="200" cy="20" r="15" fill="url(#moneyGrad)"/>
+    <circle cx="200" cy="20" r="10" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="200" y="23" text-anchor="middle" font-size="12" font-weight="bold" fill="#000">₹</text>
 
-    <!-- Coin 3 (top right) -->
-    <circle cx="380" cy="110" r="10" fill="url(#moneyGrad)"/>
-    <circle cx="380" cy="110" r="7" stroke="#cc8800" stroke-width="1.5" fill="none"/>
-    <text x="380" y="115" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">₹</text>
+    <circle cx="240" cy="50" r="10" fill="url(#moneyGrad)"/>
+    <circle cx="240" cy="50" r="7" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="240" y="53" text-anchor="middle" font-size="8" font-weight="bold" fill="#000">₹</text>
+
+    <circle cx="280" cy="50" r="15" fill="url(#moneyGrad)"/>
+    <circle cx="280" cy="50" r="10" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="280" y="53" text-anchor="middle" font-size="12" font-weight="bold" fill="#000">₹</text>
+
+    <circle cx="150" cy="50" r="10" fill="url(#moneyGrad)"/>
+    <circle cx="150" cy="50" r="7" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="150" y="53" text-anchor="middle" font-size="8" font-weight="bold" fill="#000">₹</text>
+
+    <!-- Coin 3 (upper right) -->
+    <circle cx="410" cy="85" r="11" fill="url(#moneyGrad)"/>
+    <circle cx="410" cy="85" r="8" stroke="#cc8800" stroke-width="1.5" fill="none"/>
+    <text x="410" y="89" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">₹</text>
   </g>
 
-  <!-- Speed lines (motion effect) -->
-  <g stroke="#ff4444" stroke-width="2" opacity="0.3" stroke-linecap="round">
-    <line x1="30" y1="205" x2="70" y2="205"/>
-    <line x1="25" y1="215" x2="60" y2="215"/>
-    <line x1="35" y1="225" x2="75" y2="225"/>
+  <!-- === INFO LABELS (subtle) === -->
+  <!-- Property Value (left side) -->
+  <g opacity="0.8">
+    <text x="80" y="310" font-size="11" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">Property Value</text>
+    <text x="80" y="325" font-size="9" fill="#555" font-family="Arial, sans-serif">Market Price</text>
+  </g>
+
+  <!-- Loan Amount (right side) -->
+  <g opacity="0.8">
+    <text x="350" y="310" text-anchor="end" font-size="11" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">Loan Amount</text>
+    <text x="350" y="325" text-anchor="end" font-size="9" fill="#555" font-family="Arial, sans-serif">Up to 60%</text>
+  </g>
+
+  <!-- Connection arrow (subtle) -->
+  <g stroke="#1565c0" stroke-width="2" opacity="0.25" stroke-linecap="round">
+    <path d="M 100 300 Q 240 280 380 300" fill="none"/>
   </g>
 </svg>`
 
  ,
-  CGTMSE : "l" ,
-  loanAgainstPropertyLoan : "l" ,
-  PID : "l"
+  PID: `<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Blue gradient (digital/tech) -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <!-- Green gradient (approval/success) -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <!-- Purple gradient (digital wallet) -->
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7e57c2"/>
+      <stop offset="100%" stop-color="#5e35b1"/>
+    </linearGradient>
+
+    <!-- Gold gradient (instant money) -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- === CENTER: SMARTPHONE === -->
+  <g filter="url(#shadow)">
+    <!-- Phone body -->
+    <rect x="165" y="80" width="150" height="220" fill="#1a1a1a" stroke="#000000" stroke-width="2" rx="15"/>
+
+    <!-- Phone screen background -->
+    <rect x="170" y="83" width="140" height="215" fill="url(#blueGrad)" stroke="#000000" stroke-width="0.5" rx="10"/>
+
+    <!-- Phone notch (top) -->
+    <rect x="205" y="80" width="70" height="12" fill="#000000" rx="4"/>
+
+    <!-- PID App Interface on screen -->
+    <!-- Header -->
+    <rect x="170" y="78" width="140" height="35" fill="#ffffff" opacity="0.15" rx="8"/>
+    <text x="240" y="105" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff" font-family="Arial, sans-serif">INSTANT LOAN</text>
+
+    <!-- Loan amount display -->
+    <g>
+      <rect x="180" y="115" width="120" height="45" fill="#ffffff" opacity="0.1" rx="6"/>
+      <text x="240" y="132" text-anchor="middle" font-size="10" fill="#ffff99" font-family="Arial, sans-serif">Amount</text>
+      <text x="240" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffd700" font-family="Arial, sans-serif">₹ 50,000</text>
+    </g>
+
+    <!-- Approval status (checkmark) -->
+    <g>
+      <circle cx="240" cy="185" r="20" fill="url(#greenGrad)"/>
+      <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <polyline points="232,185 238,191 248,180"/>
+      </g>
+    </g>
+
+    <!-- Status text -->
+    <text x="240" y="215" text-anchor="middle" font-size="9" font-weight="bold" fill="#4caf50" font-family="Arial, sans-serif">APPROVED</text>
+
+    <!-- Time indicator -->
+    <text x="240" y="230" text-anchor="middle" font-size="8" fill="#a8d8ea" font-family="Arial, sans-serif">In 5 Minutes</text>
+
+    <!-- Phone button (home) -->
+    <circle cx="240" cy="290" r="6" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+  </g>
+
+</svg>`
+
 };
