@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import CTAButton from "../components/shared/Button";
-import { CheckCircle, Home, User, Bike, Briefcase, Trees, Hammer, Building2, Gem, ChevronRight, ChevronLeft , Car ,ShieldCheck , CreditCard} from "lucide-react";
+import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard} from "lucide-react";
 import SvgIcon from './SvgIcon';
 
 const loanData = [
@@ -264,16 +264,6 @@ function LoanTabs() {
     <section className="mb-20 shadow-xl">
       {/* TAB NAVIGATION - Horizontal Slider */}
       <div className=" w-full relative mt-10" style={{ backgroundColor: activeLoan.bgColor }}>
-        {/* Left Arrow - Hidden on desktop */}
-        {canScrollLeft && (
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-0 top-0 bottom-0 z-10 bg-linear-to-r from-white to-transparent px-2 md:hidden flex items-center justify-center text-gray-600 hover:text-gray-800"
-          >
-            <ChevronLeft size={24} />
-          </button>
-        )}
-
         {/* Scrollable Container */}
         <div
           ref={scrollContainerRef}
@@ -317,16 +307,6 @@ function LoanTabs() {
             );
           })}
         </div>
-
-        {/* Right Arrow - Hidden on desktop */}
-        {canScrollRight && (
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-0 top-0 bottom-0 z-10 bg-linear-to-l from-white to-transparent px-2 md:hidden flex items-center justify-center text-gray-600 hover:text-gray-800"
-          >
-            <ChevronRight size={24} />
-          </button>
-        )}
       </div>
 
       {/* LOAN DETAILS SECTION */}
@@ -349,11 +329,11 @@ function LoanTabs() {
             </h3>
             </div>
 
-            <p className="text-sm md:text-base text-black font-semibold mt-4 mb-5">
+            <p className="text-sm md:text-md text-black font-bold mt-0 mb-5">
             {activeLoan.tagline}
             </p>
 
-            <p className="text-sm md:text-base text-gray-700 leading-7 mb-8">
+            <p className="text-sm md:text-md text-gray-700 leading-7 mb-6">
             {activeLoan.description}
             </p>
 
@@ -362,17 +342,16 @@ function LoanTabs() {
                 <div key={index} className="flex gap-3">
                 <div className="shrink-0 mt-0.5">
                     <div
-                    style={{ backgroundColor: activeLoan.underlineColor }}
-                    className="flex items-center justify-center h-5 w-5 rounded-full"
+                    className="flex items-center justify-center h-5 w-5 rounded-full bg-green-600"
                     >
                     <CheckCircle size={14} className="text-white" />
                     </div>
                 </div>
                 <div>
-                    <h4 className="text-sm font-bold text-black mb-0.5">
+                    <h4 className="text-sm font-bold text-[#003d7a] mb-0.5">
                     {item.title}
                     </h4>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs md:text-xs font-semibold text-gray-600 leading-relaxed">
                     {item.description}
                     </p>
                 </div>

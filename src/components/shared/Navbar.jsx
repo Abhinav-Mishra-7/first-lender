@@ -96,7 +96,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center md:gap-12 lg:gap-15 ml-auto">
+          <nav className="hidden md:flex md:justify-end items-center md:gap-8 lg:gap-15 ml-auto">
             {navLinks.map((link) => (
               <div key={link.href} className="relative font-medium">
                 {link.subItems ? (
@@ -194,16 +194,16 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="w-full bg-yellow-400 shadow-[0_4px_10px_rgba(0,0,0,0.15)] flex justify-end md:px-4 px-3 py-1 md:gap-6 gap-3 lg:gap-8 md:text-sm text-xs lg:text-md font-medium">          
+        <div className="w-full bg-yellow-500 shadow-[0_4px_10px_rgba(0,0,0,0.15)] flex md:justify-end lg:justify-end justify-center md:px-4 lg:px-7 px-0 py-1 md:gap-6 gap-1.5 lg:gap-8 md:text-sm text-xs lg:text-md font-medium">          
             <a href="#" className="flex items-center gap-2">
               <Handshake className="h-4 w-4" />
               <span>Become Our Partner</span>
             </a>
-            <a href="tel:+917291919151" className="flex items-center gap-2">
+            <a href="tel:+918287830373" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               <span>+91-82878 30373</span>
             </a>
-            <a href="https://wa.me/917291919151" className="flex items-center gap-2">
+            <a href="tel:+918114466003" className="flex items-center gap-2">
               <Smartphone className="h-4 w-4" />
               <span>+91-81144 66003</span>
             </a>

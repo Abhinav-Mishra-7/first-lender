@@ -81,7 +81,7 @@ export default function CTAButton({
       letterSpacing: "0.3px",
     },
     md: {
-      padding: "0.75rem 2.5rem",
+      padding: "0.75rem 2rem",
       fontSize: "1rem",
       letterSpacing: "0.5px",
     },
