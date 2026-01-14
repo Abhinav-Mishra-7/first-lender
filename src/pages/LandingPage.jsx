@@ -22,9 +22,11 @@ import {
   FileText,
   Monitor,
   TrendingDown,
+  Space,
 } from "lucide-react";
 import { Link } from "react-router";
 import LoanTabs from "../components/LoanTabs";
+import Footer from "../components/shared/Footer";
 
 
 const heroSlides = [
@@ -69,7 +71,7 @@ const loanTypes = [
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
   },
   {
-    title: "Secure Loan",
+    title: "Secured Loan",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
   },
 ];
@@ -198,7 +200,8 @@ function LandingPage() {
           </div>
         </div>
       </section>
-
+      
+      {/* Loan Tabs */}
       <div className="relative -mt-16 md:-mt-20 z-20 px-8">
         <LoanTabs />
       </div>
@@ -240,7 +243,7 @@ function LandingPage() {
       {/* Trending Loans */}
       <section className="px-5 mb-20 md:mb-20">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-black mb-12 pb-2.5">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-12 pb-2.5 text-shadow-lg">
             Trending Loans & Offers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -261,10 +264,6 @@ function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Loan Explanations */}      
-      {/* <LoanExplanations />
-       */}
       
 
       {/* Why Choose FIRSTLender */}
@@ -333,85 +332,9 @@ function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white px-5 py-16 md:py-20 mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-8">
-            {/* Left Section */}
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">
-                FIRST<span className="text-yellow-400">Lender</span>
-              </h3>
-              <p className="text-sm text-yellow-400 mb-6">Bharose Ka Dusra Naam</p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-sm md:text-base">
-                  <Phone size={18} /> +91-82878 30373
-                </div>
-                <div className="flex items-center gap-3 text-sm md:text-base">
-                  <MessageCircle size={18} /> +91-81144 66003
-                </div>
-                <div className="flex items-center gap-3 text-sm md:text-base">
-                  <Mail size={18} /> info@firstlender.com
-                </div>
-              </div>
-              <div>
-                <p className="font-semibold mb-4">Follow Us On:</p>
-                <div className="flex gap-3">
-                  {[Facebook, Instagram, Twitter, Linkedin, Youtube].map((Icon, i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 bg-yellow-400 rounded flex items-center justify-center text-black cursor-pointer transition-all duration-300 hover:bg-white hover:-translate-y-1"
-                    >
-                      <Icon size={20} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Section */}
-            <div>
-              <h4 className="text-xl md:text-2xl font-semibold mb-4">Contact Information</h4>
-              <p className="text-sm md:text-base leading-relaxed mb-4">
-                FIRSTLender Fincorp Limited,
-                <br />
-                Second Floor, 17A/45, WEA, Karol Bagh,
-                <br />
-                New Delhi, Delhi 110005.
-              </p>
-              <p className="text-sm text-yellow-400">ISO 9001:2015 & 27001:2013 Certified</p>
-            </div>
-          </div>
-
-          {/* Footer Links */}
-          <div className="border-t border-yellow-400/30 pt-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 text-xs md:text-sm">
-              {[
-                "About Us",
-                "Our Team",
-                "Careers",
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Partner Login",
-                "Contact Us",
-                "Investor Relations",
-              ].map((link) => (
-                <Link
-                  key={link}
-                  to="/"
-                  className="text-white opacity-90 transition-all duration-300 hover:text-yellow-400"
-                >
-                  {link}
-                </Link>
-              ))}
-            </div>
-            <p className="text-center text-xs md:text-sm opacity-70">
-              © COPYRIGHT 2025 | ALL RIGHTS RESERVED | FIRSTLENDER FINCORP LTD.
-            </p>
-          </div>
-        </div>
-      </footer>
+      
+      {/* Footer Section */}
+      <Footer></Footer>
 
       {/* Tailwind CSS Animations */}
       <style>{`

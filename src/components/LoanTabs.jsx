@@ -136,7 +136,7 @@ const loanData = [
   },
   {
     id: 8,
-    title: "Personal Instant Loan",
+    title: "PID",
     titleColor: "#003d7a",
     tagline: "Empowering Farmers with Reliable Financial Support.",
     svgName : "PID" , 
@@ -310,23 +310,22 @@ function LoanTabs() {
       </div>
 
       {/* LOAN DETAILS SECTION */}
-    <div style={{ backgroundColor: activeLoan.bgColor }} className="px-5 py-10 md:py-8 transition-colors duration-300">
+    <div style={{ backgroundColor: activeLoan.bgColor }} className="px-4 py-10 md:py-8 transition-colors duration-300">
     <div className="w-full max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         
         {/* Content Section - LEFT */}
-        <div className="flex flex-col">
-            
+        <div className="flex flex-col">           
             {/* Title with SVG Icon */}
             <div className="flex items-center gap-4 mb-4">
-                <SvgIcon name={activeLoan.svgName} />
-            <h3
+              <SvgIcon name={activeLoan.svgName} />
+              <h3
                 style={{ color: activeLoan.titleColor }}
                 className="text-2xl md:text-3xl lg:text-4xl font-bold relative pb-4 w-fit text-shadow-sm"
-            >
+              >
                 {activeLoan.title}
                 <div className="absolute bottom-0 left-0 h-1.5 w-full shadow-md bg-linear-to-r from-yellow-500 to-yellow-600" />
-            </h3>
+              </h3>
             </div>
 
             <p className="text-sm md:text-md text-black font-bold mt-0 mb-5">
