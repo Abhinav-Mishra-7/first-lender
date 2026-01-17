@@ -31,9 +31,10 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
   
   const Footer = () => {
     return (
-      <footer className="bg-linear-to-t from-black to-gray-900 text-white px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+      <>
+      <footer className="bg-linear-to-t from-black to-gray-900 text-white px-4 sm:px-6 lg:px-8 py-5 md:py-5 lg:py-5 lg:pt-6 md:pt-4 pt-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10 mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10 mb-8 lg:mb-10">
             {/* Company Info */}
             <div className="space-y-6">
               <div>
@@ -44,21 +45,21 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
               </div>
               
               {/* Contact Info */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Phone size={20} className="mt-1 shrink-0 text-yellow-400" />
-                  <div>
-                    <p className="text-sm font-medium">Phone</p>
-                    <a href="tel:+918287830373" className="text-white hover:text-yellow-400 transition-colors text-sm font-medium block">
+                  <div className="space-x-2">
+                    <p className="text-sm font-medium inline">Phone -</p>
+                    <a href="tel:+918287830373" className="text-white hover:text-yellow-400 transition-colors text-sm font-medium ">
                       +91-82878 30373
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MessageCircle size={20} className="mt-1 shrink-0 text-yellow-400" />
-                  <div>
-                    <p className="text-sm font-medium">WhatsApp</p>
-                    <a href="https://wa.me/918114466003" className="text-white hover:text-yellow-400 transition-colors text-sm font-medium block">
+                  <div className="space-x-2">
+                    <p className="text-sm font-medium inline">WhatsApp -</p>
+                    <a href="https://wa.me/918114466003" className="text-white hover:text-yellow-400 transition-colors text-sm font-medium">
                       +91-81144 66003
                     </a>
                   </div>
@@ -66,13 +67,13 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="mt-1 shrink-0 text-yellow-400" />
                   <a href="mailto:info@firstlender.com" className="text-white mt-1 hover:text-yellow-400 transition-colors text-sm font-medium block">
-                    info@firstlender.com
+                    lenders@firstlender.in
                   </a>
                 </div>
               </div>
   
               {/* Social Links */}
-              <div className="pt-6">
+              <div className="pt-2">
                 <p className="font-semibold mb-4 text-lg">Follow Us On:</p>
                 <div className="flex flex-wrap gap-3">
                   {socialLinks.map(({ icon: Icon, href, label }, index) => (
@@ -94,27 +95,27 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
   
             {/* Contact Address */}
             <div className="lg:text-left">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-yellow-400">
-                Get In Touch
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-yellow-400">
+                Contact Information
               </h3>
               <div className="bg-black/20 backdrop-blur-sm mt-3">
-                <p className="text-lg md:text-xl leading-relaxed mb-2">
-                  FIRST<span className="text-yellow-400">LENDER</span> Fincorp Limited
-                </p>
-                <address className="text-sm md:text-base not-italic space-y-1 text-gray-300">
-                  <span>Plot Number - 479, Sector - 4,</span>
-                  <span> Vaishali</span>
-                  <span className="block font-semibold text-white pt-2">
-                    Ghaziabad - 201010, Delhi
-                  </span>
-                </address>
+                  <p className="text-lg md:text-xl leading-relaxed mb-2 ">
+                    FIRST<span className="text-yellow-400">LENDER</span>
+                  </p>
+                  <address className="text-sm md:text-base not-italic space-y-1 text-white font-semibold">
+                    <span>Plot Number - 479, Sector - 4,</span>
+                    <span> Vaishali</span>
+                    <span className="block pt-2">
+                      Ghaziabad - 201010, Delhi
+                    </span>
+                  </address>
               </div>
             </div>
           </div>
   
           {/* Bottom Links */}
-          <div className="border-t border-yellow-400/30 pt-10">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
+          <div className="border-t border-yellow-400/30 pt-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 ">
               {[
                 "About Us", "Our Team", "Careers", 
                 "Privacy Policy", "Terms & Conditions", 
@@ -123,21 +124,23 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
                 <a
                   key={link}
                   href="#"
-                  className="text-sm lg:text-base text-gray-300 hover:text-yellow-400 font-medium transition-all duration-300 hover:underline underline-offset-4 group"
+                  className="text-sm lg:text-md text-gray-300 hover:text-yellow-400 font-medium transition-all duration-300 hover:underline underline-offset-4 group"
                 >
                   {link}
                 </a>
               ))}
             </div>
-            <div className="text-center pt-8 border-t border-yellow-400/20">
-              <p className="text-xs md:text-sm text-gray-400">
-                © COPYRIGHT 2026 | ALL RIGHTS RESERVED | 
-                <span className="font-bold text-yellow-400 ml-2">FIRSTLENDER FINCORP LTD.</span>
-              </p>
-            </div>
-          </div>
+            
+          </div>        
         </div>
       </footer>
+      <div className="text-center border-t border-yellow-400/20 bg-yellow-400 py-4">
+        <p className="text-xs md:text-sm lg:text-sm text-black font-semibold">
+          © COPYRIGHT 2026 | ALL RIGHTS RESERVED | 
+          <span className="font-semibold text-black ml-2">FIRSTLENDER | ABHINAV MISHRA</span>
+        </p>
+      </div>
+    </>
     );
   };
   

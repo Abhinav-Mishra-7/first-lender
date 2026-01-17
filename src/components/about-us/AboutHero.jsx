@@ -21,7 +21,7 @@ const AboutHero = () => {
               </h1>
   
               <p className="text-md md:text-md lg:text-lg text-gray-700 max-w-xl leading-relaxed font-medium">
-                Trusted over <span className="font-bold text-yellow-600">20 years</span> in
+                Trusted over <span className="font-bold text-yellow-600">6 years</span> in
                 business and personal lending, helping thousands of customers unlock fast and
                 transparent finance.
               </p>

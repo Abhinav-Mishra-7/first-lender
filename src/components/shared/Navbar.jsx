@@ -88,9 +88,10 @@ export default function Navbar() {
         ref={navRef}
         className="w-full mx-auto bg-white/80 backdrop-blur-lg shadow-md transition-all duration-300 overflow-visible pointer-events-auto"
       >
-        <div className="flex items-center justify-between px-6 md:px-10 py-4 md:py-5">
+        <div className="flex items-center justify-between px-6 md:px-7 lg:px-10 py-3 md:py-3 lg:py-4">
           {/* Brand */}
-          <Link to="/" onClick={closeAllDropdowns} className="flex items-baseline gap-0 shrink-0">
+          <Link to="/" onClick={closeAllDropdowns} className="flex items-center gap-1 shrink-0 ">
+            <img src="public/first lender logo.png" alt="first-lender-logo" className="h-11 w-11" />
             <span className="text-xl md:text-2xl text-black">FIRST</span>
             <span className="text-xl md:text-2xl text-yellow-500">LENDER</span>
           </Link>
