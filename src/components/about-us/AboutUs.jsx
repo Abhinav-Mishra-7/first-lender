@@ -64,14 +64,14 @@ const statusArray = [
   
 const AboutUs = () => {
     return (
-      <section className="pt-20 bg-linear-to-b from-gray-50 to-white">
+      <section className="pt-20 bg-linear-to-b from-gray-100 to-white">
         <Navbar></Navbar>
         <AboutHero/>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-10">  
           {/* Stats Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-24">
             {statusArray.map(({ icon: Icon, value, label, color }, i) => (
-              <div key={i} className="group text-center p-8 rounded-3xl bg-white/70 backdrop-blur-sm border hover:shadow-2xl hover:shadow-yellow-500/50 transition-all duration-500 hover:-translate-y-3 shadow-lg">
+              <div key={i} className="group text-center p-8 rounded-3xl bg-linear-to-br from-yellow-400 to-yellow-50 backdrop-blur-sm border hover:shadow-2xl hover:shadow-yellow-500/50 transition-all duration-500 hover:-translate-y-3 shadow-lg">
                 <div className="w-20 h-20 mx-auto mb-6 bg-linear-to-br from-white to-yellow-50 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
                   <Icon size={32} className={`${color} drop-shadow-lg`}/>
                 </div>
@@ -88,14 +88,14 @@ const AboutUs = () => {
           </div>
   
           {/* Mission Vision */}
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-24 items-center">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-25 mb-24 items-center bg-yellow-50 shadow-xl p-5 lg:py-10 lg:pb-13 pb-8 rounded-2xl">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-yellow-300 to-yellow-400 border border-yellow-200 rounded-2xl backdrop-blur-sm shadow-lg">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
                 <span className="font-semibold text-black text-lg">Trusted Since 2021</span>
               </div>
               
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 pr-12 leading-tight text-shadow-md">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 mb-6 pr-12 leading-tight text-shadow-md">
                 Empowering <span className="text-yellow-500 px-3 py-1 rounded-full text-2xl">Indian Dreams</span>
               </h3>
               
@@ -107,8 +107,8 @@ const AboutUs = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4 p-6 rounded-2xl bg-linear-to-br from-blue-50 to-indigo-50 border-l-4 border-blue-400 shadow-lg">
                   <Building2 size={28} className="text-blue-500" />
-                  <h4 className="text-xl font-bold text-gray-900">NBFC Partnered</h4>
-                  <p className="text-gray-600 text-sm">50+ banks & financial institutions</p>
+                  <h4 className="text-xl font-bold text-gray-900">Bank / NBFC Partnered</h4>
+                  <p className="text-gray-600 text-sm">50+ financial institutions</p>
                 </div>
                 <div className="space-y-4 p-6 rounded-2xl bg-linear-to-br from-green-50 to-emerald-50 border-l-4 border-green-400 shadow-lg">
                   <TrendingUp size={28} className="text-green-500" />
@@ -119,7 +119,7 @@ const AboutUs = () => {
             </div>
   
             <div className="relative">
-              <div className="relative z-10 bg-linear-to-br from-yellow-400 via-yellow-500 to-orange-400 p-12 lg:p-16 rounded-3xl shadow-2xl">
+              <div className="relative z-10 bg-linear-to-br from-yellow-400 via-yellow-500 to-orange-400 p-12 lg:p-16 rounded-3xl shadow-xl">
                 <div className="absolute inset-0 bg-white/20 rounded-3xl backdrop-blur-sm" />
                 <div className="relative z-20 text-center">
                   <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 bg-linear-to-r from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/50">
@@ -137,7 +137,7 @@ const AboutUs = () => {
           </div>
   
           {/* Team Trust */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-xl p-5 rounded-2xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-xl p-5 rounded-2xl lg:py-10">
             <div className="order-2 lg:order-1">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-700 pb-4 text-shadow-md">
                 Trusted by India's <span className="text-yellow-500">Best Businesses</span>
