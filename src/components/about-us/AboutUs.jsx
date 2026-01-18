@@ -1,4 +1,4 @@
-import { Users, ShieldCheck, Award, Clock, TrendingUp, Building2,Star } from "lucide-react";
+import { Users, ShieldCheck, Award, Clock, TrendingUp, Building2,Star ,Briefcase} from "lucide-react";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import AboutHero from "./AboutHero";
@@ -37,22 +37,28 @@ const teamMembers = [
   
 const anarray = [
 {
-  title: "MSMEs & Startups",
+  title: "Professionals",
+  desc: "Doctors, CAs - instant funding",
+  icon: Building2,
+  color: "from-blue-400 to-cyan-400"
+},
+{
+  title: "Manufacturers",
   desc: "Fuel growth without equity dilution",
   icon: Users,
   color: "from-purple-400 to-pink-400"
 },
 {
-  title: "Professionals",
-  desc: "Doctors, CAs, Engineers - instant funding",
-  icon: Building2,
-  color: "from-blue-400 to-cyan-400"
-},
-{
   title: "Traders & Retail",
   desc: "Working capital at lowest rates",
   icon: TrendingUp,
-  color: "from-green-400 to-emerald-400"
+  color: "from-green-500 to-emerald-300"
+},
+{
+  title: "Service Providers",
+  desc: "Scale projects without upfront cash pressure",
+  icon: Briefcase,
+  color: "from-teal-300 to-sky-600"
 }]
 
 const statusArray = [
@@ -88,14 +94,14 @@ const AboutUs = () => {
           </div>
   
           {/* Mission Vision */}
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-25 mb-24 items-center bg-yellow-50 shadow-xl p-5 lg:py-10 lg:pb-13 pb-8 rounded-2xl">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-25 mb-24 items-center bg-yellow-100/80 shadow-xl p-5 lg:py-10 lg:pb-13 pb-8 rounded-2xl">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-yellow-300 to-yellow-400 border border-yellow-200 rounded-2xl backdrop-blur-sm shadow-lg">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
                 <span className="font-semibold text-black text-lg">Trusted Since 2021</span>
               </div>
               
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 mb-6 pr-12 leading-tight text-shadow-md">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 pr-12 leading-tight text-shadow-md">
                 Empowering <span className="text-yellow-500 px-3 py-1 rounded-full text-2xl">Indian Dreams</span>
               </h3>
               
@@ -139,7 +145,7 @@ const AboutUs = () => {
           {/* Team Trust */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-xl p-5 rounded-2xl lg:py-10">
             <div className="order-2 lg:order-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-700 pb-4 text-shadow-md">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 pb-4 text-shadow-md">
                 Trusted by India's <span className="text-yellow-500">Best Businesses</span>
               </h3>
               <div className="space-y-5">
@@ -149,7 +155,7 @@ const AboutUs = () => {
                       <Icon size={24} className="text-white drop-shadow-md"/>
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-gray-600 mb-2">{title}</h4>
+                      <h4 className="font-bold text-lg text-gray-800 mb-2">{title}</h4>
                       <p className="text-gray-500 text-sm font-medium">{desc}</p>
                     </div>
                   </div>

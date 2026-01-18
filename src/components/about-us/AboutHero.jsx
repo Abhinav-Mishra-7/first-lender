@@ -2,7 +2,7 @@ import CTAButton from "../shared/Button"
 
 const AboutHero = () => {
     return (
-      <section className="relative overflow-hidden bg-linear-to-r from-[#f0db93] via-[#FEFCE8] to-yellow-100 "> 
+      <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 "> 
         {/* background decorative circles */}
         {/* <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-yellow-300/30 blur-3xl" /> */}
         {/* <div className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-orange-200/30 blur-3xl" /> */}
@@ -10,14 +10,14 @@ const AboutHero = () => {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-16 md:py-12 lg:py-12 mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* LEFT CONTENT */}
-            <div className="space-y-6 md:space-y-7">
+            <div className="space-y-6 md:space-y-7 lg:space-y-11">
               <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-black text-[11px] md:text-xs font-semibold tracking-[0.1rem]  text-white shadow-lg">
                 Welcome To
-                <span className="text-yellow-400">FIRSTLENDER</span>
+                 <span className="text-yellow-400"> FIRSTLENDER</span>
               </p>
   
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-black leading-tight text-shadow-md">
-                About <span className="text-yellow-500">FIRSTLENDER</span>
+                About <span className="text-yellow-500 ml-1"> FIRSTLENDER</span>
               </h1>
   
               <p className="text-md md:text-md lg:text-lg text-gray-700 max-w-xl leading-relaxed font-medium">
@@ -38,7 +38,7 @@ const AboutHero = () => {
             {/* RIGHT ILLUSTRATION AREA */}
             <div className="relative">
               {/* card background like screenshot */}
-              <div className="relative mx-auto w-full max-w-md lg:max-w-lg rounded-3xl bg-linear-to-br from-white/90 to-yellow-50/90 shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-yellow-100/80 overflow-hidden">
+              <div className="relative mx-auto w-full max-w-md lg:max-w-lg rounded-3xl bg-linear-to-br from-yellow-200 to-yellow-50/90 shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-yellow-100/80 overflow-hidden">
                 {/* soft inner gradient */}
                 <div className="absolute inset-0 bg-linear-to-t from-yellow-100/70 via-transparent to-white/60" />
   

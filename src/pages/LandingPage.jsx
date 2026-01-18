@@ -157,7 +157,7 @@ function LandingPage() {
       <Navbar/>
 
       {/* Hero Slider */}
-      <section className=" bg-linear-to-r from-[#f0db93] via-[#FEFCE8] to-yellow-100 px-10 py-20 mt-10 md:mt-23 lg:mt-15 overflow-hidden w-full"
+      <section className=" bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 px-10 py-20 mt-10 md:mt-23 lg:mt-15 overflow-hidden w-full"
       >
         <div className=" mx-auto relative z-10 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">

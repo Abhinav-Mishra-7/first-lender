@@ -83,7 +83,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none text-black">
+    <div className="fixed top-0 left-0 right-0 z-100 pointer-events-none text-black">
       <header
         ref={navRef}
         className="w-full mx-auto bg-white/80 backdrop-blur-lg shadow-md transition-all duration-300 overflow-visible pointer-events-auto"
