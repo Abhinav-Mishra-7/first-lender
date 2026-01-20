@@ -1,7 +1,7 @@
 // ContactUs.jsx - AboutUs Style Layout (Yellow/White Theme)
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send, ShieldCheck, Users,TrendingUp,Star} from "lucide-react";
-import Navbar from "../components/shared/Navbar";
-import Footer from "../components/shared/Footer";
+import Navbar from "../shared/Navbar";
+import Footer from "../shared/Footer";
 import ContactHero from "./ContactHero";
 import ContactForm from "./ContactForm";
 
@@ -34,8 +34,8 @@ const contactOptions = [
     desc: "Detailed queries & support",
     icon: Mail,
     color: "from-blue-400 to-cyan-400",
-    details: "info@firstlender.com",
-    link: "mailto:info@firstlender.com"
+    details: "lenders@firstlender.in",
+    link: "mailto:lenders@firstlender.in"
   },
   {
     title: "Visit Office",
@@ -104,34 +104,6 @@ const ContactUs = () => {
 
         {/* Google Maps Section - Perfect for Plot No. 479, Sector-4, Vaishali, Ghaziabad */}
         <div className="gap-8 w-full mx-auto mt-12 mb-20">
-          {/* Office Details Card */}
-          {/* <div className="bg-white/90 backdrop-blur-sm border border-yellow-100 rounded-3xl p-8 md:p-10 shadow-xl hover:scale-102 transition-all duration-500 ease-out will-change-transform order-2 md:order-1">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300">
-                <MapPin size={28} className="text-black" />
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold text-gray-900">Headquarters</h4>
-                <p className="text-yellow-600 font-semibold text-lg">Ghaziabad Office</p>
-              </div>
-            </div>
-            
-            <div className="space-y-3 text-base leading-relaxed">
-              <p className="font-semibold text-gray-900 text-lg">FIRST<span className="text-yellow-500">LENDER</span> Fincorp Ltd.</p>
-              <p className="font-medium text-gray-800">Plot No. 479, Sector-4</p>
-              <p className="font-medium text-gray-800">Vaishali, Ghaziabad</p>
-              <p className="font-medium text-gray-800">Uttar Pradesh 201010</p>
-              <div className="mt-6 pt-6 border-t border-yellow-100">
-                <p className="text-sm text-yellow-600 font-semibold mb-2 flex items-center gap-2">
-                  <Clock size={18} /> Mon-Sat: 9AM-8PM
-                </p>
-                <button className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 text-sm">
-                  Get Directions
-                </button>
-              </div>
-            </div>
-          </div> */}
-
           {/* Google Maps Embed */}
           <div className="relative h-80 md:h-96 lg:h-102 rounded-3xl shadow-2xl border-4 border-white/50 overflow-hidden order-1 md:order-2 group">
             <iframe
@@ -153,7 +125,6 @@ const ContactUs = () => {
 
 
         {/* Contact Form Section */}
-        {/* <ContactForm/> */}
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-24 items-start bg-yellow-100/80 shadow-xl p-5 lg:py-10 pb-8 rounded-2xl">
           {/* LEFT - Extended Content */}
           <div className="space-y-8">
