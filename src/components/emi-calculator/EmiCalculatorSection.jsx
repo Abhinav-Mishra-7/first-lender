@@ -27,20 +27,18 @@ const inputConfig = [
   }
 ];
 
-
-
 const EmiCalculatorSection = ({ formData, setFormData, results }) => {
   return (
-    <section className="h-screen w-full flex flex-col justify-center pt-15 pb-10 md:pb-15 lg:pb-16 bg-white">
+    <section className="h-full w-full flex flex-col justify-center mb-20 bg-white px-3">
 
        <div className="max-w-6xl mx-auto w-full shadow-xl py-5 rounded-xl bg-yellow-50">
         <h1 className="text-gray-800 text-center text-2xl md:text-3xl lg:text-4xl font-bold text-shadow-md">EMI <span className="text-yellow-400 text-center text-2xl md:text-3xl lg:text-4xl font-bold">Calculator</span></h1>
         <p className="text-gray-600 text-center font-medium">Calculate the interest and EMI before borrow</p>
         {/* ===== Calculator Layout ===== */}
-        <div className="max-w-6xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-2 flex-1 items-center pt-10">
+        <div className="max-w-6xl mx-auto w-full px-6 lg:px-6 grid grid-cols-1 lg:grid-cols-2 flex-1 items-center pt-10">
 
             {/* ================= LEFT ================= */}
-            <div className="flex flex-col gap-5 pl-4">
+            <div className="flex flex-col gap-5 pb-7">
             {/* EMI Card */}
             <div className="inline-block bg-linear-to-r from-amber-400 to-amber-500 
                 rounded-2xl px-6 py-4 shadow-xl w-fit">
@@ -170,22 +168,22 @@ const EmiCalculatorSection = ({ formData, setFormData, results }) => {
                 <div className="bg-amber-100/60 rounded-xl p-4 shadow-lg">
                 <p className="text-xs text-slate-500 font-semibold">Principal</p>
                 <p className="text-lg font-bold text-slate-800">
-                    ₹{formData.loanAmount.toLocaleString()}
+                    ₹ {formData.loanAmount.toLocaleString()}
                 </p>
                 </div>
                 <div className="bg-amber-100/60 rounded-xl p-4 shadow-lg">
                 <p className="text-xs text-slate-500 font-semibold">Total Interest</p>
                 <p className="text-lg font-bold text-slate-800">
-                    ₹{results.totalInterest.toLocaleString()}
+                    ₹ {results.totalInterest.toLocaleString()}
                 </p>
                 </div>
             </div>
             </div>
 
             {/* ================= RIGHT ================= */}
-            <div className="flex flex-col gap-10 ">
+            <div className="flex flex-col gap-10">
                 {inputConfig.map(({ key, label, min, max, step, suffix }) => (
-                    <div key={key} className="space-y-4">
+                    <div key={key} className="space-y-3">
 
                     {/* Label + Value */}
                     <div className="flex justify-between items-center">
@@ -194,7 +192,7 @@ const EmiCalculatorSection = ({ formData, setFormData, results }) => {
                         </p>
 
                         {/* Input with suffix */}
-                        <div className="flex items-center bg-slate-100 rounded-xl overflow-hidden border border-slate-300">
+                        {/* <div className="flex items-center bg-slate-100 rounded-xl overflow-hidden border border-slate-300">
                         <input
                             type="tel"
                             value={formData[key]}
@@ -204,18 +202,49 @@ const EmiCalculatorSection = ({ formData, setFormData, results }) => {
                                 [key]: Number(e.target.value)
                             })
                             }
-                            className="w-40 px-4 py-2 bg-transparent text-lg font-medium 
+                            className="w-40 px-3 py-2 bg-transparent text-lg font-medium 
                                     text-slate-900 focus:outline-none"
                         />
-                        {suffix == "🕒" ? <div className="px-3 py-2 bg-yellow-500 text-black text-lg font-semibold">
+                        {suffix == "🕒" ? <div className="lg:px-3 lg:py-2 md:px-3 md:py-2 sm:pr-13 sm:pl-3 sm:py-2 px-3 py-2 bg-yellow-500 text-black text-sm lg:text-lg font-semibold">
                             {suffix}
                         </div> :
-                            <div className="px-4 py-2 bg-yellow-500 text-black text-lg font-semibold">
+                            <div className="px-5 py-3 bg-yellow-500 text-black text-sm lg:text-lg font-semibold">
                             {suffix}
                         </div>
                         }
                         
+                        </div> */}
+                        {/* HYPER RESPONSIVE Input + Suffix Component */}
+                        <div className="flex items-stretch bg-slate-100/80 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-300/70 shadow-sm hover:shadow-md transition-all duration-300">
+                        {/* Input Field - Flexible Width */}
+                        <input
+                            type="tel"
+                            value={formData[key]}
+                            onChange={(e) =>
+                            setFormData({
+                                ...formData,
+                                [key]: Number(e.target.value)
+                            })
+                            }
+                            className="flex-1 min-w-0 px-4 py-2 bg-transparent text-base lg:text-lg font-semibold text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-400/50 focus:border-transparent transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none max-w-45"
+                            placeholder="0"
+                        />
+                        
+                        {/* Responsive Suffix Button */}
+                        <div className={`
+                            flex items-center justify-center text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+                            bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700
+                            shadow-md hover:shadow-lg active:shadow-sm
+                            transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]
+                            px-3 sm:px-4 md:px-5 lg:px-6
+                            py-2 sm:py-2.5 md:py-3
+                            min-w-[50px] whitespace-nowrap
+                            rounded-r-xl
+                        `}>
+                            {suffix}
                         </div>
+                        </div>
+
                     </div>
 
                     {/* Slider */}
@@ -252,14 +281,14 @@ const EmiCalculatorSection = ({ formData, setFormData, results }) => {
   );
 };
 
-const SliderBlock = ({ label, value, children }) => (
-  <div className="bg-amber-50 rounded-xl p-4">
-    <div className="flex justify-between text-xs font-bold text-slate-700 mb-2">
-      <span>{label}</span>
-      <span>{value}</span>
-    </div>
-    {children}
-  </div>
-);
+// const SliderBlock = ({ label, value, children }) => (
+//   <div className="bg-amber-50 rounded-xl p-4">
+//     <div className="flex justify-between text-xs font-bold text-slate-700 mb-2">
+//       <span>{label}</span>
+//       <span>{value}</span>
+//     </div>
+//     {children}
+//   </div>
+// );
 
 export default EmiCalculatorSection;

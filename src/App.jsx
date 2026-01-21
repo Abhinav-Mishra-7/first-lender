@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router';
 import LandingPage from './pages/LandingPage';
 import AboutUs from './components/about-us/AboutUs';
 import ContactUs from './components/contact-us/ContactUs' ;
-import EmiCalculator from './components/EmiCalculator';
+import EmiCalculator from './components/emi-calculator/EmiCalculator';
 
 function App() {
   return (

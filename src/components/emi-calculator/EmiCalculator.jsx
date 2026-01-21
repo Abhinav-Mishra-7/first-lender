@@ -1,10 +1,11 @@
 // pages/EmiCalculator.jsx - COMPACT Viewport-Friendly Version
 import { Calculator, DollarSign, Calendar, Percent, TrendingUp } from "lucide-react";
-import Navbar from "../components/shared/Navbar";
-import Footer from "../components/shared/Footer";
+import Navbar from "../shared/Navbar";
+import Footer from "../shared/Footer";
 import { useState, useEffect } from "react";
 import EmiHero from "./EmiHero";
 import EmiCalculatorSection from "./EmiCalculatorSection";
+import WhatIsEmi from "./WhatIsEmi";
 
 const EmiCalculator = () => {
   const [formData, setFormData] = useState({
@@ -39,13 +40,15 @@ const EmiCalculator = () => {
   }, [formData]);
 
   return (
-    <section className="pt-20 bg-linear-to-b from-yellow-50 to-orange-50 min-h-screen">
+    <section className="pt-20 bg-white min-h-screen">
       <Navbar />
 
       <EmiHero/>   
 
       <EmiCalculatorSection formData={formData} setFormData={setFormData} results={results}/>
       
+      <WhatIsEmi/>
+
       <Footer />
     </section>
   );
