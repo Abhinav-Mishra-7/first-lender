@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import EmiHero from "./EmiHero";
 import EmiCalculatorSection from "./EmiCalculatorSection";
 import WhatIsEmi from "./WhatIsEmi";
+import HowEmiWorks from "./HowEmiWorks";
 
 const EmiCalculator = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +49,8 @@ const EmiCalculator = () => {
       <EmiCalculatorSection formData={formData} setFormData={setFormData} results={results}/>
       
       <WhatIsEmi/>
+
+      <HowEmiWorks/>
 
       <Footer />
     </section>

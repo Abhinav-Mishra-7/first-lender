@@ -4,12 +4,12 @@ import CTAButton from "../shared/Button";
 
 const EmiHero = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fefce0] to-yellow-100 mb-19">
+    <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fefce0] to-yellow-100 mb-8">
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-10 md:py-8 lg:py-12 mt-5">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-8 md:py-6 lg:py-8 mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT CONTENT - EXACTLY Like AboutHero */}
-          <div className="space-y-6 md:space-y-7 lg:space-y-10">
+          <div className="space-y-6 md:space-y-8 lg:space-y-10">
             <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-black text-[11px] md:text-xs font-semibold tracking-[0.1rem] text-white shadow-lg">
               EMI <span className="text-yellow-500">CALCULATOR</span>
             </p>
@@ -18,11 +18,11 @@ const EmiHero = () => {
               Calculate <span className="text-yellow-500 ml-1">EMI Instantly</span>
             </h1>
 
-            <p className="text-md md:text-md lg:text-lg text-gray-700 max-w-xl leading-relaxed font-medium">
+            <p className="text-md md:text-md lg:text-lg text-gray-800 max-w-xl leading-relaxed font-medium">
               Know your exact monthly payments before applying. Transparent calculations powered by bank-approved formulas from top lenders.
             </p>
 
-            <p className="text-sm md:text-md lg:text-base text-gray-600 max-w-xl">
+            <p className="text-sm md:text-sm lg:text-md text-gray-700 max-w-lg">
               Instant eligibility, minimal paperwork, best rates from 50+ banks &amp; NBFCs.
             </p>
 

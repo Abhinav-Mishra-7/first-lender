@@ -29,9 +29,9 @@ const inputConfig = [
 
 const EmiCalculatorSection = ({ formData, setFormData, results }) => {
   return (
-    <section className="h-full w-full flex flex-col justify-center mb-20 bg-white px-3">
+    <section className="h-full w-full flex flex-col justify-center mb-13 bg-white px-3">
 
-       <div className="max-w-6xl mx-auto w-full shadow-xl py-5 rounded-xl bg-yellow-50">
+       <div className="max-w-6xl mx-auto w-full shadow-xl py-5 rounded-xl bg-linear-to-r  from-[#f8df8e] via-[#fefce0] to-yellow-100">
         <h1 className="text-gray-800 text-center text-2xl md:text-3xl lg:text-4xl font-bold text-shadow-md">EMI <span className="text-yellow-400 text-center text-2xl md:text-3xl lg:text-4xl font-bold">Calculator</span></h1>
         <p className="text-gray-600 text-center font-medium">Calculate the interest and EMI before borrow</p>
         {/* ===== Calculator Layout ===== */}

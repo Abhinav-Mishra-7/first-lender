@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { Menu, X, ChevronDown, ChevronRight, Phone, Smartphone , Handshake } from "lucide-react";
+import logo from "../../../public/first lender logo.png" ;
 
 const navLinks = [
   {
@@ -91,7 +92,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 md:px-7 lg:px-10 py-3 md:py-3 lg:py-4">
           {/* Brand */}
           <Link to="/" onClick={closeAllDropdowns} className="flex items-center gap-1 shrink-0 ">
-            <img src="public/first lender logo.png" alt="first-lender-logo" className="h-11 w-11" />
+            <img src={logo} alt="first-lender-logo" className="h-11 w-11" />
             <span className="text-xl md:text-2xl text-black">FIRST</span>
             <span className="text-xl md:text-2xl text-yellow-500">LENDER</span>
           </Link>
