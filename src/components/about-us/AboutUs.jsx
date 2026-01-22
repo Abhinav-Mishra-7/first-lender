@@ -2,6 +2,7 @@ import { Users, ShieldCheck, Award, Clock, TrendingUp, Building2,Star ,Briefcase
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import AboutHero from "./AboutHero";
+import img1 from "../../../public/loan-approved-application-form-concept.jpg"
 
 
 const teamMembers = [
@@ -165,7 +166,7 @@ const AboutUs = () => {
             
             <div className="order-1 lg:order-2 relative h-115">
               <img 
-                src="public/loan-approved-application-form-concept.jpg" 
+                src={img1}
                 alt="Happy customers"
                 className="w-full h-105 object-cover rounded-3xl shadow-2xl border-5 border-white/50"
               />

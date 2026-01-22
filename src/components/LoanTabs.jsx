@@ -3,9 +3,39 @@ import CTAButton from "../components/shared/Button";
 import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard} from "lucide-react";
 import SvgIcon from './SvgIcon';
 
+// Images import 
+import personal from "../../public/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
+import car from "../../public/saving-money-car-trade-car-cash.jpg"
+
 const loanData = [
   {
     id: 1,
+    title: "Personal Loan",
+    titleColor: "#003d7a",
+    tagline: "Smart Advice. Fast Approval. Complete Peace of Mind.",
+    svgName: "personalLoan" ,
+    description:
+      "At FIRST LENDER, we don't just help you apply for a Personal Loan — we guide you to the right one. As your trusted financial advisor, we compare top banks and NBFCs, explain every option clearly, and ensure you choose a loan that fits your needs, budget, and future plans.",
+    items: [
+      {
+        title: "Expert Comparison",
+        description: "We compare top banks and NBFCs to find the best rates and terms for your financial situation."
+      },
+      {
+        title: "Stress-Free Process",
+        description: "We make the entire process simple, stress-free, and tailored to your needs."
+      },
+      {
+        title: "Guided Support",
+        description: "Our role as advisors is to give you clarity, choice, and confidence for every financial decision."
+      }
+    ],
+    image: personal,
+    imagePosition: "left",
+    bgColor: "#fff",
+  },
+  {
+    id: 8,
     title: "Home Loan",
     titleColor: "#003d7a",
     tagline: "Expert Guidance. Better Rates. Your Dream Home Made Simple.",
@@ -28,32 +58,6 @@ const loanData = [
     ],
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
     imagePosition: "right",
-    bgColor: "#fff",
-  },
-  {
-    id: 2,
-    title: "Personal Loan",
-    titleColor: "#003d7a",
-    tagline: "Smart Advice. Fast Approval. Complete Peace of Mind.",
-    svgName: "personalLoan" ,
-    description:
-      "At FIRST LENDER, we don't just help you apply for a Personal Loan — we guide you to the right one. As your trusted financial advisor, we compare top banks and NBFCs, explain every option clearly, and ensure you choose a loan that fits your needs, budget, and future plans.",
-    items: [
-      {
-        title: "Expert Comparison",
-        description: "We compare top banks and NBFCs to find the best rates and terms for your financial situation."
-      },
-      {
-        title: "Stress-Free Process",
-        description: "We make the entire process simple, stress-free, and tailored to your needs."
-      },
-      {
-        title: "Guided Support",
-        description: "Our role as advisors is to give you clarity, choice, and confidence for every financial decision."
-      }
-    ],
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
-    imagePosition: "left",
     bgColor: "#fff",
   },
   {
@@ -109,7 +113,7 @@ const loanData = [
     bgColor: "#fff",
   },
   {
-    id: 5,
+    id: 2,
     title: "Used Car Loan",
     titleColor: "#003d7a",
     tagline: "Supporting Agricultural Growth and Rural Development.",
@@ -130,12 +134,12 @@ const loanData = [
         description: "Access to government-backed schemes and subsidized rates."
       }
     ],
-    image: "https://images.unsplash.com/photo-1500382017468-f049863aae22?auto=format&fit=crop&w=600&q=80",
+    image: car,
     imagePosition: "right",
     bgColor: "#fff",
   },
   {
-    id: 8,
+    id: 5,
     title: "PID",
     titleColor: "#003d7a",
     tagline: "Empowering Farmers with Reliable Financial Support.",
@@ -162,7 +166,7 @@ const loanData = [
   },
   {
     id: 7,
-    title: "Loan Against Property",
+    title: "LAP",
     titleColor: "#003d7a",
     tagline: "Unlock Your Property Value. Quick Liquidity Solutions.",
     svgName : 'loanAgainstProperty' ,
@@ -187,8 +191,60 @@ const loanData = [
     bgColor: "#fff",
   },
   {
-    id: 6,
+    id: 9,
     title: "CGTMSE",
+    titleColor: "#003d7a",
+    tagline: "Empowering Farmers with Reliable Financial Support.",
+    svgName : "CGTMSE" , 
+    description:
+      "Dedicated financing solutions for farmers to invest in equipment, seeds, irrigation, and other agricultural needs.",
+    items: [
+      {
+        title: "Low Interest Rates",
+        description: "Special rates designed for farming community."
+      },
+      {
+        title: "Seasonal Flexibility",
+        description: "Payment schedules aligned with harvest seasons."
+      },
+      {
+        title: "Equipment Financing",
+        description: "Direct support for purchasing farming equipment and machinery."
+      }
+    ],
+    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
+    imagePosition: "left",
+    bgColor: "#fff",
+  },
+  {
+    id: 6,
+    title: "MSME",
+    titleColor: "#003d7a",
+    tagline: "Empowering Farmers with Reliable Financial Support.",
+    svgName : "CGTMSE" , 
+    description:
+      "Dedicated financing solutions for farmers to invest in equipment, seeds, irrigation, and other agricultural needs.",
+    items: [
+      {
+        title: "Low Interest Rates",
+        description: "Special rates designed for farming community."
+      },
+      {
+        title: "Seasonal Flexibility",
+        description: "Payment schedules aligned with harvest seasons."
+      },
+      {
+        title: "Equipment Financing",
+        description: "Direct support for purchasing farming equipment and machinery."
+      }
+    ],
+    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
+    imagePosition: "left",
+    bgColor: "#fff",
+  },
+  {
+    id: 10,
+    title: "CC LIMIT",
     titleColor: "#003d7a",
     tagline: "Empowering Farmers with Reliable Financial Support.",
     svgName : "CGTMSE" , 
@@ -215,14 +271,16 @@ const loanData = [
 ];
 
 const tabConfig = [
-  { id: 1, label: "Home Loan", icon: Home },
-  { id: 2, label: "Personal Loan", icon: User },
+  { id: 1, label: "Personal Loan", icon: User },
+  { id: 2, label: "Used Car Loan", icon: Car },
   { id: 3, label: "Professional Loan ", icon: Bike },
   { id: 4, label: "Business Loan", icon: Briefcase },
-  { id: 5, label: "Used Car Loan", icon: Car },
-  { id: 6, label: "CGTMSE", icon: ShieldCheck },
-  { id: 7, label: "Loan Against Property", icon: Building2 },
-  { id: 8, label: "PID", icon: CreditCard },
+  { id: 5, label: "PID", icon: CreditCard },
+  { id: 6, label: "MSME", icon: CreditCard },
+  { id: 7, label: "LAP", icon: Building2 },
+  { id: 8, label: "Home Loan", icon: Home },
+  { id: 9, label: "CGTMSE", icon: ShieldCheck },
+  { id: 10, label: "CC LIMIT", icon: CreditCard },
 ];
 
 function LoanTabs() {
@@ -369,12 +427,12 @@ function LoanTabs() {
         </div>
 
         {/* Image Section - RIGHT */}
-        <div>
+        <div className="mt-14">
             <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
             <img
                 src={activeLoan.image}
                 alt={activeLoan.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
             />
             </div>
         </div>

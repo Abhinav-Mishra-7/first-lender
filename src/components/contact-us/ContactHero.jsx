@@ -1,5 +1,6 @@
 // ContactHero.jsx - Compact Hero (Same style as AboutHero)
 import { Phone, MessageCircle, Clock } from "lucide-react";
+import img1 from "../../../public/yellow-model-career-kit-arrangement.jpg"
 
 const miniStats = [
   { value: "24 Hrs", label: "Response", size: "text-xs" },
@@ -9,14 +10,7 @@ const miniStats = [
 
 const ContactHero = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 py-12 lg:py-14">
-      {/* Subtle top border */}
-      {/* <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-500 opacity-80" /> */}
-      
-      {/* Background glows */}
-      {/* <div className="pointer-events-none absolute -right-24 -top-12 h-48 w-48 rounded-full bg-yellow-300/20 blur-xl" />
-      <div className="pointer-events-none absolute -left-20 bottom-4 h-40 w-40 rounded-full bg-orange-200/20 blur-xl" /> */}
-
+    <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 py-15 lg:pb-22 lg:pt-15">
       <div className="relative max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-[400px] lg:h-[350px]">
           {/* LEFT - Contact Text */}
@@ -48,15 +42,15 @@ const ContactHero = () => {
           </div>
 
           {/* RIGHT - Contact Image */}
-          <div className="relative order-first lg:order-last">
-            <div className="relative mx-auto w-full max-w-sm lg:max-w-md rounded-2xl bg-linear-to-br from-yellow-200 to-yellow-50/90 shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-yellow-100/80 overflow-hidden h-[290px] lg:h-[380px] ">
+          <div className="relative order-last">
+            <div className="relative mx-auto w-full max-w-md lg:max-w-lg rounded-2xl bg-linear-to-br from-yellow-200 to-yellow-50/90 shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-yellow-100/80 overflow-hidden h-[300px] lg:h-[400px] ">
               {/* Inner linear */}
               <div className="absolute inset-0 bg-linear-to-t from-yellow-100/60 via-transparent to-white/40 rounded-2xl" />
               
               {/* Contact Illustration */}
-              <div className="relative z-10 flex items-center justify-center h-60 p-6 lg:pt-22">
+              <div className="relative z-10 flex items-center justify-center h-65 p-6 lg:pt-22">
                 <img
-                  src="public/yellow-model-career-kit-arrangement.jpg"
+                  src={img1}
                   alt="Contact our loan experts at FIRSTLENDER"
                   className="w-full h-60 lg:h-70 object-contain mx-auto drop-shadow-lg"
                 />

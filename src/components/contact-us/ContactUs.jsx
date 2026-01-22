@@ -4,6 +4,7 @@ import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import ContactHero from "./ContactHero";
 import ContactForm from "./ContactForm";
+import img1 from "../../../public/close-up-shot-curly-beautiful-african-american-woman-makes-phone-gesture-says-call-me-back-wears-round-glasses-casual-t-shirt-poses-against-yellow-wall-communication-sign.jpg"
 
 const contactStats = [
   { icon: Users, value: "10K+", label: "Happy Customers", color: "text-blue-500" },
@@ -94,8 +95,7 @@ const ContactUs = () => {
           {/* Image */}
           <div className="order-1 lg:order-2 relative h-96 lg:h-[430px]">
             <img 
-              src="public/close-up-shot-curly-beautiful-african-american-woman-makes-phone-gesture-says-call-me-back-wears-round-glasses-casual-t-shirt-poses-against-yellow-wall-communication-sign.jpg"
-              alt="Contact our loan experts"
+              src={img1}
               className="w-full h-full object-cover rounded-3xl shadow-2xl 
               border-4 border-white/50 will-change-transform"
             />

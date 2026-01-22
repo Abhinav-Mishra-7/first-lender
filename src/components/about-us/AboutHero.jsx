@@ -1,4 +1,5 @@
 import CTAButton from "../shared/Button"
+import rightImage from "../../../public/group-five-professionals.avif"
 
 const AboutHero = () => {
     return (
@@ -45,7 +46,7 @@ const AboutHero = () => {
                 {/* main illustration */}
                 <div className="relative p-6 md:p-8">
                   <img
-                    src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/f816a5b4-31f8-588f-85cd-498a77d6b933/59a8cbc7-95fc-5b34-8d83-53f7729a6786.jpg"
+                    src={rightImage}
                     // src="public/group-five-professionals.avif"
                     alt="FIRSTLENDER team helping customers with loans"
                     className="w-full h-52 md:h-64 object-contain mx-auto drop-shadow-md"
