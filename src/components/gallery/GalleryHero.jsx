@@ -1,4 +1,4 @@
-import galleryHeroImage from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM.jpeg";
+import galleryHeroImage from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM (1).jpeg";
 
 const GalleryHero = () => {
   return (
