@@ -79,7 +79,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:justify-end items-center md:gap-8 lg:gap-15 ml-auto">
+          <nav className="hidden md:flex md:justify-end items-center md:gap-4 lg:gap-15 ml-auto">
             {navLinks.map((link) => (
               <div key={link.href} className="relative font-medium">
                 {link.subItems ? (

@@ -54,7 +54,7 @@ const ContactUs = () => {
       <Navbar />
       <ContactHero />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-10">  
+      <div className="max-w-7xl mx-auto px-3 lg:px-5 mt-10">  
 
         {/* Contact Methods */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-xl p-5 rounded-2xl lg:py-10 mb-24">
@@ -125,7 +125,7 @@ const ContactUs = () => {
 
 
         {/* Contact Form Section */}
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 mb-24 items-start bg-yellow-100/80 shadow-xl p-5 lg:py-10 pb-8 rounded-2xl">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-24 items-start bg-yellow-100/80 shadow-xl p-5 lg:py-10 pb-8 rounded-2xl">
           {/* LEFT - Extended Content */}
           <div className="space-y-8">
             {/* Trust Badge */}
@@ -137,7 +137,7 @@ const ContactUs = () => {
             {/* Main Heading */}
             <div>
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 leading-tight text-shadow-md">
-                Send Your <span className="text-yellow-500 bg-yellow-100 px-4 py-2 rounded-full text-2xl block md:inline">Enquiry Now</span>
+                Send Your <span className="text-yellow-500 px-3 py-2 rounded-full text-xl md:text-2xl lg:text-3xl">Enquiry Now</span>
               </h3>
               <p className="text-sm text-yellow-700 font-semibold tracking-wide uppercase mt-1">Free Consultation • No Obligation</p>
             </div>

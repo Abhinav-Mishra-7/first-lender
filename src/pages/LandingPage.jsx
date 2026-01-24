@@ -27,6 +27,15 @@ import {
 import { Link } from "react-router";
 import LoanTabs from "../components/LoanTabs";
 import Footer from "../components/shared/Footer";
+import HeroSlider from "./LandingPageHero";
+import PartnersSection from "../components/Banks";
+
+// image import
+import img1 from "../../public/23991565_6859168.jpg"
+import img2 from "../../public/10783162_19198812.jpg"
+import img3 from "../../public/423537009_f5ab20dc-dfca-4282-9802-08e9c81bd845.jpg"
+import img4 from "../../public/20827214_6366975.jpg"
+
 
 
 const heroSlides = [
@@ -57,24 +66,49 @@ const stats = [
   { label: "Banks & NBFCs", value: "50+", icon: <Building size={20} /> },
 ];
 
+// const loanTypes = [
+//   {
+//     title: "Business Loan",
+//     image: img1,
+//     shadow: '[#5689e1]'
+//   },
+//   {
+//     title: "Personal Loan",
+//     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
+//   },
+//   {
+//     title: "Professional Loan",
+//     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+//   },
+//   {
+//     title: "Secured Loan",
+//     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
+//   },
+// ];
+
 const loanTypes = [
-  {
-    title: "Business Loan",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=80",
+  { 
+    title: "Business Loan", 
+    image: img1,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
   },
-  {
-    title: "Personal Loan",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
+  { 
+    title: "Personal Loan", 
+    image: img2 , 
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
   },
-  {
-    title: "Professional Loan",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+  { 
+    title: "Professional Loan", 
+    image: img3,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
   },
-  {
-    title: "Secured Loan",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
-  },
+  { 
+    title: "Secured Loan", 
+    image: img4,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
+  }
 ];
+
 
 const whyChoose = [
   {
@@ -156,50 +190,7 @@ function LandingPage() {
     <div className="w-full bg-white">
       <Navbar/>
 
-      {/* Hero Slider */}
-      <section className=" bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 px-10 py-20 mt-10 md:mt-23 lg:mt-15 overflow-hidden w-full"
-      >
-        <div className=" mx-auto relative z-10 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left Content */}
-            <div className="flex flex-col md:gap-3 lg:gap-5 gap-2">
-              <div className="h-42">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-4 relative inline-block pb-6 ">
-                  {heroSlides[activeSlide].title}
-                  <div className="absolute bottom-0 left-0 h-1 w-3/5 bg-linear-to-r from-yellow-400 to-yellow-600" />
-                </h1>
-                <p className="text-sm md:text-md lg:text-base text-gray-700 leading-relaxed mt-5">
-                  {heroSlides[activeSlide].description}
-                </p>
-              </div>
-
-              <CTAButton to="/apply" variant="primary" size="sm">Apply Now</CTAButton>
-            </div>
-
-            {/* Right Image */}
-            <div className="order-first md:order-last">
-              <img
-                src={heroSlides[activeSlide].image}
-                alt="Hero"
-                className="w-full h-40 md:h-45 lg:h-50 object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex gap-3 justify-center mt-8">
-            {heroSlides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === activeSlide ? "bg-yellow-400" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <HeroSlider/>
       
       {/* Loan Tabs */}
       <div className="relative -mt-16 md:-mt-20 z-20 px-8">
@@ -207,11 +198,11 @@ function LandingPage() {
       </div>
 
       {/* Stats Bar */}
-      <section className="px-4 sm:px-5 my-10 md:my-20">
+      <section className="px-4 sm:px-5">
         <div className="max-w-5xl mx-auto bg-white border-3 sm:border-4 border-yellow-400 rounded-2xl sm:rounded-3xl p-4 sm:p-2 md:p-3 shadow-lg shadow-yellow-200/50">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-4 md:gap-5 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-4 md:gap-5 lg:gap-6 wrap-normal">
             {/* First Stat Item - Special */}
-            <div className="sm:col-span-2 md:col-span-2 lg:col-span-2 flex items-center sm:items-start gap-2 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-400">
+            <div className="col-span-2 md:col-span-2 lg:col-span-2 flex items-center sm:items-start gap-2 sm:gap-4 pb-6 sm:pb-0 sm:border-r-2 border-yellow-400">
               <div className="w-14 h-14 sm:w-12 sm:h-12 shrink-0 bg-yellow-400 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
                 <CheckCircle size={26} className="text-black sm:w-8 sm:h-8" />
               </div>
@@ -241,23 +232,26 @@ function LandingPage() {
       </section>
 
       {/* Trending Loans */}
-      <section className="px-5 mb-20 md:mb-20">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-12 pb-2.5 text-shadow-lg">
+      <section className="max-w-7xl mx-auto px-6 lg:px-5 shadow-sm py-5 rounded-2xl">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 shadow-sm py-15 rounded-2xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-black mb-12 pb-3 text-shadow-lg">
             Trending Loans & Offers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10">
             {loanTypes.map((loan, index) => (
               <div
                 key={index}
-                className="bg-white border-0 border-yellow-400 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-yellow-400/50 shadow-yellow-600/50 shadow-lg"
+                className="w-63 border-0 border-yellow-400 rounded-2xl p-5 text-center transition-all duration-300 hover:-translate-y-1 shadow-xl"
+                //  style={{ boxShadow: `${loan.shadow}`,'--shadow-color': loan.shadowColor || '#facc15' }}
               >
                 <img
                   src={loan.image}
                   alt={loan.title}
-                  className="w-full h-40 object-cover rounded-xl mb-4"
+                  className="w-full h-60 object-cover rounded-xl"
+                   style={{ boxShadow: `${loan.shadow}`}}
                 />
-                <h3 className="text-lg font-bold text-black mb-4">{loan.title}</h3>
+               
+                <h3 className="text-lg font-bold text-black pt-2">{loan.title}</h3>
                 <CTAButton to="/apply" variant="ternary" size="xs">Apply Now</CTAButton>
               </div>
             ))}
@@ -265,6 +259,7 @@ function LandingPage() {
         </div>
       </section>
       
+      <PartnersSection/>
 
       {/* Why Choose FIRSTLender */}
       <section className="px-5 py-10 md:py-10 bg-gray-50">
@@ -355,3 +350,4 @@ function LandingPage() {
 }
 
 export default LandingPage;
+

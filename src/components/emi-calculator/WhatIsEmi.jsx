@@ -5,7 +5,7 @@ const WhatIsEmi = () => {
     <section className="relative  mb-20 px-3 h-full w-full">
 
       <div className="relative max-w-6xl mx-auto w-full px-6 lg:px-10 py-16 md:py-12 lg:py-10 mt-5 bg-linear-to-r from-[#f8df8e] via-[#fefce0] to-yellow-100 rounded-xl shadow-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">         
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">         
           {/* LEFT CONTENT */}
           <div className="space-y-6 md:space-y-7 lg:space-y-9">
             <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-black text-[11px] md:text-xs font-semibold tracking-[0.1rem] text-white shadow-lg">
@@ -61,7 +61,7 @@ const WhatIsEmi = () => {
 
           {/* RIGHT IMAGE */}
           <div className="relative">
-            <div className="relative mx-auto w-full max-w-md lg:max-w-lg rounded-3xl bg-linear-to-br from-yellow-200 to-yellow-50/90 shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-yellow-100/80 overflow-hidden h-110">
+            <div className="relative mx-auto w-full max-w-3xl lg:max-w-lg rounded-3xl bg-linear-to-br from-yellow-200 to-yellow-50/90 shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-yellow-100/80 overflow-hidden h-63 md:h-110">
               
               {/* Soft inner linear */}
               <div className="absolute inset-0 bg-linear-to-t from-yellow-100/70 via-transparent to-white/60" />
@@ -71,7 +71,7 @@ const WhatIsEmi = () => {
                 <img
                   src={rightImage}
                   alt="Professional calculating EMI on laptop with loan documents"
-                  className="w-full h-96 md:h-94 lg:h-93 object-cover rounded-2xl shadow-2xl mx-auto drop-shadow-lg"
+                  className="w-full h-50 md:h-96 lg:h-93 object-cover rounded-2xl shadow-2xl mx-auto drop-shadow-lg"
                 />
               </div>
 

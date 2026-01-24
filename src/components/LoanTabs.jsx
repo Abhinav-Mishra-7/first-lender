@@ -2,10 +2,18 @@ import { useState, useRef } from "react";
 import CTAButton from "../components/shared/Button";
 import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard} from "lucide-react";
 import SvgIcon from './SvgIcon';
+import video1 from "../../public/0_Doctor_Vaccine_1080x1080.mp4"
+import PersonalLoanAnimation from "./PersonalAnimation";
 
 // Images import 
 import personal from "../../public/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
 import car from "../../public/saving-money-car-trade-car-cash.jpg"
+import professional from "../../public/latin-confident-professionals-suit-standing-against-isolated-background.jpg"
+import bussiness from "../../public/modern-equipped-computer-lab (1).jpg"
+import pid from "../../public/woman-planting-vegetables-smiling-farm-with-equipments.jpg"
+import lap from "../../public/table-desk-with-credit-approved-request.jpg"
+import home from "../../public/ideas-real-estate-moving-houses-renting-real-estate.jpg"
+import ctgmse from "../../public/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic.jpg"
 
 const loanData = [
   {
@@ -56,7 +64,7 @@ const loanData = [
         description: "Our advisors help you prepare documents, check eligibility, and coordinate with lenders for faster approval."
       }
     ],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
+    image: home,
     imagePosition: "right",
     bgColor: "#fff",
   },
@@ -82,7 +90,7 @@ const loanData = [
         description: "Minimal documents required with hassle-free verification process."
       }
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
+    image: professional,
     imagePosition: "right",
     bgColor: "#fff",
   },
@@ -108,7 +116,7 @@ const loanData = [
         description: "Faster approvals and hassle-free disbursement with expert guidance."
       }
     ],
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&q=80",
+    image: bussiness,
     imagePosition: "left",
     bgColor: "#fff",
   },
@@ -160,7 +168,7 @@ const loanData = [
         description: "Direct support for purchasing farming equipment and machinery."
       }
     ],
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
+    image: pid,
     imagePosition: "left",
     bgColor: "#fff",
   },
@@ -186,7 +194,7 @@ const loanData = [
         description: "Use funds for any purpose - business, education, medical, etc."
       }
     ],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+    image: lap,
     imagePosition: "right",
     bgColor: "#fff",
   },
@@ -212,7 +220,7 @@ const loanData = [
         description: "Direct support for purchasing farming equipment and machinery."
       }
     ],
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
+    image: ctgmse,
     imagePosition: "left",
     bgColor: "#fff",
   },
@@ -321,7 +329,7 @@ function LoanTabs() {
   return (
     <section className="mb-20 shadow-xl">
       {/* TAB NAVIGATION - Horizontal Slider */}
-      <div className=" w-full relative mt-10" style={{ backgroundColor: activeLoan.bgColor }}>
+      <div className=" w-full relative lg:mt-4 md:mt-4 mt-16" style={{ backgroundColor: activeLoan.bgColor }}>
         {/* Scrollable Container */}
         <div
           ref={scrollContainerRef}
@@ -342,10 +350,10 @@ function LoanTabs() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  flex flex-col items-center justify-between gap-2 px-4 md:px-1 py-6.5
+                  flex flex-col items-center justify-between gap-2 px-4 md:px-1 py-5.5
                   transition-all duration-300 cursor-pointer relative
                   border-b-4 border-b-transparent whitespace-nowrap shrink-0
-                  min-w-[140px] md:min-w-[150px] border-r-1 border-r-gray-300
+                  min-w-[140px] md:min-w-[150px] border-r border-r-gray-300
                   ${isActive 
                     ? 'bg-white border-b-yellow-400 -translate-y-2 shadow-lg' 
                     : 'bg-[#fff0be] hover:bg-yellow-100 hover:-translate-y-1 shadow-lg'
@@ -434,6 +442,13 @@ function LoanTabs() {
                 alt={activeLoan.title}
                 className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
             />
+            {/* <video
+              className="w-full h-96 object-cover rounded-xl shadow-2xl"
+              poster="/thumbnail.jpg"
+            >
+              <source src={video1} type="video/mp4" />
+            </video> */}
+            {/* <PersonalLoanAnimation/> */}
             </div>
         </div>
 

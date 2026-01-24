@@ -3,11 +3,7 @@ import rightImage from "../../../public/group-five-professionals.avif"
 
 const AboutHero = () => {
     return (
-      <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 "> 
-        {/* background decorative circles */}
-        {/* <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-yellow-300/30 blur-3xl" /> */}
-        {/* <div className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-orange-200/30 blur-3xl" /> */}
-  
+      <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100"> 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-16 md:py-12 lg:py-12 mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* LEFT CONTENT */}
@@ -44,26 +40,26 @@ const AboutHero = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-yellow-100/70 via-transparent to-white/60" />
   
                 {/* main illustration */}
-                <div className="relative p-6 md:p-8">
+                <div className="relative p-5 md:p-5 lg:p-8">
                   <img
                     src={rightImage}
                     // src="public/group-five-professionals.avif"
                     alt="FIRSTLENDER team helping customers with loans"
-                    className="w-full h-52 md:h-64 object-contain mx-auto drop-shadow-md"
+                    className="w-full h-52 md:h-50 lg:h-60 object-contain mx-auto drop-shadow-md"
                   />
   
                   {/* mini stats strip at bottom */}
                   <div className="mt-6 grid grid-cols-3 gap-3 text-center text-[11px] md:text-xs">
                     <div className="rounded-2xl bg-yellow-50 border border-yellow-100 py-3">
-                      <p className="text-base md:text-lg font-bold text-gray-900">20+</p>
+                      <p className="text-sm md:text-base lg:text-lg font-bold text-gray-900">20+</p>
                       <p className="text-gray-500">Years Experience</p>
                     </div>
                     <div className="rounded-2xl bg-yellow-50 border border-yellow-100 py-3">
-                      <p className="text-base md:text-lg font-bold text-gray-900">50+</p>
+                      <p className="text-sm md:text-base lg:text-lg font-bold text-gray-900">50+</p>
                       <p className="text-gray-500">Banks & NBFCs</p>
                     </div>
                     <div className="rounded-2xl bg-yellow-50 border border-yellow-100 py-3">
-                      <p className="text-base md:text-lg font-bold text-gray-900">5K+</p>
+                      <p className="text-sm md:text-base lg:text-lg font-bold text-gray-900">5K+</p>
                       <p className="text-gray-500">Happy Clients</p>
                     </div>
                   </div>
@@ -77,6 +73,6 @@ const AboutHero = () => {
         </div>
       </section>
     );
-  };
+};
   
-  export default AboutHero;  
+export default AboutHero;  

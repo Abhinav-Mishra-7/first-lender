@@ -44,12 +44,12 @@ const ContactForm = () => {
     <form
       noValidate
       onSubmit={handleSubmit}
-      className="space-y-8.5 bg-white/90 backdrop-blur-sm p-8 pb-10 rounded-3xl 
+      className="space-y-8.5 bg-white/90 backdrop-blur-sm p-3 md:p-8 lg:p-8 pb-10 rounded-3xl 
       border border-yellow-100 shadow-2xl hover:shadow-3xl transition-all duration-300 text-gray-700"
     >
       {/* Name & Phone */}
         <div className="grid md:grid-cols-2 gap-5">
-            <div className="relative">
+            <div className="relative p-3">
                 <input
                 name="fullName"
                 type="text"
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 )}
             </div>
 
-            <div className="relative">
+            <div className="relative p-3">
                 <input
                 name="phone"
                 type="tel"
@@ -88,7 +88,8 @@ const ContactForm = () => {
 
 
       {/* Email */}
-      <input
+      <div className="p-3">
+        <input
         name="email"
         type="email"
         placeholder="Email (Optional)"
@@ -96,11 +97,12 @@ const ContactForm = () => {
         focus:shadow-[0_5px_10px_rgba(250,224,51,0.55)] focus:ring-0 outline-none transition-all duration-300
         text-sm placeholder-gray-400 font-medium"
       />
+      </div>
 
 
       {/* Loan Amount & Purpose */}
       <div className="grid md:grid-cols-2 gap-5">
-        <div className="relative">
+        <div className="relative p-3">
             <select
             name="loanAmount"
             className="w-full p-4 rounded-2xl 
@@ -123,7 +125,7 @@ const ContactForm = () => {
             )}
         </div>
 
-        <div className="relative">
+        <div className="relative p-3">
             <select
             name="loanPurpose"
             className="w-full p-4 rounded-2xl 
@@ -149,7 +151,8 @@ const ContactForm = () => {
 
 
       {/* Message */}
-      <textarea
+      <div className="p-3">
+        <textarea
         name="message"
         rows="3"
         placeholder="Tell us about your requirements (Optional)"
@@ -161,6 +164,7 @@ const ContactForm = () => {
         transition-all duration-300
         text-base resize-none placeholder-gray-400 font-medium"
         />
+      </div>
 
 
       {/* Submit */}
