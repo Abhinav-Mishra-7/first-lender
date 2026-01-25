@@ -2,8 +2,6 @@ import { useState, useRef } from "react";
 import CTAButton from "../components/shared/Button";
 import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard} from "lucide-react";
 import SvgIcon from './SvgIcon';
-import video1 from "../../public/0_Doctor_Vaccine_1080x1080.mp4"
-import PersonalLoanAnimation from "./PersonalAnimation";
 
 // Images import 
 import personal from "../../public/account-assets-audit-bank-bookkeeping-finance-concept.jpg"

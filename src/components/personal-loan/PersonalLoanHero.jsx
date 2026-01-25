@@ -1,11 +1,8 @@
-// PersonalLoanHero.jsx - Yellow & White theme (exact MyMudra replica)
-import CTAButton from "../components/shared/Button";
-import { Phone, Shield, Clock } from "lucide-react";
-import flag from "../../public/flag.webp"
+import flag from "../../../public/flag.webp"
 
 const HeroPersonalLoan = () => {
   return (
-    <section className="w-full bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-25.5 mb-20">
+    <section className="w-full bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-22 md:mt-25.5 mb-0">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-8 md:py-7 lg:py-7 mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -43,7 +40,7 @@ const HeroPersonalLoan = () => {
               </h3>
 
               {/* INPUT */}
-              <div className="mt-1.5 flex text-sm items-center gap-2 rounded-lg px-12 py-1">
+              <div className="mt-1.5 flex text-sm items-center gap-2 rounded-lg lg:px-12 lg:py-1 md:px-5 px-10">
                 <img src={flag} alt="indian flag" className="h-4"/>
                 <span className="text-slate-600 font-medium">+91</span>
                 <input
@@ -54,16 +51,12 @@ const HeroPersonalLoan = () => {
               </div>
 
               {/* BUTTON */}
-              <div className="w-full flex items-center justify-center pl-5"> 
-                {/* <CTAButton size="lg"> Continue </CTAButton>  */}
+              <div className="w-full flex items-center justify-center lg:pl-5 md:pl-4 pl-4"> 
                 <button className="mt-4 w-65 text-sm bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-full font-medium transition cursor-pointer">
                     Continue
                 </button>
               </div>
-              {/* <button className="mt-6 w-20 bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-full font-semibold transition">
-                Continue
-              </button> */}
-
+          
               {/* CONSENT */}
               <div className="flex justify-center items-center">
                 <input type="checkbox" className="bg-black relative bottom-0.5 cursor-pointer"/>

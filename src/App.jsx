@@ -4,7 +4,7 @@ import AboutUs from './components/about-us/AboutUs';
 import ContactUs from './components/contact-us/ContactUs' ;
 import EmiCalculator from './components/emi-calculator/EmiCalculator';
 import Gallery from './components/gallery/Gallery';
-import LoanComponent from './components/LoanComponent';
+import LoanComponent from './components/personal-loan/LoanComponent';
 
 function App() {
   return (
