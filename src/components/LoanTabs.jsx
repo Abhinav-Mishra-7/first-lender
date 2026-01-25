@@ -329,7 +329,7 @@ function LoanTabs() {
   return (
     <section className="mb-20 shadow-xl">
       {/* TAB NAVIGATION - Horizontal Slider */}
-      <div className=" w-full relative lg:mt-4 md:mt-4 mt-16" style={{ backgroundColor: activeLoan.bgColor }}>
+      <div className=" w-full relative lg:mt-3.25 md:mt-4 mt-16" style={{ backgroundColor: activeLoan.bgColor }}>
         {/* Scrollable Container */}
         <div
           ref={scrollContainerRef}

@@ -4,6 +4,8 @@ import heroSlide1 from "../../public/9650001_7563.jpg";
 import heroSlide2 from "../../public/58596573_2306.i402.021.S.m004.c13.Credit score flat composition.jpg";
 import heroSlide3 from "../../public/arranged-mortgage-approved-paper-desk.jpg";
 import heroSlide4 from "../../public/23991565_6859168.jpg"
+import heroSlide5 from "../../public/20289191_6247661.jpg"
+import heroSlide6 from "../../public/12085315_20944141.jpg"
 
 const HeroSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -41,9 +43,18 @@ const HeroSlider = () => {
       subtitle: "Property Assessment • Infrastructure",
       description: "Fund business expansion through PID bonds. Property assessments repay infrastructure investments.",
       features: "✅ Tax-Linked Funding • ✅ No Personal Guarantee • ✅ Economic Development",
-      image: heroSlide3, // Property/business district image
+      image: heroSlide6, // Property/business district image
       stats: ["2:1 Ratio", "Tax-Based", "Infrastructure"]
+    },
+    {
+      title: "Professional Loan", 
+      subtitle: "Doctors • CAs • No Collateral",
+      description: "Special loans for medical professionals & chartered accountants. Up to ₹1 Cr with minimal documentation.",
+      features: "✅ High Loan Amount • ✅ Low Interest • ✅ No Collateral",
+      image: heroSlide5, // Doctor/CA professional image
+      stats: ["₹1Cr", "12% Rate", "No Security"]
     }
+
 
   ];
 
@@ -58,7 +69,7 @@ const HeroSlider = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 
-    py-7 md:py-8 lg:py-9 lg:mt-26 md:mt-24 mt-22 lg:h-123">
+    py-7 md:py-8 lg:py-8 lg:mt-26 md:mt-24 mt-22 lg:h-123">
 
       <div className="relative max-w-7xl mx-auto px-4 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -117,7 +128,7 @@ const HeroSlider = () => {
               <img
                 src={slide.image}
                 alt="FIRSTLENDER team helping customers with loans"
-                className="w-full h-75 md:h-85 object-cover mx-auto drop-shadow-md"
+                className="w-full h-75 md:h-80 object-cover mx-auto drop-shadow-md"
               />
             
               {/* mini stats strip at bottom */}
@@ -144,7 +155,7 @@ const HeroSlider = () => {
         </div>
 
         {/* ================= SLIDER DOTS ================= */}
-        <div className="flex justify-center gap-2 mt-3.5">
+        <div className="flex justify-center gap-2 mt-6">
           {heroSlides.map((_, i) => (
             <button
               key={i}
