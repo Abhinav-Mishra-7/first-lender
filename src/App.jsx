@@ -5,6 +5,7 @@ import ContactUs from './components/contact-us/ContactUs' ;
 import EmiCalculator from './components/emi-calculator/EmiCalculator';
 import Gallery from './components/gallery/Gallery';
 import LoanComponent from './components/personal-loan/LoanComponent';
+import ProLoanComponent from './components/professional-loan/proLoanComponent';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/resources/emi-calculator" element={<EmiCalculator />} />
         <Route path="/resources/gallery" element={<Gallery />} />
         <Route path="/loans/personal" element={<LoanComponent />}></Route>
+        <Route path="/loans/professional" element={<ProLoanComponent />}></Route>
       </Routes>
   );
 }
