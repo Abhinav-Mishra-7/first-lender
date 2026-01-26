@@ -8,16 +8,51 @@ const navLinks = [
     href: "/loans",
     label: "Loans",
     subItems: [
-      {label: "Personal Loan",href: "/loans/personal"},
-      {label: "Used Car Loan",href: "/loans/used-car"},
-      {label: "Professional Loan",href: "/loans/professional"},
-      {label: "Business Loan", href: "/loans/business"},
-      {label: "PID", href: "/loans/pid"},
-      {label: "MSME", href: "/loans/msme"},
-      {label: "Loan Against Property", href: "/loans/property"},
-      {label: "Home Loan", href: "/loans/home"},
-      {label: "CGTMSE", href: "/loans/cgtmse"},
-      {label: "CC LIMIT", href: "/loans/cc-limit"},
+      {label: "Personal Loan",href: "/loans/personal" , 
+        submenuItems: [
+          { label: "Personal Loan", href: "/loans/personal" },
+          { label: "Marriage Loan", href: "/loans/marriage" },
+          { label: "Travel Loan", href: "/loans/travel" },
+          { label: "Personal Overdraft", href: "/loans/personal-overdraft" },
+          { label: "Advance Salary", href: "/loans/advance-salary" },
+          { label: "Medical Loan", href: "/loans/medical" },
+          { label: "Balance Transfer (Other Bank)", href: "/loans/balance-transfer" },
+        ],
+      },
+      // {label: "Used Car Loan",href: "/loans/used-car"},
+      {label: "Professional Loan",href: "/loans/professional" , 
+        submenuItems: [
+          { label: "CA Loan", href: "/loans/professional/ca" },
+          { label: "CS Loan", href: "/loans/professional/cs" },
+          { label: "Doctor Loan", href: "/loans/professional/doctor" },
+        ]
+      },
+      {label: "Business Loan", href: "/loans/business", 
+        submenuItems: [
+          { label: "Business Loan", href: "/loans/business" },
+          { label: "Business Overdraft", href: "/loans/business-overdraft" },
+          { label: "Working Capital", href: "/loans/working-capital" },
+          { label: "MSME Term Loan", href: "/loans/msme-term-loan" },
+          { label: "Business Expansion Loan", href: "/loans/business-expansion" },
+          { label: "Purchase Invoice Discounting (PID)", href: "/loans/pid" },
+          { label: "CGTMSE", href: "/loans/cgtmse" },
+        ]
+      },
+      {label: "Secured Loan", href: "/loans/secured" ,
+        submenuItems: [
+          { label: "Home Loan", href: "/loans/home" },
+          { label: "Loan Against Property", href: "/loans/property" },
+          { label: "Car Loan", href: "/loans/car" },
+          { label: "Used Car Loan", href: "/loans/used-car" },
+        ]
+      },
+      // {label: "PID", href: "/loans/pid"},
+      // {label: "MSME", href: "/loans/msme"},
+      // {label: "Loan Against Property", href: "/loans/property"},
+      // {label: "Home Loan", href: "/loans/home"},
+      // {label: "CGTMSE", href: "/loans/cgtmse"},
+      // {label: "CC LIMIT", href: "/loans/cc-limit"},
+
     ],
   },
   { href: "/emi-calculator", 
@@ -126,7 +161,7 @@ export default function Navbar() {
                                 </button>
 
                                 {activeSubmenu === subItem.label && (
-                                  <div className="absolute left-full top-0 ml-2 min-w-56 bg-white border border-gray-300 rounded-xl shadow-2xl p-2 z-50">
+                                  <div className="absolute left-full -top-4 ml-2 min-w-56 bg-white border border-gray-300 rounded-xl shadow-2xl p-2 z-50">
                                     {subItem.submenuItems.map((submenuItem) => (
                                       <Link
                                         key={submenuItem.href}
