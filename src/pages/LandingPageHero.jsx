@@ -89,13 +89,13 @@ const HeroSlider = () => {
               </p>
             {/* Heading */}
             <h1 className="text-2xl md:text-3xl lg:text-4xl 
-                           font-extrabold tracking-tight 
+                           font-semibold tracking-tight 
                            text-black leading-tight transition-all duration-500">
               {slide.title}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-md md:text-base font-bold text-yellow-600">
+            <p className="text-md md:text-base font-semibold text-yellow-600">
               {slide.subtitle}
             </p>
 
