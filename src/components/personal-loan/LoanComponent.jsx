@@ -14,11 +14,11 @@ function LoanComponent() {
         <Navbar/>
         <HeroSection/>
         <LoanExplanation/>
-        <LoanEligibility/>
+        <LoanEligibility loanType='Personal Loan'/>
         <LoanDocuments/>
         <LoanRepaymentOptions/>
         <LoanComparisonTable/>
-        <WhyChooseFL/>
+        <WhyChooseFL loanType='Personal Loan' />
         <Footer/>
     </div>
   )

@@ -1,6 +1,6 @@
 import img1 from "../../../public/4530235_19222.jpg";
 
-function WhyChooseFL() {
+function WhyChooseFL({loanType}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -11,11 +11,11 @@ function WhyChooseFL() {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
-            Top Reasons to Choose FIRSTLENDER for Your Instant Personal Loan
+            Top Reasons to Choose FIRSTLENDER for Your {loanType}
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-            Personal loans are an easy and quick fix for your temporary fund
+            {loanType} are an easy and quick fix for your temporary fund
             requirements. Yet, the decision should be made with complete
             consideration. If you are exploring the options, cease the hunt now.
             At <span className="font-medium">FIRSTLENDER</span>,

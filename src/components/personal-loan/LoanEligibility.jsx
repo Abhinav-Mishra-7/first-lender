@@ -1,6 +1,6 @@
 import img1 from "../../../public/4530235_19222.jpg"
 
-function LoanEligibility() {
+function LoanEligibility({loanType}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -11,7 +11,7 @@ function LoanEligibility() {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
-            Eligibility Criteria for a Quick Personal Loan
+            Eligibility Criteria for a Quick {loanType}
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">

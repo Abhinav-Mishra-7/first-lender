@@ -5,7 +5,7 @@ function LoanComparisonTable() {
           p-6 md:p-8 transition-all duration-300">
         {/* HEADER */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-900">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Compare Online Personal Loans from Our Top Lenders
           </h2>
 

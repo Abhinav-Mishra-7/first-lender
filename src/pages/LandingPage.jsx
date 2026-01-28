@@ -193,7 +193,7 @@ function LandingPage() {
       <HeroSlider/>
       
       {/* Loan Tabs */}
-      <div className="relative -mt-16 md:-mt-20 z-20 px-8">
+      <div className="relative -mt-16 md:-mt-19 z-20 px-8">
         <LoanTabs />
       </div>
 
