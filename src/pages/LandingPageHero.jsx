@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CTAButton from "../components/shared/Button";
-import heroSlide1 from "../../public/9650001_7563.jpg";
-import heroSlide2 from "../../public/58596573_2306.i402.021.S.m004.c13.Credit score flat composition.jpg";
+import heroSlide1 from "../../public/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433 (1).png";
+import heroSlide2 from "../../public/58596573_2306.i402.021.S.m004.c13.Credit score flat composition (1).png";
 import heroSlide3 from "../../public/arranged-mortgage-approved-paper-desk.jpg";
-import heroSlide4 from "../../public/23991565_6859168.jpg"
-import heroSlide5 from "../../public/20289191_6247661.jpg"
-import heroSlide6 from "../../public/12085315_20944141.jpg"
-import img1 from "../../public/20289191_6247661.png"
-import img2 from "../../public/freepik__cartoon-man-in-suit-explaining-professional-loan-y__83008.png"
-import img3 from "../../public/freepik__in-the-image-a-cartoon-should-be-present-with-a-go__83009.png"
-
-
+import heroSlide4 from "../../public/5615656_5615656.png"
+import heroSlide5 from "../../public/20289191_6247661.png"
+import heroSlide6 from "../../public/20289191_6247661.png"
 
 
 
@@ -25,7 +20,8 @@ const HeroSlider = () => {
         "Get approved in minutes with minimal paperwork. Loans for salaried individuals and MSMEs from trusted lenders.",
       features: "✅ Instant Eligibility • ✅ Paperless • ✅ Fast Disbursal",
       image: heroSlide2,
-      stats: ["₹20L+", "2 Min", "99%"]
+      stats: ["₹20L+", "2 Min", "99%"],
+      height: 110
     },
     {
       title: "MSME Business Loans",
@@ -79,7 +75,7 @@ const HeroSlider = () => {
     py-7 md:py-8 lg:py-8 lg:mt-10 md:mt-24 mt-22 lg:h-138">
 
       <div className="relative max-w-7xl mx-auto px-4 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2.5fr] gap-10 lg:gap-16 items-center">
 
           {/* ================= LEFT CONTENT ================= */}
           <div className="space-y-7 md:space-y-8 lg:space-y-8">
@@ -124,9 +120,9 @@ const HeroSlider = () => {
           </div>
 
           {/* ================= RIGHT IMAGE CARD ================= */}
-          <div className="relative ">
+          <div className="relative ml-12">
           
-          <img src={img1} alt="" className="w-full h-115 object-cover" />
+          <img src={slide.image} alt="" className="w-full h-115 object-cover" />
             
           {/* subtle shadow oval under card */}
           <div className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 h-8 w-40 md:w-56     rounded-full bg-black/10 blur-xl" />
