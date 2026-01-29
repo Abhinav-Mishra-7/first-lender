@@ -4,8 +4,8 @@ import Footer from "../shared/Footer";
 import business from "../../components/business-loan/business_loans" ;
 import LoanExplanation from "../LoanExplanation";
 import BusinessLoanProcess from "../../components/business-loan/BusinessLoanProcess";
-import LoanEligibility from "../personal-loan/LoanEligibility";
-import LoanDocuments from "../personal-loan/LoanDocuments";
+import BusinessLoanEligibility from "./BusinessLoanEligibility";
+import BusinessLoanDocuments from "./BusinessLoanDocuments";
 import WhyChooseFL from "../personal-loan/WhyChooseFL";
 
 function BusinessLoanMain() {
@@ -14,10 +14,10 @@ function BusinessLoanMain() {
         <Navbar/>
         <HeroBusinessLoan/>
         <LoanExplanation heading={business[0].heading} p1={business[0].p1} p2={business[0].p2} image={business[0].image} />
-        <LoanEligibility loanType="business" />
-        <LoanDocuments loanType="business" />
+        <BusinessLoanEligibility/>
+        <BusinessLoanDocuments/>
         <BusinessLoanProcess/>
-        <WhyChooseFL/>
+        <WhyChooseFL loanType="Business Loan" />
         <Footer/>
     </div>
   )

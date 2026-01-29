@@ -2,7 +2,7 @@ import flag from "../../../public/flag.webp"
 
 const HeroBusinessLoan = () => {
   return (
-    <section className="w-full bg-gradient-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-22 md:mt-25.5 mb-0">
+    <section className="w-full bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-22 md:mt-25.5 mb-0">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-8 md:py-7 lg:py-7 mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -18,15 +18,15 @@ const HeroBusinessLoan = () => {
             </h1>
 
             <p className="mt-2 text-slate-700 text-base md:text-sm max-w-xl">
-              Fuel your business growth with flexible working capital loans. Get instant funding up to <span className="font-bold text-yellow-600">₹50 Lakh</span> with minimal documentation and fast disbursal at competitive rates with <span className="text-yellow-600 font-semibold">FIRSTLENDER</span>.
+              Fuel your business growth with flexible working capital loans. Get instant funding up to <span className="font-semibold text-slate-600">₹1 Cr</span> with minimal documentation and fast disbursal at competitive rates.
             </p>
 
             {/* BUSINESS LOAN FEATURES */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Feature text="MSME & Traders Welcome" />
+              <Feature text="Hassle Free Process" />
               <Feature text="No Collateral Required" />
               <Feature text="Disbursal in 48 Hours" />
-              <Feature text="Rates from 11.49% p.a." />
+              <Feature text="Rates starting from 11.49%* p.a." />
             </div>
           </div>
 

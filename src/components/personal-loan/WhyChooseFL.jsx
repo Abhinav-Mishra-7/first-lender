@@ -29,8 +29,7 @@ function WhyChooseFL({loanType}) {
 
           <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-disc pl-5">
             <li>
-              Loan comparison option to find the lowest interest rate from among
-              over 8 partner banks and NBFCs
+              Loan comparison option to find the lowest interest rate from multiple options of Banks/NBFCs available in the market.
             </li>
             <li>
               Secure and easily accessible processes and transactions
