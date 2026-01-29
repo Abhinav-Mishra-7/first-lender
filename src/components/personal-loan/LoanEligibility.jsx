@@ -11,11 +11,11 @@ function LoanEligibility({loanType}) {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
-            Eligibility Criteria for a Quick {loanType}
+            Eligibility Criteria for a Quick <span className="capitalize">{loanType}</span>  Loan
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-            The eligibility criteria for personal loans are minimal, with the
+            The eligibility criteria for {loanType} loans are minimal, with the
             requirement to meet the following:
           </p>
 
@@ -44,7 +44,7 @@ function LoanEligibility({loanType}) {
 
           <p className="text-slate-500 text-xs mt-4">
             <span className="font-semibold">Note:</span> The minimum salary
-            requirement for a personal loan may vary depending on the applicant’s
+            requirement for a {loanType} loan may vary depending on the applicant’s
             profile.
           </p>
         </div>

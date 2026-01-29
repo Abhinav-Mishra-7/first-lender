@@ -7,6 +7,7 @@ import Gallery from './components/gallery/Gallery';
 import LoanComponent from './components/personal-loan/LoanComponent';
 import ProLoanComponent from './components/professional-loan/proLoanComponent';
 import MarraigeLoan from './components/personal-loan/marraige-loan/MarraigeLoan';
+import BusinessLoanMain from './components/business-loan/BusinessLoanMain';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Route path="/loans/personal/personal" element={<LoanComponent />}></Route>
         <Route path="/loans/personal/marriage" element={<MarraigeLoan />}></Route>
         <Route path="/loans/professional" element={<ProLoanComponent />}></Route>
+
+        {/* Business Loan */}
+        <Route path="/loans/business" element={<BusinessLoanMain />}></Route>
       </Routes>
   );
 }

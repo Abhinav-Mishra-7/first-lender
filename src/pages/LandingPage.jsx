@@ -66,46 +66,26 @@ const stats = [
   { label: "Banks & NBFCs", value: "50+", icon: <Building size={20} /> },
 ];
 
-// const loanTypes = [
-//   {
-//     title: "Business Loan",
-//     image: img1,
-//     shadow: '[#5689e1]'
-//   },
-//   {
-//     title: "Personal Loan",
-//     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
-//   },
-//   {
-//     title: "Professional Loan",
-//     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
-//   },
-//   {
-//     title: "Secured Loan",
-//     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80",
-//   },
-// ];
-
 const loanTypes = [
   { 
     title: "Business Loan", 
     image: img1,
-    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 80px rgba(59, 130, 246, 0.2)" ,
   },
   { 
     title: "Personal Loan", 
     image: img2 , 
-    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 80px rgba(59, 130, 246, 0.2)" ,
   },
   { 
     title: "Professional Loan", 
     image: img3,
-    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 80px rgba(59, 130, 246, 0.2)" ,
   },
   { 
     title: "Secured Loan", 
     image: img4,
-    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 100px rgba(59, 130, 246, 0.2)" ,
+    shadow: "0 15px 20px rgba(59, 130, 246, 0.3), 0 0px 80px rgba(59, 130, 246, 0.2)" ,
   }
 ];
 
