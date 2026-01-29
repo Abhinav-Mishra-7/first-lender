@@ -8,7 +8,7 @@ function LoanExplanation({heading , p1 , p2 , image}) {
                 grid grid-cols-1 lg:grid-cols-[3.5fr_2fr] gap-10 items-center hover:shadow-xl hover:shadow-blue-200 transition-all duration-400"
             >
             <div>
-            <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
+            <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
                 {heading}
             </h2>
 

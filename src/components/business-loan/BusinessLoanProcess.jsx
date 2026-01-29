@@ -4,7 +4,7 @@ function BusinessLoanProcess() {
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-200 p-6 md:p-8 transition-all duration-300">
         
         {/* TITLE */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
           What We Analyze Before Processing Your Loan
         </h2>
 

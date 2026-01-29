@@ -18,7 +18,7 @@ const HeroBusinessLoan = () => {
             </h1>
 
             <p className="mt-2 text-slate-700 text-base md:text-sm max-w-xl">
-              Fuel your business growth with flexible working capital loans. Get instant funding up to <span className="font-semibold text-slate-600">₹1 Cr</span> with minimal documentation and fast disbursal at competitive rates.
+              Fuel your business growth with flexible working capital loans. Get instant funding up to <span className="font-bold text-yellow-600">₹1 Cr</span> with minimal documentation and fast disbursal at competitive rates.
             </p>
 
             {/* BUSINESS LOAN FEATURES */}

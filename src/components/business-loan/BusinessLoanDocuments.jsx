@@ -10,7 +10,7 @@ function BusinessLoanDocuments({loanType = "Business"}) {
       >
         {/* LEFT CONTENT - Business Loan Specific */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
             Documents for Fast Approval <span className="capitalize">{loanType}</span> Loan
           </h2>
 

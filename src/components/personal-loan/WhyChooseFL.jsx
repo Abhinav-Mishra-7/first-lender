@@ -10,15 +10,15 @@ function WhyChooseFL({loanType}) {
       >
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
-            Top Reasons to Choose FIRSTLENDER for Your {loanType}
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
+            Top Reasons to Choose <span className="text-yellow-500">FIRSTLENDER</span> for Your {loanType}
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
             {loanType} are an easy and quick fix for your temporary fund
             requirements. Yet, the decision should be made with complete
             consideration. If you are exploring the options, cease the hunt now.
-            At <span className="font-medium">FIRSTLENDER</span>,
+            At <span className="font-semibold text-yellow-600">FIRSTLENDER</span>,
             we are committed to offering a trusted, reliable, and authentic
             experience along with the best personal loan solutions in India.
           </p>
