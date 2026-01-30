@@ -19,7 +19,7 @@ function CALoanComponent() {
         <CADocuments/>
         <LoanRepaymentOptions/>
         {/* <LoanComparisonTable/> */}
-        <WhyChooseFL/>
+        <WhyChooseFL loanType="CA Loan" />
         <Footer/>
     </div>
   )
