@@ -1,4 +1,4 @@
-import flag from "../../../public/flag.webp";
+import flag from "../../../../public/flag.webp";
 
 const HeroProfessionalLoan = () => {
   return (
@@ -15,25 +15,19 @@ const HeroProfessionalLoan = () => {
             </p>
 
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 leading-tight">
-              Professional Loan
+              CA Loan
             </h1>
 
             <p className="mt-2 text-slate-700 text-base md:text-sm max-w-xl">
-              A Professional Loan is designed to support the financial needs of
-              self-employed professionals such as doctors, chartered
-              accountants, architects, engineers, and consultants. It helps you
-              manage business expansion, equipment purchase, clinic setup, or
-              working capital needs with ease. Get access to quick funding at
-              competitive interest rates with{" "}
-              <span className="text-yellow-600 font-semibold">FIRSTLENDER</span>.
+              Running a CA practice takes more than expertise—it needs the right financial support. A professional loan for chartered accountants offers quick funds to upgrade your office, buy software, hire staff, and manage daily expenses.
             </p>
 
             {/* FEATURES */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Feature text="For Self-Employed Professionals" />
+              <Feature text="CA-Specific Solutions" />
               <Feature text="No Collateral Required" />
               <Feature text="Quick Approval & Disbursal" />
-              <Feature text="Attractive Interest Rates" />
+              <Feature text="Affordable Interest Rates" />
             </div>
           </div>
 
@@ -43,7 +37,7 @@ const HeroProfessionalLoan = () => {
 
               <h3 className="text-base font-medium text-slate-900 text-center">
                 Check Low Interest
-                <span className="text-yellow-500"> Professional Loan </span>
+                <span className="text-yellow-500"> CA Loan </span>
                 Offers
               </h3>
 
@@ -60,7 +54,7 @@ const HeroProfessionalLoan = () => {
 
               {/* BUTTON */}
               <div className="w-full flex items-center justify-center lg:pl-5 md:pl-4 pl-4">
-                <button className="mt-4 w-65 text-sm bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-full font-medium transition cursor-pointer">
+                <button className="mt-4 w-65 text-sm bg-yellow-400 hover:bg-yellow-500 text-white py-2 rounded-full font-medium transition cursor-pointer">
                   Continue
                 </button>
               </div>
