@@ -1,6 +1,6 @@
 
 
-function LoanExplanation({heading , p1 , p2 , p3 , image}) {
+function LoanExplanation({heading , p1 , p2 , p3 , p4 , p5 , image}) {
   return (
         <div class="w-full bg-slate-50 py-10 px-3">
             <div
@@ -20,8 +20,16 @@ function LoanExplanation({heading , p1 , p2 , p3 , image}) {
                 {p2}
             </p>}
 
-            {p3 && <p class="text-slate-600 leading-relaxed text-sm">
+            {p3 && <p class="text-slate-600 leading-relaxed mb-4 text-sm">
                 {p3}
+            </p>}
+
+            {p4 && <p class="text-slate-600 leading-relaxed mb-4 text-sm">
+                {p4}
+            </p>}
+
+            {p5 && <p class="text-slate-600 leading-relaxed mb-4 text-sm">
+                {p5}
             </p>}
             </div>
 

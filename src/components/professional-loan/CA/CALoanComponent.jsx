@@ -4,7 +4,7 @@ import Footer from "../../shared/Footer"
 import CAEligibility from "./CAEligibility";
 import CADocuments from "./CADocuments";
 import LoanRepaymentOptions from "../../personal-loan/LoanRepaymentOptions";
-import LoanComparisonTable from "../../personal-loan/LoanComparisonTable";
+// import LoanComparisonTable from "../../personal-loan/LoanComparisonTable";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import professional from "../professional-loan";
 import LoanExplanation from "../../LoanExplanation";

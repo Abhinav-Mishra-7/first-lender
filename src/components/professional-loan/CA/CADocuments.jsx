@@ -1,6 +1,6 @@
 import img1 from "../../../../public/11879344_Checklist.jpg";
 
-function CADocuments({loanType = "CA"}) {
+function CADocuments({loanType}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -26,7 +26,7 @@ function CADocuments({loanType = "CA"}) {
               <span className="font-medium text-slate-800">KYC Documents:</span> PAN card, Aadhar card, Voter ID, Driving License, Passport
             </li>
             <li>
-              <span className="font-medium text-slate-800">CA Certification:</span> Certificate of Membership or Certificate of Practice issued by ICAI and atleast 3 years old
+              <span className="font-medium text-slate-800">{loanType} Certification:</span> Certificate of Membership or Certificate of Practice issued by I{loanType}I and atleast 3 years old
             </li>
             <li>
               <span className="font-medium text-slate-800">Financials:</span> Balance sheet for last 2 years with Profit & Loss statement
@@ -44,7 +44,7 @@ function CADocuments({loanType = "CA"}) {
         <div className="flex justify-center">
           <img
             src={img1}
-            alt="CA Loan Documents"
+            alt={loanType+"Loan Documents"}
             className="w-full max-w-md rounded-xl object-cover"
           />
         </div>

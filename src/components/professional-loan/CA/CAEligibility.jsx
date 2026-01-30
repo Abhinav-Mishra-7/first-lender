@@ -1,6 +1,6 @@
 import img1 from "../../../../public/4530235_19222.jpg"
 
-function CAEligibility({loanType = "CA"}) {
+function CAEligibility({loanType}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -15,7 +15,7 @@ function CAEligibility({loanType = "CA"}) {
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-            The eligibility criteria for CA loans are specifically designed for chartered accountants, with the following requirements:
+            The eligibility criteria for {loanType} loans are specifically designed for chartered accountants, with the following requirements:
           </p>
 
           <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-disc pl-5">
@@ -29,11 +29,11 @@ function CAEligibility({loanType = "CA"}) {
                 <li>Partnership Firms</li>
                 <li>Limited Liability Partnerships</li>
                 <li>Private Limited Companies</li>
-                <li>CA firm registered with ICAI</li>
+                <li>{loanType} firm registered with I{loanType}I</li>
               </ul>
             </li>
             <li>
-              <span className="font-medium text-slate-800">CA Certification:</span> CAs having Certificate of Membership or Certificate of Practice atleast 3 years old issued by ICAI
+              <span className="font-medium text-slate-800">{loanType} Certification:</span> {loanType}s having Certificate of Membership or Certificate of Practice atleast 3 years old issued by I{loanType}I
             </li>
             <li>
               <span className="font-medium text-slate-800">Business Vintage:</span> Minimum 3 years
@@ -51,7 +51,7 @@ function CAEligibility({loanType = "CA"}) {
         <div className="flex justify-center">
           <img
             src={img1}
-            alt="CA Loan Eligibility"
+            alt={loanType + "loan image"}
             className="w-full max-w-md rounded-xl object-cover"
           />
         </div>
