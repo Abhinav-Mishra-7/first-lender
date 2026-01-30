@@ -5,7 +5,7 @@ import heroSlide2 from "../../public/58596573_2306.i402.021.S.m004.c13.Credit sc
 import heroSlide3 from "../../public/arranged-mortgage-approved-paper-desk.jpg";
 import heroSlide4 from "../../public/5615656_5615656.png"
 import heroSlide5 from "../../public/20289191_6247661.png"
-import heroSlide6 from "../../public/20289191_6247661.png"
+import heroSlide6 from "../../public/9650001_7563.png"
 
 
 
@@ -24,7 +24,7 @@ const HeroSlider = () => {
       height: 110
     },
     {
-      title: "MSME Business Loans",
+      title: "Business Loans",
       subtitle: "Collateral-Free up to ₹5 Cr",
       description:
         "Working capital and term loans backed by CGTMSE to help your business scale confidently.",

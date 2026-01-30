@@ -217,12 +217,11 @@ function LandingPage() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-black mb-12 pb-3 text-shadow-lg">
             Trending Loans & Offers
           </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-7">
             {loanTypes.map((loan, index) => (
               <div
                 key={index}
-                className="w-63 border-0 border-yellow-400 rounded-2xl p-5 text-center transition-all duration-300 hover:-translate-y-1 shadow-xl"
-                //  style={{ boxShadow: `${loan.shadow}`,'--shadow-color': loan.shadowColor || '#facc15' }}
+                className="w-66 rounded-2xl p-5 text-center transition-all duration-300 hover:-translate-y-1 shadow-xl"
               >
                 <img
                   src={loan.image}
@@ -245,13 +244,13 @@ function LandingPage() {
       <section className="px-5 py-10 md:py-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black text-shadow-lg">
-            Why Choose FIRST<span className="text-yellow-400">LENDER</span>
+            Why Choose <span className="text-yellow-400">FIRSTLENDER</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12">
             {whyChoose.map((item, index) => (
               <div
                 key={index}
-                className="relative bg-white p-6 md:p-8 border-2 border-yellow-400 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl shadow-lg rounded-2xl"
+                className="relative bg-white p-6 md:p-8 border border-yellow-400 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl shadow-lg rounded-2xl"
               >
                 {/* Top Left Corner */}
                 {/* <div className="absolute top-0 left-0 w-6 h-6 bg-blue-100" /> */}

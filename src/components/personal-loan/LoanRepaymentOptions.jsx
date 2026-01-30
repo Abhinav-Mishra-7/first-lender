@@ -1,4 +1,4 @@
-function LoanRepaymentOptions() {
+function LoanRepaymentOptions({loanType}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -6,13 +6,13 @@ function LoanRepaymentOptions() {
           p-6 md:p-8 transition-all duration-300"
       >
         {/* TITLE */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4">
-          Instant Personal Loan Repayment Options
+        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
+          Instant {loanType} Loan Repayment Options
         </h2>
 
         {/* INTRO */}
         <p className="text-slate-600 leading-relaxed text-sm mb-5">
-          The personal loan repayment options generally include payment in the
+          The {loanType} loan repayment options generally include payment in the
           following forms:
         </p>
 

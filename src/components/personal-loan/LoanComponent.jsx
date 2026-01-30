@@ -17,7 +17,7 @@ function LoanComponent() {
         <LoanExplanation heading={personal[0].heading} p1={personal[0].p1} p2={personal[0].p2} image={personal[0].image} />
         <LoanEligibility loanType='personal'/>
         <LoanDocuments loanType='personal'/>
-        <LoanRepaymentOptions/>
+        <LoanRepaymentOptions loanType="Personal" />
         <LoanComparisonTable/>
         <WhyChooseFL loanType='Personal Loan' />
         <Footer/>
