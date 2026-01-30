@@ -11,7 +11,7 @@ function CAEligibility({loanType = "CA"}) {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
-            Eligibility Criteria for <span className="capitalize">{loanType}</span>s
+            Eligibility Criteria for a Quick <span className="capitalize">{loanType}</span> Loan
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
