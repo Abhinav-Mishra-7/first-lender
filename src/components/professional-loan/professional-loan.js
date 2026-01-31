@@ -1,4 +1,5 @@
 import img1 from "../../../public/10782761_19197296.jpg";
+import doctor from "../../../public/10780107_19197554.jpg"
 
 const professional = [
     {
@@ -18,6 +19,13 @@ const professional = [
         p4: "Company secretaries play a crucial role in corporate governance, ensuring legal and regulatory compliance. They’re the behind-the-scenes heroes, but like any professional, they may need financial support to grow their business." ,
         p5: "The Loan can be availed either in the form of Overdraft Limit wherein, the borrower have to pay the interest on the utilised amount or it can be availed in the form of Term Loan where the repayment is done through monthly EMIs. The repayment tenure of Chartered Accountant loan goes upto 8 years.",
         image: img1
+    },
+    {
+        name: "Doctor Loan" ,
+        heading: "What is a Doctor Loan?" ,
+        p1: "A Doctor’s Loan is an Unsecured Loan, tailored for medical professionals, including Doctors, Dentists, and Healthcare practitioners. This type of loan is designed to address the unique financial requirements of healthcare professionals, considering their distinct income patterns and professional needs. This loan can only be used to finance higher medical studies, set up or expand hospitals/clinics, or purchase medical diagnostic equipment. They cannot be used for personal needs. Only medical practitioners can apply for these loans. This includes MBBS doctors, specialists, surgeons, recent graduates, residents and fellows." ,
+        p2: "The Loan can be availed either in the form of Overdraft Limit wherein, the borrower have to pay the interest on the utilised amount or it can be availed in the form of Term Loan where the repayment is done through monthly EMIs. The repayment tenure of Chartered Accountant loan goes upto 8 years.",
+        image: doctor
     }
 
 ]

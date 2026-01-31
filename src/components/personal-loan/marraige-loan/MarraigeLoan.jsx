@@ -13,7 +13,7 @@ function MarraigeLoan() {
     <div>
       <Navbar/>
       <HeroMarriageLoan/>
-      <LoanExplanation heading={personal[1].heading} p1={personal[1].p1} p2={personal[1].p2} image={personal[1].image} />
+      <LoanExplanation heading={personal[1].heading} p1={personal[1].p1} p2={personal[1].p2} p3={personal[1].p3} image={personal[1].image} />
       <LoanEligibility loanType='Marriage Loan'/>
       <LoanDocuments loanType='Marriage'/>
       <LoanRepaymentOptions loanType="Marriage" />
