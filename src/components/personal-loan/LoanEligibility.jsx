@@ -37,7 +37,7 @@ function LoanEligibility({loanType}) {
               Applicant must be a salaried or self-employed professional
             </li>
             <li>
-              <span className="font-medium text-slate-800">Residency:</span> You
+              <span className="font-medium text-slate-800">Residency:</span> Applicant
               must be a resident of India with valid proof of address
             </li>
           </ul>

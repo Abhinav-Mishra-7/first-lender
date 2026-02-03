@@ -11,8 +11,7 @@ function LoanComparisonTable() {
 
           <p className="mt-4 text-slate-600 max-w-4xl mx-auto text-sm md:text-base leading-relaxed">
             Selecting the right personal loan is a matter of comparing interest
-            rate, tenure, and charges. My Mudra makes it easy by connecting you
-            with top banks and NBFCs for the best deals.
+            rate, tenure, and charges.
           </p>
 
           <p className="mt-3 text-slate-700 font-medium">

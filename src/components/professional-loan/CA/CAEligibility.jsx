@@ -20,7 +20,7 @@ function CAEligibility({loanType}) {
 
           <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-disc pl-5">
             <li>
-              <span className="font-medium text-slate-800">Age:</span> 22 years at the time of loan application and 65 years at the time of loan maturity
+              <span className="font-medium text-slate-800">Age:</span> 21 years at the time of loan application and 65 years at the time of loan maturity
             </li>
             <li>
               <span className="font-medium text-slate-800">Eligible Entities:</span>

@@ -24,7 +24,7 @@ const professional = [
         name: "Doctor Loan" ,
         heading: "What is a Doctor Loan?" ,
         p1: "A Doctor’s Loan is an Unsecured Loan, tailored for medical professionals, including Doctors, Dentists, and Healthcare practitioners. This type of loan is designed to address the unique financial requirements of healthcare professionals, considering their distinct income patterns and professional needs. This loan can only be used to finance higher medical studies, set up or expand hospitals/clinics, or purchase medical diagnostic equipment. They cannot be used for personal needs. Only medical practitioners can apply for these loans. This includes MBBS doctors, specialists, surgeons, recent graduates, residents and fellows." ,
-        p2: "The Loan can be availed either in the form of Overdraft Limit wherein, the borrower have to pay the interest on the utilised amount or it can be availed in the form of Term Loan where the repayment is done through monthly EMIs. The repayment tenure of Chartered Accountant loan goes upto 8 years.",
+        p2: "The Loan can be availed either in the form of Overdraft Limit wherein, the borrower have to pay the interest on the utilised amount or it can be availed in the form of Term Loan where the repayment is done through monthly EMIs. The repayment tenure of doctor loan goes upto 8 years.",
         image: doctor
     }
 

@@ -22,10 +22,10 @@ const HeroPersonalLoan = () => {
 
             {/* FEATURES */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Feature text="For Salaried & Self-Employed" />
+              <Feature text="For Salaried & Self-Employed Professionals" />
               <Feature text="No Collateral Required" />
               <Feature text="Disbursal in 24 Hours" />
-              <Feature text="Interest Rate from 9.99% p.a." />
+              <Feature text="Interest Rate starting from 9.99% p.a." />
             </div>
           </div>
 

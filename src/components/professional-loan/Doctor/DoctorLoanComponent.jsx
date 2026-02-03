@@ -14,8 +14,8 @@ function DoctorLoanComponent() {
         <Navbar/>
         <HeroDoctorLoan/>
         <LoanExplanation heading={professional[2].heading} p1={professional[2].p1} p2={professional[2].p2} image={professional[2].image} />
-        <DoctorEligibility/>
-        <DoctorDocuments/>
+        <DoctorEligibility loanType="Doctor"/>
+        <DoctorDocuments loanType="Doctor"/>
         <LoanRepaymentOptions loanType="Doctor" />
         <WhyChooseFL loanType="Doctor Loan" />
         <Footer/>

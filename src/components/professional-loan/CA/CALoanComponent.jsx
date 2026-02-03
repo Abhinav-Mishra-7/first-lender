@@ -14,9 +14,9 @@ function CALoanComponent() {
         <Navbar/>
         <HeroProfessionalLoan/>
         <LoanExplanation heading={professional[0].heading} p1={professional[0].p1} p2={professional[0].p2} p3={professional[0].p3} image={professional[0].image} />
-        <CAEligibility/>
-        <CADocuments/>
-        <LoanRepaymentOptions loanType="Doctor" />
+        <CAEligibility loanType="CA"/>
+        <CADocuments loanType="CA"/>
+        <LoanRepaymentOptions loanType="CA" />
         <WhyChooseFL loanType="CA Loan" />
         <Footer/>
     </div>
