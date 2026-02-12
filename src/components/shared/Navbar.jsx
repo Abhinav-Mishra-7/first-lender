@@ -29,13 +29,11 @@ const navLinks = [
       },
       {label: "Business Loan", href: "/loans/business", 
         submenuItems: [
-          { label: "Business Loan", href: "/loans/business" },
-          { label: "Business Overdraft", href: "/loans/business-overdraft" },
-          { label: "Working Capital", href: "/loans/working-capital" },
-          { label: "MSME Term Loan", href: "/loans/msme-term-loan" },
-          { label: "Business Expansion Loan", href: "/loans/business-expansion" },
-          { label: "Purchase Invoice Discounting (PID)", href: "/loans/pid" },
-          { label: "CGTMSE", href: "/loans/cgtmse" },
+          { label: "Business Loan", href: "/loans/business/business" },
+          { label: "Business Overdraft", href: "/loans/business/business-overdraft" },
+          { label: "Working Capital", href: "/loans/business/working-capital" },
+          { label: "Purchase Invoice Discounting (PID)", href: "/loans/business/pid" },
+          { label: "CGTMSE", href: "/loans/business/cgtmse" },
         ]
       },
       {label: "Secured Loan", href: "/loans/secured" ,

@@ -1,6 +1,6 @@
 import img1 from "../../../public/11879344_Checklist.jpg";
 
-function BusinessLoanDocuments({loanType = "Business"}) {
+function BusinessLoanDocuments({loanType = "Business Loan"}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -11,11 +11,11 @@ function BusinessLoanDocuments({loanType = "Business"}) {
         {/* LEFT CONTENT - Business Loan Specific */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
-            Documents for Fast Approval <span className="capitalize">{loanType}</span> Loan
+            Documents for Fast Approval <span className="capitalize">{loanType}</span>
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-            The basic documents required for {loanType} loan online approval are:
+            The basic documents required for {loanType} online approval are:
           </p>
 
           <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-disc pl-5">

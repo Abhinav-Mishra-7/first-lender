@@ -1,6 +1,6 @@
 import img1 from "../../../public/4530235_19222.jpg"
 
-function BusinessLoanEligibility({loanType = "Business"}) {
+function BusinessLoanEligibility({loanType = "Business Loan"}) {
   return (
     <div className="w-full bg-slate-50 py-10 px-3">
       <div
@@ -11,11 +11,11 @@ function BusinessLoanEligibility({loanType = "Business"}) {
         {/* LEFT CONTENT - Business Loan Specific */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 pb-4 text-shadow-md">
-            Eligibility Criteria for a Quick <span className="capitalize">{loanType}</span> Loan
+            Eligibility Criteria for a Quick <span className="capitalize">{loanType}</span>
           </h2>
 
           <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-            The eligibility criteria for {loanType} loans are minimal, with the requirement to meet the following:
+            The eligibility criteria for {loanType}s are minimal, with the requirement to meet the following:
           </p>
 
           <ul className="text-slate-600 text-sm leading-relaxed space-y-2 list-disc pl-5">

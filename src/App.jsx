@@ -16,6 +16,11 @@ import BalanaceTransferComponent from './components/personal-loan/bank-transfer-
 
 // Business Loan
 import BusinessLoanMain from './components/business-loan/BusinessLoanMain';
+import PIDComponent from './components/business-loan/PID/PIDComponent';
+import CGTMSEComponent from './components/business-loan/CGTMSE/CGTMSEComponent';
+import WorkingCaptialComponent from './components/business-loan/Working-Capital/WorkingCapitalComponent';
+import BusinessOverdraftComponent from './components/business-loan/Business-Overdraft/BusinessOverdraftComponent';
+
 
 // Professional Loan
 import CALoanComponent from './components/professional-loan/CA/CALoanComponent';
@@ -46,7 +51,11 @@ function App() {
         
 
         {/* Business Loan */}
-        <Route path="/loans/business" element={<BusinessLoanMain />}></Route>
+        <Route path="/loans/business/business" element={<BusinessLoanMain />}></Route>
+        <Route path="/loans/business/pid" element={<PIDComponent />}></Route>
+        <Route path="/loans/business/cgtmse" element={<CGTMSEComponent />}></Route>
+        <Route path="/loans/business/working-capital" element={<WorkingCaptialComponent />}></Route>
+        <Route path="/loans/business/business-overdraft" element={<BusinessOverdraftComponent />}></Route>
       </Routes>
   );
 }
