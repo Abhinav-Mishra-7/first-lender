@@ -2,18 +2,9 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/shared/Navbar";
 import CTAButton from "../components/shared/Button";
 import {
-  Phone,
-  Mail,
-  MessageCircle,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Youtube,
   Star,
   Users,
   Building,
-  Briefcase,
   Wallet,
   CheckCircle,
   UserCheck,
@@ -22,9 +13,7 @@ import {
   FileText,
   Monitor,
   TrendingDown,
-  Space,
 } from "lucide-react";
-import { Link } from "react-router";
 import LoanTabs from "../components/LoanTabs";
 import Footer from "../components/shared/Footer";
 import HeroSlider from "./LandingPageHero";

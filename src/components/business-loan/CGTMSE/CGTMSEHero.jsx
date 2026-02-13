@@ -2,7 +2,7 @@ import flag from "../../../../public/flag.webp"
 
 const HeroCGTMSE = () => {
   return (
-    <section className="w-full bg-gradient-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-22 md:mt-25.5 mb-0">
+    <section className="w-full bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 mt-22 md:mt-25.5 mb-0">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-8 md:py-7 lg:py-7 mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -18,7 +18,7 @@ const HeroCGTMSE = () => {
             </h1>
 
             <p className="mt-2 text-slate-700 text-base md:text-sm max-w-xl">
-              Get up to <span className="font-bold text-yellow-600">₹2 Cr</span> business loans with zero collateral guarantee cover. Government-backed security for MSMEs with fast processing and low interest rates.
+              Get up to <span className="font-bold text-yellow-600">25% of Turnover </span> as CGTMSE Loan with zero collateral guarantee cover. Government-backed security for MSMEs with fast processing and low interest rates.
             </p>
 
             {/* CGTMSE FEATURES */}

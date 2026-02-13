@@ -6,6 +6,7 @@ import poonwalla from "../../public/poonawalla.webp"
 import unity from "../../public/unity-bank-nj.png"
 import Ugro from "../../public/logo-ugrocapital21-1681208402.jpg"
 import piramal from "../../public/piramal.webp"
+import IDFC from "../../public/idfc-first-credit-card-dm-1708492863.png"
 
 
 
@@ -23,6 +24,9 @@ const PartnersSection = () => {
     { name: 'Unity Bank', src: unity },
     { name: 'Ugro Capital', src: Ugro },
     { name: 'Piramal', src: piramal },
+
+    // Bottom last row
+    { name: 'IDFC', src: IDFC },
   ];
 
   return (
