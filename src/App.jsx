@@ -27,6 +27,9 @@ import CALoanComponent from './components/professional-loan/CA/CALoanComponent';
 import CSLoanComponent from './components/professional-loan/CS/CSLoanComponent';
 import DoctorLoanComponent from './components/professional-loan/Doctor/DoctorLoanComponent';
 
+// Secured Loan
+import HomeLoanComponent from './components/secured-loan/home-loan/HomeLoanComponent';
+
 function App() {
   return (
       <Routes>
@@ -56,6 +59,10 @@ function App() {
         <Route path="/loans/business/cgtmse" element={<CGTMSEComponent />}></Route>
         <Route path="/loans/business/working-capital" element={<WorkingCaptialComponent />}></Route>
         <Route path="/loans/business/business-overdraft" element={<BusinessOverdraftComponent />}></Route>
+
+
+        {/* Secured Loan */}
+        <Route path="/loans/secured/home" element={<HomeLoanComponent />}></Route>
       </Routes>
   );
 }

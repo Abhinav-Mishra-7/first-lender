@@ -38,10 +38,10 @@ const navLinks = [
       },
       {label: "Secured Loan", href: "/loans/secured" ,
         submenuItems: [
-          { label: "Home Loan", href: "/loans/home" },
-          { label: "Loan Against Property", href: "/loans/property" },
-          { label: "Car Loan", href: "/loans/car" },
-          { label: "Used Car Loan", href: "/loans/used-car" },
+          { label: "Home Loan", href: "/loans/secured/home" },
+          { label: "Loan Against Property", href: "/loans/secured/property" },
+          { label: "Car Loan", href: "/loans/secured/car" },
+          { label: "Car Refinance", href: "/loans/secured/car-refinance" },
         ]
       },
       // {label: "PID", href: "/loans/pid"},
