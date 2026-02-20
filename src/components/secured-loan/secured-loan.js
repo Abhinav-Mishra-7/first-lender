@@ -28,6 +28,13 @@ const secured = [
         p5: "Doctors are eligible to get a loan amount that is up to 75% of their property value. They can use the funds for buying medical equipment, expanding their operations, buying a second home and more.",
         p6: "The funding is also available for industrial or any other special use properties, for a tenure of up to 10 years.",
         image: car
+    },
+    {
+        name: "Car Refinancing" ,
+        heading: "What is a Car Refinancing?" ,
+        p1: "Do you need immediate access to funds but want to avoid the hassle of selling your car? Refinancing of your existing car allows you to leverage the value of your car and gain access to funds, provided there are no current loan on the vehicle. This convenient option provides cash for unexpected expenses, home renovations, debt consolidation, or any other pressing needs." ,
+        p2: `Need quick cash without selling your car? Car refinancing lets you unlock your vehicle's value as instant funds—even if no existing loan exists. Use it for emergencies, home improvements, debt consolidation, or urgent needs with zero hassle.`,
+        image: car
     }
 ]
 

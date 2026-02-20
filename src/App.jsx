@@ -31,6 +31,7 @@ import DoctorLoanComponent from './components/professional-loan/Doctor/DoctorLoa
 import HomeLoanComponent from './components/secured-loan/home-loan/HomeLoanComponent';
 import CarLoanComponent from './components/secured-loan/car-loan/CarLoanComponent';
 import LAPComponent from './components/secured-loan/lap/LAPComponent';
+import CarRefinanceComponent from './components/secured-loan/car-refinancing-loan/CarRefinanceComponent';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path="/loans/secured/home" element={<HomeLoanComponent />}></Route>
         <Route path="/loans/secured/car" element={<CarLoanComponent />}></Route>
         <Route path="/loans/secured/property" element={<LAPComponent />}></Route>
+        <Route path="/loans/secured/car-refinance" element={<CarRefinanceComponent />}></Route>
       </Routes>
   );
 }
