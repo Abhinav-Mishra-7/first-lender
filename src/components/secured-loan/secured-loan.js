@@ -17,6 +17,17 @@ const secured = [
         p2: `Car loans come with low interest rates and can be repaid over up to 8 years. Some lenders may offer loans covering up to 100% of the car’s on-road price.`,
         p3: "With quick approvals and minimal documentation, car loans make driving your new vehicle home simple and stress-free for salaried professionals, self-employed individuals, and businesses alike.",
         image: car
+    },
+    {
+        name: "Loan Against Property" ,
+        heading: "What is a Loan Against Property?" ,
+        p1: "Do you need funds as working capital for your business and can’t bear the cost of Business Loan? Or your salary is not enough to incur personal expenses like Wedding, Child’s Education,Medical Treatment etc.? Then this is the right product for you." ,
+        p2: `A Loan Against Property is a secured loan which is availed by offering a property as collateral to the Bank to secure funds. This property can be residential, commercial or an industrial property.`,
+        p3: "The loan facility is also available to self-employed individuals who have their own business or practice. The minimum age is 25 and the maximum age is 70, when it comes to a Loan Against Property’s eligibility.",
+        p4: "This Loan is also designed to meet the needs of medical professionals. This category of customers can easily qualify for the loan and get an instant Loan Against Property approval on the loan amount.",
+        p5: "Doctors are eligible to get a loan amount that is up to 75% of their property value. They can use the funds for buying medical equipment, expanding their operations, buying a second home and more.",
+        p6: "The funding is also available for industrial or any other special use properties, for a tenure of up to 10 years.",
+        image: car
     }
 ]
 

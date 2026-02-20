@@ -1,6 +1,6 @@
 
 
-function LoanExplanation({heading , p1 , p2 , p3 , p4 , p5 , image}) {
+function LoanExplanation({heading , p1 , p2 , p3 , p4 , p5, p6 , image}) {
 
     function processText(para) {
         const words = para.split(" ");
@@ -54,6 +54,10 @@ function LoanExplanation({heading , p1 , p2 , p3 , p4 , p5 , image}) {
 
                 {p5 && <p class="text-slate-600 leading-relaxed mb-4 text-sm">
                     {processText(p5)}
+                </p>}
+
+                {p6 && <p class="text-slate-600 leading-relaxed mb-4 text-sm">
+                    {processText(p6)}
                 </p>}
                 </div>
 
