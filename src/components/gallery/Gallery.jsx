@@ -136,13 +136,6 @@ const Gallery = () => {
                         >
                             Close
                         </button>
-                        <a 
-                            href={selectedImage?.src}
-                            download={selectedImage?.alt}
-                            className="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm cursor-pointer hover:-translate-0.5"
-                        >
-                            Download
-                        </a>
                     </div>
                     
                 </div>
