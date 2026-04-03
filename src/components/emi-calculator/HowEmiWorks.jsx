@@ -1,5 +1,4 @@
-// components/HowEmiWorks.jsx - EXACT Screenshot Match
-import rightImage from "../../../public/flat-lay-business-concept.jpg"
+import rightImage from "../../assets/flat-lay-business-concept.jpg"
 
 const HowEmiWorks = () => {
   return (

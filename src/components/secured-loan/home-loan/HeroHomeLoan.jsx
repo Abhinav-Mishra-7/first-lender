@@ -1,4 +1,4 @@
-import flag from "../../../../public/flag.webp";
+import flag from "../../../assets/flag.webp";
 
 const HeroHomeLoan = () => {
   return (

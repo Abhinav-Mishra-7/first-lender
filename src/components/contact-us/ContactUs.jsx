@@ -4,7 +4,7 @@ import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import ContactHero from "./ContactHero";
 import ContactForm from "./ContactForm";
-import img1 from "../../../public/close-up-shot-curly-beautiful-african-american-woman-makes-phone-gesture-says-call-me-back-wears-round-glasses-casual-t-shirt-poses-against-yellow-wall-communication-sign.jpg"
+import img1 from "../../assets/close-up-shot-curly-beautiful-african-american-woman-makes-phone-gesture-says-call-me-back-wears-round-glasses-casual-t-shirt-poses-against-yellow-wall-communication-sign.jpg"
 
 const contactStats = [
   { icon: Users, value: "10K+", label: "Happy Customers", color: "text-blue-500" },

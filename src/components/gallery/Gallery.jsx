@@ -4,25 +4,25 @@ import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import { useState } from "react";
 
-// import images 
-import img1 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM.jpeg"
-import img2 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.19 PM.jpeg"
-import img3 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM (1).jpeg"
-import img4 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM (2).jpeg"
-import img5 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM.jpeg"
-import img6 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.19 PM.jpeg"
-import img7 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.21 PM (2).jpeg"
-import img8 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.21 PM.jpeg"
-import img9 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.22 PM (1).jpeg"
-import img10 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.22 PM.jpeg"
-import img11 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.24 PM (1).jpeg"
-import img12 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (1).jpeg"
-import img13 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (2).jpeg"
-import img14 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (3).jpeg"
-import img15 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM.jpeg"
-import img16 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.24 PM.jpeg"
-import img17 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM (2).jpeg"
-import img18 from "../../../public/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM (1).jpeg"
+// image imports
+import img1 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM.jpeg"
+import img2 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.19 PM.jpeg"
+import img3 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM (1).jpeg"
+import img4 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM (2).jpeg"
+import img5 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.20 PM.jpeg"
+import img6 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.19 PM.jpeg"
+import img7 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.21 PM (2).jpeg"
+import img8 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.21 PM.jpeg"
+import img9 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.22 PM (1).jpeg"
+import img10 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.22 PM.jpeg"
+import img11 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.24 PM (1).jpeg"
+import img12 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (1).jpeg"
+import img13 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (2).jpeg"
+import img14 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM (3).jpeg"
+import img15 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.23 PM.jpeg"
+import img16 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.24 PM.jpeg"
+import img17 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM (2).jpeg"
+import img18 from "../../assets/office-gallery/WhatsApp Image 2026-01-06 at 1.43.25 PM (1).jpeg"
 
 
 

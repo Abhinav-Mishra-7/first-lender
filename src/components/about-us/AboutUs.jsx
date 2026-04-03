@@ -2,7 +2,7 @@ import { Users, ShieldCheck, Award, Clock, TrendingUp, Building2,Star ,Briefcase
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import AboutHero from "./AboutHero";
-import img1 from "../../../public/loan-approved-application-form-concept.jpg"
+import img1 from "../../assets/loan-approved-application-form-concept.jpg"
 
 
 const teamMembers = [

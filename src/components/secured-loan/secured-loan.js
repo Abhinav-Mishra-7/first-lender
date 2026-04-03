@@ -1,5 +1,5 @@
-import home from "../../../public/28480709_Married couple investing savings into new home.jpg"
-import car from "../../../public/10782871_19199287.jpg"
+import home from "../../assets/28480709_Married couple investing savings into new home.jpg"
+import car from "../../assets/10782871_19199287.jpg"
 
 const secured = [
     {

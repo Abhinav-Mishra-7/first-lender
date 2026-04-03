@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
 import { Menu, X, ChevronDown, ChevronRight, Phone, Smartphone , Handshake } from "lucide-react";
-import logo from "../../../public/first lender logo (1).png" ;
+import logo from "../../assets/first lender logo (1).png" ;
 
 const navLinks = [
   {

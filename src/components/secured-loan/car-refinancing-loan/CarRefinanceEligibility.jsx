@@ -1,4 +1,4 @@
-import img1 from "../../../../public/57166071_2304_i402_019_s_m004_c13_corporate_culture_composition.jpg";
+import img1 from "../../../assets/57166071_2304_i402_019_s_m004_c13_corporate_culture_composition.jpg";
 
 function CarLoanApplicantTypes({ productName = "Car Refinance" }) {
   return (

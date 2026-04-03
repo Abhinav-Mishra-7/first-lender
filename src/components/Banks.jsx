@@ -1,14 +1,12 @@
-import LT from "../../public/l&t.png"
-import bajaj from "../../public/bajaj-finance6835.jpg"
-import Aditya from "../../public/adityaBirlaGroupCom.png"
-import godrej from "../../public/Godrej.webp"
-import poonwalla from "../../public/poonawalla.webp"
-import unity from "../../public/unity-bank-nj.png"
-import Ugro from "../../public/logo-ugrocapital21-1681208402.jpg"
-import piramal from "../../public/piramal.webp"
-import IDFC from "../../public/idfc-first-credit-card-dm-1708492863.png"
-
-
+import LT from "../assets/l&t.png"
+import bajaj from "../assets/bajaj-finance6835.jpg"
+import Aditya from "../assets/adityaBirlaGroupCom.png"
+import godrej from "../assets/Godrej.webp"
+import poonwalla from "../assets/poonawalla.webp"
+import unity from "../assets/unity-bank-nj.png"
+import Ugro from "../assets/logo-ugrocapital21-1681208402.jpg"
+import piramal from "../assets/piramal.webp"
+import IDFC from "../assets/idfc-first-credit-card-dm-1708492863.png"
 
 
 const PartnersSection = () => {

@@ -1,4 +1,4 @@
-import rightImage from "../../../public/flat-lay-earning-money-concept.jpg"
+import rightImage from "../../assets/flat-lay-earning-money-concept.jpg"
 
 const WhatIsEmi = () => {
   return (

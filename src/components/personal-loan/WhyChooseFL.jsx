@@ -1,4 +1,4 @@
-import img1 from "../../../public/4530235_19222.jpg";
+import img1 from "../../assets/4530235_19222.jpg";
 
 function WhyChooseFL({loanType}) {
   return (

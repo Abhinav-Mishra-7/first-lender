@@ -1,6 +1,6 @@
 // ContactHero.jsx - Updated to match AboutHero styling exactly
 import { Phone, MessageCircle } from "lucide-react";
-import img1 from "../../../public/yellow-model-career-kit-arrangement.jpg"
+import img1 from "../../assets/yellow-model-career-kit-arrangement.jpg"
 
 const miniStats = [
   { value: "24 Hrs", label: "Response", size: "text-xs" },

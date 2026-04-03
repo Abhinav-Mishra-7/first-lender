@@ -4,14 +4,14 @@ import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck ,
 import SvgIcon from './SvgIcon';
 
 // Images import 
-import personal from "../../public/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
-import car from "../../public/saving-money-car-trade-car-cash.jpg"
-import professional from "../../public/latin-confident-professionals-suit-standing-against-isolated-background.jpg"
-import bussiness from "../../public/modern-equipped-computer-lab (1).jpg"
-import pid from "../../public/woman-planting-vegetables-smiling-farm-with-equipments.jpg"
-import lap from "../../public/table-desk-with-credit-approved-request.jpg"
-import home from "../../public/ideas-real-estate-moving-houses-renting-real-estate.jpg"
-import ctgmse from "../../public/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic.jpg"
+import personal from "../assets/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
+import car from "../assets/saving-money-car-trade-car-cash.jpg"
+import professional from "../assets/latin-confident-professionals-suit-standing-against-isolated-background.jpg"
+import bussiness from "../assets/modern-equipped-computer-lab (1).jpg"
+import pid from "../assets/woman-planting-vegetables-smiling-farm-with-equipments.jpg"
+import lap from "../assets/table-desk-with-credit-approved-request.jpg"
+import home from "../assets/ideas-real-estate-moving-houses-renting-real-estate.jpg"
+import ctgmse from "../assets/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic.jpg"
 
 const loanData = [
   {

@@ -20,10 +20,10 @@ import HeroSlider from "./LandingPageHero";
 import PartnersSection from "../components/Banks";
 
 // image import
-import img1 from "../../public/23991565_6859168.jpg"
-import img2 from "../../public/10783162_19198812.jpg"
-import img3 from "../../public/423537009_f5ab20dc-dfca-4282-9802-08e9c81bd845.jpg"
-import img4 from "../../public/20827214_6366975.jpg"
+import img1 from "../assets/23991565_6859168.jpg"
+import img2 from "../assets/10783162_19198812.jpg"
+import img3 from "../assets/423537009_f5ab20dc-dfca-4282-9802-08e9c81bd845.jpg"
+import img4 from "../assets/20827214_6366975.jpg"
 
 
 

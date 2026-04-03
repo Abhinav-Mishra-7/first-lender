@@ -1,4 +1,4 @@
-import mainExplaination from "../../../public/11668577_20943648.jpg"
+import mainExplaination from "../../assets/11668577_20943648.jpg"
 
 
 const business = [

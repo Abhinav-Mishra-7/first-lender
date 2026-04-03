@@ -1,4 +1,4 @@
-import img1 from "../../../../public/11879344_Checklist.jpg";
+import img1 from "../../../assets/11879344_Checklist.jpg";
 
 function DoctorDocuments({loanType = "Doctor"}) {
   return (

@@ -1,5 +1,5 @@
-import img1 from "../../../public/10782761_19197296.jpg";
-import doctor from "../../../public/10780107_19197554.jpg"
+import img1 from "../../assets/10782761_19197296.jpg";
+import doctor from "../../assets/10780107_19197554.jpg"
 
 const professional = [
     {

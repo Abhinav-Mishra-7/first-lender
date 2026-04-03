@@ -1,5 +1,5 @@
 import CTAButton from "../shared/Button"
-import rightImage from "../../../public/group-five-professionals.avif"
+import rightImage from "../../assets/group-five-professionals.avif"
 
 const AboutHero = () => {
     return (

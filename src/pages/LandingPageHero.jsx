@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CTAButton from "../components/shared/Button";
-import heroSlide1 from "../../public/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433 (1).png";
-import heroSlide2 from "../../public/58596573_2306.i402.021.S.m004.c13.Credit score flat composition (1).png";
-import heroSlide3 from "../../public/arranged-mortgage-approved-paper-desk.jpg";
-import heroSlide4 from "../../public/5615656_5615656.png"
-import heroSlide5 from "../../public/20289191_6247661.png"
-import heroSlide6 from "../../public/9650001_7563.png"
+import heroSlide1 from "../assets/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433 (1).png";
+import heroSlide2 from "../assets/58596573_2306.i402.021.S.m004.c13.Credit score flat composition (1).png";
+import heroSlide3 from "../assets/arranged-mortgage-approved-paper-desk.jpg";
+import heroSlide4 from "../assets/5615656_5615656.png"
+import heroSlide5 from "../assets/20289191_6247661.png"
+import heroSlide6 from "../assets/9650001_7563.png"
 
 
 

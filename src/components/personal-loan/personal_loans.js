@@ -1,10 +1,10 @@
-import mainExplaination from "../../../public/12085315_20944141 (1).jpg";
-import marriageLoan1 from "../../../public/9676925_4215155.jpg";
-import overdraft from "../../../public/68191096_2304-i402-040-F-m004-c9-Financial Instability flat icons background.jpg";
-import travel from "../../../public/11235774_10966.jpg";
-import salary from "../../../public/5561835_21212.jpg";
-import medical from "../../../public/24857585_2203_w037_n003_236a_p1_236.jpg";
-import balance from "../../../public/12699161_Mobile bank users transferring money.jpg"
+import mainExplaination from "../../assets/12085315_20944141 (1).jpg";
+import marriageLoan1 from "../../assets/9676925_4215155.jpg";
+import overdraft from "../../assets/68191096_2304-i402-040-F-m004-c9-Financial Instability flat icons background.jpg";
+import travel from "../../assets/11235774_10966.jpg";
+import salary from "../../assets/5561835_21212.jpg";
+import medical from "../../assets/24857585_2203_w037_n003_236a_p1_236.jpg";
+import balance from "../../assets/12699161_Mobile bank users transferring money.jpg"
 
 const personal = [
     {
