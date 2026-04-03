@@ -216,7 +216,8 @@ function LandingPage() {
                   src={loan.image}
                   alt={loan.title}
                   className="w-full h-60 object-cover rounded-xl"
-                   style={{ boxShadow: `${loan.shadow}`}}
+                  style={{ boxShadow: `${loan.shadow}`}}
+                  loading="lazy"
                 />
                
                 <h3 className="text-lg font-bold text-black pt-2">{loan.title}</h3>

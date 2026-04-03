@@ -43,6 +43,7 @@ function CarLoanDocuments({ loanType = "Car" }) {
             src={img1}
             alt={`${loanType} loan documents image`}
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

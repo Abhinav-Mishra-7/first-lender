@@ -98,6 +98,8 @@ const ContactUs = () => {
               src={img1}
               className="w-full h-full object-cover rounded-3xl shadow-2xl 
               border-4 border-white/50 will-change-transform"
+              alt="Contact our loan experts at FIRSTLENDER"
+              loading="lazy"
             />
           </div>
         </div>

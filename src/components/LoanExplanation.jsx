@@ -67,6 +67,7 @@ function LoanExplanation({heading , p1 , p2 , p3 , p4 , p5, p6 , image}) {
                         src={image}
                         alt="Personal Loan"
                         class="w-full max-w-md rounded-xl object-cover"
+                        loading="lazy"
                     />
                 </div>
                 </div>

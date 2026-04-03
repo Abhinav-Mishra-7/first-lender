@@ -168,6 +168,7 @@ const AboutUs = () => {
               <img 
                 src={img1}
                 alt="Happy customers"
+                loading="lazy"
                 className="w-full h-105 object-cover rounded-3xl shadow-2xl border-5 border-white/50"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent rounded-3xl" />

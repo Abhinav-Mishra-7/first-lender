@@ -46,6 +46,7 @@ function CADocuments({loanType}) {
             src={img1}
             alt={loanType+"Loan Documents"}
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

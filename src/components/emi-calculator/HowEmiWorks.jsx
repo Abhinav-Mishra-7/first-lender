@@ -64,6 +64,7 @@ const HowEmiWorks = () => {
                   src={rightImage}
                   alt="EMI calculation formula visualization"
                   className="w-full h-96 md:h-94 lg:h-93 object-cover md:object-cover lg:object-cover rounded-2xl shadow-2xl mx-auto drop-shadow-lg"
+                  loading="lazy"
                 />
               </div>
 

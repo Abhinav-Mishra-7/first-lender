@@ -32,6 +32,7 @@ function CGTMSEBenefits({loanType = "CGTMSE"}) {
                 src={img1}
                 alt="CGTMSE Benefits"
                 className="w-full max-w-md rounded-xl object-cover"
+                loading="lazy"
             />
             </div>
         </div>

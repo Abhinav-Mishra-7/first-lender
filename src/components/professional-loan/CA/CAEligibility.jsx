@@ -52,6 +52,7 @@ function CAEligibility({loanType}) {
           <img
             src={img1}
             alt={loanType + "loan image"}
+            loading="lazy"
             className="w-full max-w-md rounded-xl object-cover"
           />
         </div>

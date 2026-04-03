@@ -122,7 +122,7 @@ const HeroSlider = () => {
           {/* ================= RIGHT IMAGE CARD ================= */}
           <div className="relative ml-12">
           
-          <img src={slide.image} alt="" className="w-full h-115 object-cover" />
+          <img src={slide.image} alt="" className="w-full h-115 object-cover" loading="lazy"/>
             
           {/* subtle shadow oval under card */}
           <div className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 h-8 w-40 md:w-56     rounded-full bg-black/10 blur-xl" />

@@ -439,6 +439,7 @@ function LoanTabs() {
                 src={activeLoan.image}
                 alt={activeLoan.title}
                 className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
+                loading="lazy"
             />
             {/* <video
               className="w-full h-96 object-cover rounded-xl shadow-2xl"

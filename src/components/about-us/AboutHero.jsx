@@ -45,6 +45,7 @@ const AboutHero = () => {
                     src={rightImage}
                     // src="public/group-five-professionals.avif"
                     alt="FIRSTLENDER team helping customers with loans"
+                    loading="lazy"
                     className="w-full h-52 md:h-50 lg:h-60 object-contain mx-auto drop-shadow-md"
                   />
   

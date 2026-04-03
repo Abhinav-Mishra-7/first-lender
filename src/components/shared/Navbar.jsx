@@ -106,7 +106,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 md:px-7 lg:px-10 py-3 md:py-3 lg:py-4">
           {/* Brand */}
           <Link to="/" onClick={closeAllDropdowns} className="flex items-center gap-1 shrink-0 ">
-            <img src={logo} alt="first-lender-logo" className="h-11 w-11" />
+            <img src={logo} alt="first-lender-logo" className="h-11 w-11" loading="lazy"/>
             <span className="text-xl md:text-2xl text-black">FIRST</span>
             <span className="text-xl md:text-2xl text-yellow-500">LENDER</span>
           </Link>

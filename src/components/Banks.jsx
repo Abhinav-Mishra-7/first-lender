@@ -65,6 +65,7 @@ const PartnersSection = () => {
                   height={100}
                   className="max-h-12 md:max-h-16 lg:max-h-22 object-contain transition-all duration-500 rounded-2xl"
                   priority={index < 4}
+                  loading="lazy"
                 />
               </div>
               

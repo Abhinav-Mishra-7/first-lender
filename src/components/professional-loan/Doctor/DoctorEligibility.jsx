@@ -49,6 +49,7 @@ function DoctorEligibility({loanType = "Doctor"}) {
             src={img1}
             alt="Doctor Loan Eligibility"
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

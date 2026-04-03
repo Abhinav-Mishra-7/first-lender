@@ -72,6 +72,7 @@ const WhatIsEmi = () => {
                   src={rightImage}
                   alt="Professional calculating EMI on laptop with loan documents"
                   className="w-full h-50 md:h-96 lg:h-93 object-cover rounded-2xl shadow-2xl mx-auto drop-shadow-lg"
+                  loading="lazy"
                 />
               </div>
 

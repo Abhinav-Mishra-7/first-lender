@@ -40,6 +40,7 @@ function CarLoanEligibility({ loanType = "Car" }) {
             src={img1}
             alt={`${loanType} loan image`}
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

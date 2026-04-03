@@ -43,6 +43,7 @@ function BusinessLoanEligibility({loanType = "Business Loan"}) {
             src={img1}
             alt="Business Loan Eligibility"
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

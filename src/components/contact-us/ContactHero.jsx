@@ -64,6 +64,7 @@ const ContactHero = () => {
                   src={img1}
                   alt="Contact our loan experts at FIRSTLENDER"
                   className="w-full h-52 md:h-64 lg:object-cover md:object-contain mx-auto drop-shadow-md"
+                  loading="lazy"
                 />
                 
                 {/* mini stats strip at bottom - Exact AboutHero styling */}

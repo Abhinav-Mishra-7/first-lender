@@ -64,6 +64,7 @@ function WorkingCapitalExplanation() {
                         src={img1}
                         alt="Working Capital Loan"
                         className="w-full max-w-md rounded-xl object-cover"
+                        loading="lazy"
                     />
                 </div>
             </div>

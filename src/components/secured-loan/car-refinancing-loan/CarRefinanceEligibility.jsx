@@ -69,6 +69,7 @@ function CarLoanApplicantTypes({ productName = "Car Refinance" }) {
             src={img1}
             alt={`${productName} eligibility`}
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

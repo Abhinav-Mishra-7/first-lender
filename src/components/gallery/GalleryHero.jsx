@@ -38,6 +38,7 @@ const GalleryHero = () => {
                   src={galleryHeroImage}
                   alt="Company team moments captured in gallery"
                   className="w-full h-52 md:h-64 object-cover mx-auto drop-shadow-md"
+                  loading="lazy"
                 />
 
                 {/* Mini Stats Strip - Gallery Edition */}

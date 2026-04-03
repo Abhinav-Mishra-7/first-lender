@@ -58,6 +58,7 @@ function WhyChooseFL({loanType}) {
             src={img1}
             alt="Why Choose My Mudra"
             className="w-full max-w-md rounded-xl object-cover"
+            loading="lazy"
           />
         </div>
       </div>

@@ -41,7 +41,7 @@ const HeroAdvanceSalaryLoan = () => {
 
               {/* INPUT */}
               <div className="mt-1.5 flex text-sm items-center gap-2 rounded-lg lg:px-12 lg:py-1 md:px-5 px-10">
-                <img src={flag} alt="indian flag" className="h-4"/>
+                <img src={flag} alt="indian flag" className="h-4" loading="lazy"/>
                 <span className="text-slate-600 font-medium">+91</span>
                 <input
                   type="tel"
