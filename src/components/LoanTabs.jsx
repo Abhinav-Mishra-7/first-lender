@@ -4,14 +4,23 @@ import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck ,
 import SvgIcon from './SvgIcon';
 
 // Images import 
-import personal from "../assets/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
-import car from "../assets/saving-money-car-trade-car-cash.jpg"
-import professional from "../assets/latin-confident-professionals-suit-standing-against-isolated-background.jpg"
-import bussiness from "../assets/modern-equipped-computer-lab (1).jpg"
-import pid from "../assets/woman-planting-vegetables-smiling-farm-with-equipments.jpg"
-import lap from "../assets/table-desk-with-credit-approved-request.jpg"
-import home from "../assets/ideas-real-estate-moving-houses-renting-real-estate.jpg"
-import ctgmse from "../assets/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic.jpg"
+// import personal from "../assets/account-assets-audit-bank-bookkeeping-finance-concept.jpg"
+// import car from "../assets/saving-money-car-trade-car-cash.jpg"
+// import professional from "../assets/latin-confident-professionals-suit-standing-against-isolated-background.jpg"
+// import bussiness from "../assets/modern-equipped-computer-lab (1).jpg"
+// import pid from "../assets/woman-planting-vegetables-smiling-farm-with-equipments.jpg"
+// import lap from "../assets/table-desk-with-credit-approved-request.jpg"
+// import home from "../assets/ideas-real-estate-moving-houses-renting-real-estate.jpg"
+// import ctgmse from "../assets/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic.jpg"
+
+const personal = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775206363/account-assets-audit-bank-bookkeeping-finance-concept_zrfyn2.jpg"
+const car = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775459174/saving-money-car-trade-car-cash_brhyep.jpg"
+const professional = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465404/latin-confident-professionals-suit-standing-against-isolated-background_j6zwcw.jpg"
+const bussiness = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465421/modern-equipped-computer-lab_1_jumvha.jpg"
+const pid = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465377/woman-planting-vegetables-smiling-farm-with-equipments_xabt1y.jpg"
+const lap = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775199734/arranged-mortgage-approved-paper-desk_ckitrl.jpg"
+const home = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775206874/ideas-real-estate-moving-houses-renting-real-estate_becpz9.jpg"
+const ctgmse = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775200048/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic_f0ugai.jpg"
 
 const loanData = [
   {
