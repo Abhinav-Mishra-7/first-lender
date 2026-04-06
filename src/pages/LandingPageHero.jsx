@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import CTAButton from "../components/shared/Button";
-import heroSlide1 from "../assets/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433 (1).png";
-import heroSlide2 from "../assets/58596573_2306.i402.021.S.m004.c13.Credit score flat composition (1).png";
+// import heroSlide1 from "../assets/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433 (1).png";
+// import heroSlide2 from "../assets/58596573_2306.i402.021.S.m004.c13.Credit score flat composition (1).png";
+// import heroSlide3 from "../assets/arranged-mortgage-approved-paper-desk.jpg";
+// import heroSlide4 from "../assets/5615656_5615656.png"
+// import heroSlide5 from "../assets/20289191_6247661.png"
+// import heroSlide6 from "../assets/9650001_7563.png"
+
+const heroSlide1 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775199804/freepik__a-flat-illustration-depicts-a-credit-assessment-sc__35433_1_w4cccl.png";
+const heroSlide2 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775205666/58596573_2306.i402.021.S.m004.c13.Credit_score_flat_composition_1_s2ik9g.png";
 import heroSlide3 from "../assets/arranged-mortgage-approved-paper-desk.jpg";
 import heroSlide4 from "../assets/5615656_5615656.png"
-import heroSlide5 from "../assets/20289191_6247661.png"
-import heroSlide6 from "../assets/9650001_7563.png"
-
+const heroSlide5 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775206723/20289191_6247661_hrk9pj.png"
+const heroSlide6 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775205933/9650001_7563_rw68zr.png"
 
 
 const HeroSlider = () => {
