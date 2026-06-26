@@ -7,6 +7,7 @@ import LoanRepaymentOptions from "../../personal-loan/LoanRepaymentOptions";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import professional from "../professional-loan";
 import LoanExplanation from "../../LoanExplanation";
+import ProfessionalLoanForm from "../../forms/ProfessionalLoanForm";
 
 function DoctorLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function DoctorLoanComponent() {
         <DoctorDocuments loanType="Doctor"/>
         <LoanRepaymentOptions loanType="Doctor" />
         <WhyChooseFL loanType="Doctor Loan" />
+        <ProfessionalLoanForm/>
         <Footer/>
     </div>
   )

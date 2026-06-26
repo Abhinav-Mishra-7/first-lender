@@ -8,6 +8,7 @@ import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import business from "../business_loans";
 import BillDiscountingHowItWorks from "./BillDiscountingHowItWorks";
 import InvoiceDiscountingBenefits from "./InvoiceDiscountingBenefits";
+import BussinessLoanForm from "../../forms/BusinessLoanForm"
 
 function PIDComponent() {
   return (
@@ -20,6 +21,7 @@ function PIDComponent() {
         <BusinessLoanEligibility loanType="PID"/>
         <BusinessLoanDocuments loanType="PID"/>
         <WhyChooseFL loanType="PID" />
+        <BussinessLoanForm/>
         <Footer/>
     </div>
   )

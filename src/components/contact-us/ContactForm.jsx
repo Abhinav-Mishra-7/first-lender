@@ -44,7 +44,7 @@ const ContactForm = () => {
     <form
       noValidate
       onSubmit={handleSubmit}
-      className="space-y-8.5 bg-white/90 backdrop-blur-sm p-3 md:p-8 lg:p-8 pb-10 rounded-3xl 
+      className="space-y-2.5 bg-white/90 backdrop-blur-sm p-3 md:p-8 lg:p-6 pb-10 rounded-3xl 
       border border-yellow-100 shadow-2xl hover:shadow-3xl transition-all duration-300 text-gray-700"
     >
       {/* Name & Phone */}

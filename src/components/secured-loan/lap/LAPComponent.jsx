@@ -7,6 +7,7 @@ import CarLoanEligibility from "../car-loan/CarLoanEligibility";
 import HomeLoanDocuments from "../home-loan/HomeLoanDocuments"
 import LoanAgainstPropertyLTV from "./LAP";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
+import HomeLoanForm from "../../forms/HomeLoanForm"
 
 function LAPComponent() {
   return (
@@ -18,6 +19,7 @@ function LAPComponent() {
         <HomeLoanDocuments/>
         <LoanAgainstPropertyLTV/>
         <WhyChooseFL loanType="Loan Against Property"/>
+        <HomeLoanForm/>
         <Footer/>
     </div>
   )

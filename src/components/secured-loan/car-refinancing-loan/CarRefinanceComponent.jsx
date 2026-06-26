@@ -7,6 +7,7 @@ import CarRefinancingBenefits from "./CarRefinancingBenefits";
 import CarLoanApplicantTypes from "./CarRefinanceEligibility";
 import CarRefinanceDocuments from "./CarRefinanceLoanDocuments";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
+import HomeLoanForm from "../../forms/HomeLoanForm"
 
 function CarRefinanceComponent() {
   return (
@@ -18,6 +19,7 @@ function CarRefinanceComponent() {
         <CarLoanApplicantTypes/>
         <CarRefinanceDocuments/>
         <WhyChooseFL loanType="Car Refinance"/>
+        <HomeLoanForm/>
         <Footer/>
     </div>
   )

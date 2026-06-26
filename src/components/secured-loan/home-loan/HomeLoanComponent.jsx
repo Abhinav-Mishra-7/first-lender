@@ -7,6 +7,7 @@ import HomeLoanBenefits from "./HomeLoanBenefits"
 import HomeLoanDocuments from "./HomeLoanDocuments"
 import MaximumLoanAmount from "./MaximumLoanAmount"
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
+import HomeLoanForm from "../../forms/HomeLoanForm"
 
 function HomeLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function HomeLoanComponent() {
         <HomeLoanDocuments/>
         <MaximumLoanAmount/>
         <WhyChooseFL loanType="Home Loan"/>
+        <HomeLoanForm/>
         <Footer/>
     </div>
   )

@@ -7,6 +7,7 @@ import LoanRepaymentOptions from "../../personal-loan/LoanRepaymentOptions";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import professional from "../professional-loan";
 import LoanExplanation from "../../LoanExplanation";
+import ProfessionalLoanForm from "../../forms/ProfessionalLoanForm";
 
 function CALoanComponent() {
   return (
@@ -18,6 +19,7 @@ function CALoanComponent() {
         <CADocuments loanType="CA"/>
         <LoanRepaymentOptions loanType="CA" />
         <WhyChooseFL loanType="CA Loan" />
+        <ProfessionalLoanForm/>
         <Footer/>
     </div>
   )

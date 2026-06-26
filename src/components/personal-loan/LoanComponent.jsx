@@ -8,6 +8,7 @@ import LoanRepaymentOptions from "./LoanRepaymentOptions";
 import LoanComparisonTable from "./LoanComparisonTable";
 import WhyChooseFL from "./WhyChooseFL";
 import personal from "./personal_loans";
+import PersonalLoanForm from "../forms/PersonalLoanForm";
 
 function LoanComponent() {
   return (
@@ -20,6 +21,7 @@ function LoanComponent() {
         <LoanRepaymentOptions loanType="Personal" />
         <LoanComparisonTable/>
         <WhyChooseFL loanType='Personal Loan' />
+        <PersonalLoanForm/>
         <Footer/>
     </div>
   )

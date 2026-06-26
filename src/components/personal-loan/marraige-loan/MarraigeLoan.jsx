@@ -7,6 +7,7 @@ import LoanExplanation from "../../LoanExplanation"
 import personal from "../personal_loans"
 import LoanDocuments from "../LoanDocuments"
 import LoanRepaymentOptions from "../LoanRepaymentOptions"
+import PersonalLoanForm from "../../forms/PersonalLoanForm";
 
 function MarraigeLoan() {
   return (
@@ -18,6 +19,7 @@ function MarraigeLoan() {
       <LoanDocuments loanType='Marriage'/>
       <LoanRepaymentOptions loanType="Marriage" />
       <WhyChooseFL loanType='Marriage Loan'/>
+      <PersonalLoanForm/>
       <Footer/>
     </div>
   )

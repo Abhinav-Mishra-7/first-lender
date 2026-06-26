@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router';
+import { HelmetProvider } from 'react-helmet-async';
 import LandingPage from './pages/LandingPage';
 import AboutUs from './components/about-us/AboutUs';
 import ContactUs from './components/contact-us/ContactUs' ;
@@ -33,8 +34,15 @@ import CarLoanComponent from './components/secured-loan/car-loan/CarLoanComponen
 import LAPComponent from './components/secured-loan/lap/LAPComponent';
 import CarRefinanceComponent from './components/secured-loan/car-refinancing-loan/CarRefinanceComponent';
 
+// Forms
+import PersonalLoanForm from "./components/forms/PersonalLoanForm";
+import ProfessionalLoanForm from "./components/forms/ProfessionalLoanForm";
+import BusinessLoanForm from "./components/forms/BusinessLoanForm";
+import HomeLoanForm from "./components/forms/HomeLoanForm";
+
 function App() {
   return (
+    <HelmetProvider>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -69,7 +77,11 @@ function App() {
         <Route path="/loans/secured/car" element={<CarLoanComponent />}></Route>
         <Route path="/loans/secured/property" element={<LAPComponent />}></Route>
         <Route path="/loans/secured/car-refinance" element={<CarRefinanceComponent />}></Route>
+
+        {/* Forms */}
+        <Route path="/form" element={<HomeLoanForm />} />
       </Routes>
+    </HelmetProvider>
   );
 }
 

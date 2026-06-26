@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /thank-you
+
+# Allow important pages for crawling
+Allow: /loans/
+Allow: /emi-calculator/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+Allow: /apply/
+
+# Sitemap location
+Sitemap: https://www.firstlender.in/sitemap.xml
+Sitemap: https://www.firstlender.in/sitemap-blog.xml
+
+# Crawl delay (optional, helps server performance)
+Crawl-delay: 2

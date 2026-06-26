@@ -7,6 +7,7 @@ import LoanDocuments from "../LoanDocuments";
 import LoanRepaymentOptions from "../LoanRepaymentOptions";
 import WhyChooseFL from "../WhyChooseFL";
 import personal from "../personal_loans";
+import PersonalLoanForm from "../../forms/PersonalLoanForm";
 
 function MedicalLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function MedicalLoanComponent() {
         <LoanDocuments loanType='medical'/>
         <LoanRepaymentOptions loanType="Medical" />
         <WhyChooseFL loanType='Medical Loan' />
+        <PersonalLoanForm/>
         <Footer/>
     </div>
   )

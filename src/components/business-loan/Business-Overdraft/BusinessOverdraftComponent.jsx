@@ -8,6 +8,7 @@ import BusinessLoanEligibility from "../BusinessLoanEligibility"
 import BusinessLoanDocuments from "../BusinessLoanDocuments"
 import OverdraftBenefits from "./OverdraftBenefits"
 import WhyChooseFL from "../../personal-loan/WhyChooseFL"
+import BussinessLoanForm from "../../forms/BusinessLoanForm"
 
 function BusinessOverdraftComponent() {
     return (
@@ -20,6 +21,7 @@ function BusinessOverdraftComponent() {
             <OverdraftBenefits/>
             <OverdraftVsBusinessLoans/>
             <WhyChooseFL loanType="Business Overdraft"/>
+            <BussinessLoanForm/>
             <Footer/>
         </div>
     )

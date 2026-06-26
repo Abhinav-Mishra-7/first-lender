@@ -1,6 +1,6 @@
 function LoanComparisonTable() {
   return (
-    <div className="w-full bg-white pb-10 px-3 text-black">
+    <div className="w-full bg-slate-50 pb-10 px-3 text-black">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-200
           p-6 md:p-8 transition-all duration-300">
         {/* HEADER */}

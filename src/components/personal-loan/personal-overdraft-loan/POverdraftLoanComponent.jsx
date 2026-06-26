@@ -7,6 +7,7 @@ import LoanDocuments from "../LoanDocuments";
 import LoanRepaymentOptions from "../LoanRepaymentOptions";
 import WhyChooseFL from "../WhyChooseFL";
 import personal from "../personal_loans";
+import PersonalLoanForm from "../../forms/PersonalLoanForm";
 
 function OverdraftLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function OverdraftLoanComponent() {
         <LoanDocuments loanType='personal overdraft'/>
         <LoanRepaymentOptions loanType="Personal overdraft" />
         <WhyChooseFL loanType='Personal Overdraft Loan' />
+        <PersonalLoanForm/>
         <Footer/>
     </div>
   )

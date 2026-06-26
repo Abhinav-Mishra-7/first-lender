@@ -5,7 +5,8 @@ import secured from "../secured-loan"
 import LoanExplanation from "../../LoanExplanation"
 import CarLoanEligibility from "./CarLoanEligibility"
 import CarLoanDocuments from "./CarLoanDocuments"
-import WhyChooseFL from "../../personal-loan/WhyChooseFL";
+import WhyChooseFL from "../../personal-loan/WhyChooseFL"
+import HomeLoanForm from "../../forms/HomeLoanForm"
 
 function CarLoanComponent() {
   return (
@@ -16,6 +17,7 @@ function CarLoanComponent() {
         <CarLoanEligibility/>
         <CarLoanDocuments/>
         <WhyChooseFL loanType="Car Loan"/>
+        <HomeLoanForm/>
         <Footer/>
     </div>
   )

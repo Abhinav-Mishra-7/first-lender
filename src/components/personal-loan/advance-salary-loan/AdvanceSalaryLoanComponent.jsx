@@ -7,6 +7,7 @@ import LoanDocuments from "../LoanDocuments";
 import LoanRepaymentOptions from "../LoanRepaymentOptions";
 import WhyChooseFL from "../WhyChooseFL";
 import personal from "../personal_loans";
+import PersonalLoanForm from "../../forms/PersonalLoanForm";
 
 function AdvanceSalaryLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function AdvanceSalaryLoanComponent() {
         <LoanDocuments loanType='advance salary'/>
         <LoanRepaymentOptions loanType="Advance Salary" />
         <WhyChooseFL loanType='Advance Salary Loan' />
+        <PersonalLoanForm/>
         <Footer/>
     </div>
   )

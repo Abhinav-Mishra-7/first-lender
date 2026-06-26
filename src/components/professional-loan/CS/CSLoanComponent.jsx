@@ -7,6 +7,7 @@ import LoanRepaymentOptions from "../../personal-loan/LoanRepaymentOptions";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import professional from "../professional-loan";
 import LoanExplanation from "../../LoanExplanation";
+import ProfessionalLoanForm from "../../forms/ProfessionalLoanForm";
 
 function CSLoanComponent() {
   return (
@@ -18,6 +19,7 @@ function CSLoanComponent() {
         <CADocuments loanType="CS" />
         <LoanRepaymentOptions loanType="CS" />
         <WhyChooseFL loanType="CS Loan" />
+        <ProfessionalLoanForm/>
         <Footer/>
     </div>
   )

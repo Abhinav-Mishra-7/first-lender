@@ -129,7 +129,7 @@ const ContactUs = () => {
         {/* Contact Form Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-24 items-start bg-yellow-100/80 shadow-xl p-5 lg:py-10 pb-8 rounded-2xl">
           {/* LEFT - Extended Content */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-yellow-300 to-yellow-400 border border-yellow-200 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 ease-out">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />

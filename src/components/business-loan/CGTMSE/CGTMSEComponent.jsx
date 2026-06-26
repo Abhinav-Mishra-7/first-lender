@@ -8,6 +8,7 @@ import CGTMSEEligibleBorrowers from "./CGTMSEEligibleBorrowers";
 import BusinessLoanDocuments from "../BusinessLoanDocuments";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
 import business from "../business_loans";
+import BussinessLoanForm from "../../forms/BusinessLoanForm";
 
 function CGTMSEComponent() {
   return (
@@ -20,6 +21,7 @@ function CGTMSEComponent() {
         <CGTMSEBenefits/>
         <CGTMSEEligibleBorrowers/>
         <WhyChooseFL loanType="CGTMSE" />
+        <BussinessLoanForm/>
         <Footer/>
     </div>
   )

@@ -7,6 +7,7 @@ import BusinessLoanProcess from "../../components/business-loan/BusinessLoanProc
 import BusinessLoanEligibility from "./BusinessLoanEligibility";
 import BusinessLoanDocuments from "./BusinessLoanDocuments";
 import WhyChooseFL from "../personal-loan/WhyChooseFL";
+import BussinessLoanForm from "../forms/BusinessLoanForm";
 
 function BusinessLoanMain() {
   return (
@@ -18,6 +19,7 @@ function BusinessLoanMain() {
         <BusinessLoanDocuments/>
         <BusinessLoanProcess/>
         <WhyChooseFL loanType="Business Loan" />
+        <BussinessLoanForm/>
         <Footer/>
     </div>
   )

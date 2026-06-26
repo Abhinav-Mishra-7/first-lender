@@ -3,6 +3,7 @@ import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import AboutHero from "./AboutHero";
 import img1 from "../../assets/loan-approved-application-form-concept.jpg"
+import TeamCards from "./AboutFounders"
 
 
 const teamMembers = [
@@ -179,70 +180,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="mt-24 mb-20 md:mt-28">
-        <div className="text-center mb-12 md:mb-16">
-            <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-200 text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-yellow-700">
-            Our Core Team
-            </p>
-            <h3 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
-            People behind <span className="text-yellow-500">FIRSTLENDER</span>
-            </h3>
-            <p className="mt-3 text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
-            A specialised team from banking, risk and technology working together to build India’s most trusted loan platform.
-            </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {teamMembers.map((member, index) => (
-            <div
-                key={member.name}
-                className="group relative bg-white/80 backdrop-blur-sm border border-yellow-100 rounded-3xl p-6 md:p-7 flex flex-col h-full shadow-sm hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-500 hover:-translate-y-3"
-            >
-                {/* Accent badge */}
-                <div className="absolute -top-3 left-5 px-3 py-1 rounded-full bg-yellow-400 text-[10px] md:text-xs font-semibold tracking-wide text-black shadow-md">
-                {index === 0 ? "FOUNDER" : "LEAD"}
-                </div>
-
-                {/* Avatar */}
-                <div className="flex items-center gap-4 mb-4">
-                <div className="relative">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-lg md:text-xl font-bold text-black shadow-lg">
-                    {member.initials}
-                    </div>
-                    <span className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-green-400 border-2 border-white" />
-                </div>
-                <div>
-                    <h4 className="text-base md:text-lg font-semibold text-gray-900">
-                    {member.name}
-                    </h4>
-                    <p className="text-xs md:text-sm font-medium text-yellow-600">
-                    {member.role}
-                    </p>
-                </div>
-                </div>
-
-                {/* Focus pill */}
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-yellow-50 border border-yellow-100 text-[10px] md:text-xs font-semibold text-yellow-700 mb-3">
-                {member.focus}
-                </div>
-
-                {/* Bio */}
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed flex-1">
-                {member.bio}
-                </p>
-
-                {/* CTA / contact hint */}
-                <div className="mt-4 pt-3 border-t border-yellow-50 flex items-center justify-between text-[11px] md:text-xs text-gray-500">
-                <span>Available for partner discussions</span>
-                <span className="text-yellow-500 font-semibold group-hover:translate-x-1 transition-transform">
-                    Connect →
-                </span>
-                </div>
-            </div>
-            ))}
-        </div>
-        </div>
+       <TeamCards/>
         
         {/* Footer section */}
         <Footer></Footer>

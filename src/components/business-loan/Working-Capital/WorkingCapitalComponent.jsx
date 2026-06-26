@@ -5,7 +5,7 @@ import WorkingCapitalExplanation from "./WorkingCapitalExplanation";
 import BusinessLoanEligibility from "../BusinessLoanEligibility";
 import BusinessLoanDocuments from "../BusinessLoanDocuments";
 import WhyChooseFL from "../../personal-loan/WhyChooseFL";
-// import business from "../business_loans";
+import BussinessLoanForm from "../../forms/BusinessLoanForm"
 
 function WorkingCaptialComponent() {
   return (
@@ -15,9 +15,8 @@ function WorkingCaptialComponent() {
         <WorkingCapitalExplanation/>
         <BusinessLoanEligibility loanType="Working Capital Loan" />
         <BusinessLoanDocuments loanType="Working Capital Loan"/>
-        {/* <CGTMSEBenefits/> */}
-        {/* <CGTMSEEligibleBorrowers/> */}
         <WhyChooseFL loanType="Working Capital Loan" />
+        <BussinessLoanForm/>
         <Footer/>
     </div>
   )
