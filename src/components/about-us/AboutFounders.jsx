@@ -14,7 +14,7 @@ const teamData = [
     // image: "/images/rahul-singh.jpg",
     image: RahulSir,
     appointment: "01 Jan, 2020",
-    age: "38 Years",
+    // age: "38 Years",
     nationality: "Indian",
     expertise: ["Personal Loans","Business Loans","Home Loans","Vehicle Loans","Mortgage Loans","Structured Finance"],
     tagline: "Specializes in structuring and securing all types of loans through strong banking partnerships.",
@@ -40,8 +40,8 @@ const teamData = [
   initials: "LK",
   // image: "/images/lokesh-khariwal.jpg",
   image: LokeshSir,
-  appointment: "01 Jan, 20XX", // Update as needed
-  age: "", // Update if required
+  appointment: "01 Jan, 2020", // Update as needed
+  // age: "", // Update if required
   nationality: "Indian",
   expertise: [
     "Home Loans",
@@ -217,8 +217,8 @@ function Modal({ person, onClose }) {
                 label="Date of appointment"
                 value={person.appointment}
               />
-              <div className="w-px bg-gray-200 self-stretch mx-5" />
-              <StatItem
+              <div className=" bg-gray-200 self-stretch" />
+              {/* <StatItem
                 icon={
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -226,7 +226,7 @@ function Modal({ person, onClose }) {
                 }
                 label="Age"
                 value={person.age}
-              />
+              /> */}
               <div className="w-px bg-gray-200 self-stretch mx-5" />
               <StatItem
                 icon={
