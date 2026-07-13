@@ -10,11 +10,11 @@ const AboutHero = () => {
             <div className="space-y-6 md:space-y-7 lg:space-y-11">
               <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-black text-[11px] md:text-xs font-semibold tracking-[0.1rem]  text-white shadow-lg">
                 Welcome To
-                 <span className="text-yellow-400"> FIRSTLENDER</span>
+                 <span className="text-yellow-400"> FIRST LENDER</span>
               </p>
   
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-black leading-tight text-shadow-md">
-                About <span className="text-yellow-500 ml-1"> FIRSTLENDER</span>
+                About <span className="text-yellow-500 ml-1"> FIRST LENDER</span>
               </h1>
   
               <p className="text-md md:text-md lg:text-lg text-gray-700 max-w-xl leading-relaxed font-medium">

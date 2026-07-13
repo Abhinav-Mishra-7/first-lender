@@ -44,7 +44,7 @@ const PartnersSection = () => {
         {/* Header - Exact match */}
         <div className="text-center mb-16 md:mb-20 max-w-6xl mx-auto text-shadow-sm">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 pb-5">
-            FIRSTLENDER has a Strategic Association with
+            FIRST LENDER has a Strategic Association with
             {/* <br className="hidden md:block" /> */}
             <span className="block md:inline text-yellow-500">  Top Banks &amp; NBFCs</span>
           </h2>

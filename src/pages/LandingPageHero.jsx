@@ -27,7 +27,8 @@ const HeroSlider = () => {
       features: "✅ Instant Eligibility • ✅ Paperless • ✅ Fast Disbursal",
       image: heroSlide2,
       stats: ["₹20L+", "2 Min", "99%"],
-      height: 110
+      height: 110,
+      form: "/loans/personal/personal"
     },
     {
       title: "Business Loans",
@@ -36,7 +37,8 @@ const HeroSlider = () => {
         "Working capital and term loans backed by CGTMSE to help your business scale confidently.",
       features: "✅ CGTMSE • ✅ No Collateral • ✅ Flexible EMI",
       image: heroSlide1,
-      stats: ["₹5Cr+", "CGTMSE", "50+"]
+      stats: ["₹5Cr+", "CGTMSE", "50+"],
+      form: "/loans/business/business"
     },
     {
       title: "Credit Card Limit Boost",
@@ -45,7 +47,8 @@ const HeroSlider = () => {
         "Enhance your credit card limit instantly and convert spends into easy EMIs.",
       features: "✅ Instant Upgrade • ✅ 0% Fee • ✅ Rewards",
       image: heroSlide4,
-      stats: ["99%", "24h", "0%"]
+      stats: ["99%", "24h", "0%"],
+      form: "/loans/business/business"
     },
     {
       title: "PID Financing", 
@@ -53,7 +56,8 @@ const HeroSlider = () => {
       description: "Fund business expansion through PID bonds. Property assessments repay infrastructure investments.",
       features: "✅ Tax-Linked Funding • ✅ No Personal Guarantee • ✅ Economic Development",
       image: heroSlide6, // Property/business district image
-      stats: ["2:1 Ratio", "Tax-Based", "Infrastructure"]
+      stats: ["2:1 Ratio", "Tax-Based", "Infrastructure"],
+      form: "/loans/business/pid"
     },
     {
       title: "Professional Loan", 
@@ -61,10 +65,9 @@ const HeroSlider = () => {
       description: "Special loans for medical professionals & chartered accountants. Up to ₹1 Cr with minimal documentation.",
       features: "✅ High Loan Amount • ✅ Low Interest • ✅ No Collateral",
       image: heroSlide5, // Doctor/CA professional image
-      stats: ["₹1Cr", "12% Rate", "No Security"]
+      stats: ["₹1Cr", "12% Rate", "No Security"],
+      form: "/loans/professional/ca"
     }
-
-
   ];
 
   useEffect(() => {
@@ -87,7 +90,7 @@ const HeroSlider = () => {
           <div className="space-y-7 md:space-y-8 lg:space-y-8">
              <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-black text-[11px] md:text-xs font-semibold tracking-[0.1rem]  text-white shadow-lg">
                 Welcome To
-                 <span className="text-yellow-400"> FIRSTLENDER</span>
+                 <span className="text-yellow-400"> FIRST LENDER</span>
               </p>
             {/* Heading */}
             <h1 className="text-2xl md:text-3xl lg:text-4xl 
@@ -116,7 +119,7 @@ const HeroSlider = () => {
 
             {/* CTA */}
             <CTAButton
-              to="/apply"
+              to={slide.form}
               variant="primary"
               size="md"
               className="shadow-lg hover:scale-105 transition-all"

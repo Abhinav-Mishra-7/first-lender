@@ -25,6 +25,7 @@ const navLinks = [
           { label: "CA Loan", href: "/loans/professional/ca" },
           { label: "CS Loan", href: "/loans/professional/cs" },
           { label: "Doctor Loan", href: "/loans/professional/doctor" },
+          { label: "Others", href: "/loans/professional/doctor" },
         ]
       },
       {label: "Business Loan", href: "/loans/business", 

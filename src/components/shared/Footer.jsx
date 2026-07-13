@@ -39,7 +39,7 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 bg-linear-to-r from-white to-yellow-400 bg-clip-text text-transparent">
-                  FIRST<span className="text-yellow-400">LENDER</span>
+                  FIRST <span className="text-yellow-400">LENDER</span>
                 </h2>
                 {/* <p className="text-yellow-400 text-sm font-medium">Bharose Ka Dusra Naam</p> */}
               </div>
@@ -67,7 +67,7 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="mt-1 shrink-0 text-yellow-400" />
                   <a href="mailto:info@firstlender.com" className="text-white mt-1 hover:text-yellow-400 transition-colors text-sm font-medium block">
-                    lenders@firstlender.in
+                    info@firstlender.in
                   </a>
                 </div>
               </div>
@@ -83,9 +83,9 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="group relative h-9 w-9 md:w-11 md:h-11 lg:w-13 lg:h-13 bg-yellow-400/10 hover:bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30 rounded-lg md:rounded-xl lg:rounded-2xl p-1.5 md:p-2 lg:p-3 flex items-center justify-center transition-all duration-4000 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-400/25"
+                      className="group relative h-9 w-9 md:w-11 md:h-11 lg:w-13 lg:h-13 bg-yellow-400/10 hover:bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30 rounded-lg md:rounded-xl lg:rounded-2xl p-1.5 md:p-2 lg:p-3 flex items-center justify-center transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-400/25"
                     >
-                      <Icon size={24} className="text-yellow-400 group-hover:text-yellow-300 transition-colors" />
+                      <Icon size={24} className="text-yellow-400 group-hover:text-yellow-300" />
                     </a>
                   ))}
                 </div>
@@ -100,13 +100,13 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
               </h3>
               <div className="bg-black/20 backdrop-blur-sm mt-3">
                   <p className="text-lg md:text-xl leading-relaxed mb-2 ">
-                    FIRST<span className="text-yellow-400">LENDER</span>
+                    FIRST <span className="text-yellow-400">LENDER</span>
                   </p>
                   <address className="text-sm md:text-base not-italic space-y-1 text-white font-semibold">
-                    <span>Plot Number - 479, Sector - 4,</span>
+                    <span>Plot Number - 479, Sector - 04,</span>
                     <span> Vaishali</span>
                     <span className="block pt-2">
-                      Ghaziabad - 201010, Delhi
+                      Ghaziabad, UP - 201010
                     </span>
                   </address>
               </div>
@@ -137,7 +137,7 @@ import { Phone,Mail,MessageCircle,Facebook,Instagram,Linkedin,Youtube} from "luc
       <div className="text-center border-t border-yellow-400/20 bg-yellow-400 py-4">
         <p className="text-xs md:text-sm lg:text-sm text-black font-semibold">
           © COPYRIGHT 2026 | ALL RIGHTS RESERVED | 
-          <span className="font-semibold text-black ml-2">FIRSTLENDER | ABHINAV MISHRA</span>
+          <span className="font-semibold text-black ml-2">FIRST LENDER | ABHINAV MISHRA</span>
         </p>
       </div>
     </>

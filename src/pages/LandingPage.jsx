@@ -239,7 +239,7 @@ function LandingPage() {
       <section className="px-5 py-10 md:py-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black text-shadow-lg">
-            Why Choose <span className="text-yellow-400">FIRSTLENDER</span>
+            Why Choose <span className="text-yellow-400">FIRST LENDER</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12">
             {whyChoose.map((item, index) => (

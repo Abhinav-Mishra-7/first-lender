@@ -1,14 +1,7 @@
 import { Link } from "react-router";
 import { useState } from "react";
 
-export default function CTAButton({ 
-  children, 
-  to = "/apply", 
-  variant = "primary",
-  size = "md",
-  className = "",
-  ...props 
-}) {
+export default function CTAButton({ children, to , variant = "primary",size = "md",className = "",...props }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const baseStyles = "inline-block font-bold uppercase rounded-full transition-all duration-300 border-none w-fit";

@@ -32,11 +32,11 @@ const teamData = [
     quote: "My mission is to simplify the lending journey and help clients move forward with confidence and financial clarity.",
   },
   {
-  id: 1,
-  name: "Lokesh Khariwal",
-  role: "Founder",
+  id: 2,
+  name: "CA Lokesh Khariwal",
+  role: "Founder & CFO",
   credentials: "Chartered Accountant | 10+ Years of Experience",
-  badge: "Founder",
+  badge: "Founder & CFO",
   initials: "LK",
   // image: "/images/lokesh-khariwal.jpg",
   image: LokeshSir,
@@ -96,7 +96,7 @@ export default function TeamCards() {
             Our Core Team
             </p>
             <h3 className="pt-4 text-3xl md:text-4xl font-bold text-gray-900">
-            People behind <span className="text-yellow-500">FIRSTLENDER</span>
+            People behind <span className="text-yellow-500">FIRST LENDER</span>
             </h3>
             <p className="mt-3 text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
             A specialised team from banking, risk and technology working together to build India’s most trusted loan platform.

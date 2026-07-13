@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import CTAButton from "../components/shared/Button";
-import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard} from "lucide-react";
+import { CheckCircle, Home, User, Bike, Briefcase, Building2, Car ,ShieldCheck , CreditCard, BookOpenCheck} from "lucide-react";
 import SvgIcon from './SvgIcon';
 
 // Images import 
@@ -48,6 +48,7 @@ const loanData = [
     image: personal,
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/personal/personal"
   },
   {
     id: 8,
@@ -74,6 +75,7 @@ const loanData = [
     image: home,
     imagePosition: "right",
     bgColor: "#fff",
+    to: "/loans/secured/home"
   },
   {
     id: 3,
@@ -100,6 +102,7 @@ const loanData = [
     image: professional,
     imagePosition: "right",
     bgColor: "#fff",
+    to: "/loans/professional/ca"
   },
   {
     id: 4,
@@ -126,32 +129,37 @@ const loanData = [
     image: bussiness,
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/business/business"
   },
   {
     id: 2,
     title: "Used Car Loan",
     titleColor: "#003d7a",
-    tagline: "Supporting Agricultural Growth and Rural Development.",
-    svgName : "usedCarLoan" ,
+    tagline: "Drive Your Dream Car with Affordable & Hassle-Free Financing.",
+    svgName: "usedCarLoan",
     description:
-      "Specialized financing for rural entrepreneurs and farmers to support agricultural productivity and rural development initiatives.",
+      "At FIRST LENDER, we make buying a pre-owned car simple and stress-free. We help you compare loan offers from leading banks and NBFCs, ensuring you get competitive interest rates, flexible repayment options, and quick approvals—all tailored to your budget.",
     items: [
       {
-        title: "Agriculture Focus",
-        description: "Designed specifically for agricultural and rural business needs."
+        title: "Quick Loan Approval",
+        description:
+          "Get fast approvals with minimal documentation for eligible used vehicles."
       },
       {
-        title: "Flexible Terms",
-        description: "Extended repayment periods suitable for seasonal agricultural cycles."
+        title: "Best Loan Offers",
+        description:
+          "Compare multiple lenders to secure competitive interest rates and flexible EMIs."
       },
       {
-        title: "Government Support",
-        description: "Access to government-backed schemes and subsidized rates."
+        title: "End-to-End Assistance",
+        description:
+          "From loan application to disbursement, our experts guide you at every step."
       }
     ],
     image: car,
-    imagePosition: "right",
+    imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/secured/car"
   },
   {
     id: 5,
@@ -178,6 +186,7 @@ const loanData = [
     image: pid,
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/business/pid"
   },
   {
     id: 7,
@@ -204,6 +213,7 @@ const loanData = [
     image: lap,
     imagePosition: "right",
     bgColor: "#fff",
+    to: "/loans/secured/property"
   },
   {
     id: 9,
@@ -230,6 +240,7 @@ const loanData = [
     image: ctgmse,
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/business/cgtmse"
   },
   {
     id: 6,
@@ -256,6 +267,7 @@ const loanData = [
     image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/business/business"
   },
   {
     id: 10,
@@ -282,13 +294,14 @@ const loanData = [
     image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80",
     imagePosition: "left",
     bgColor: "#fff",
+    to: "/loans/business/business"
   },
 ];
 
 const tabConfig = [
   { id: 1, label: "Personal Loan", icon: User },
   { id: 2, label: "Used Car Loan", icon: Car },
-  { id: 3, label: "Professional Loan ", icon: Bike },
+  { id: 3, label: "Professional Loan ", icon: BookOpenCheck },
   { id: 4, label: "Business Loan", icon: Briefcase },
   { id: 5, label: "PID", icon: CreditCard },
   { id: 6, label: "MSME", icon: CreditCard },
@@ -432,12 +445,12 @@ function LoanTabs() {
             </div>
 
             <div className="flex gap-4">
-            <CTAButton to="/apply" variant="primary" size="md">
-                Apply Now
-            </CTAButton>
-            <button className="px-6 py-2 border-2 border-gray-400 rounded-lg text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
+            <CTAButton to={activeLoan.to} variant="primary" size="md">
                 Know More
-            </button>
+            </CTAButton>
+            {/* <button className="px-6 py-2 border-2 border-gray-400 rounded-lg text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
+                Know More
+            </button> */}
             </div>
         </div>
 
