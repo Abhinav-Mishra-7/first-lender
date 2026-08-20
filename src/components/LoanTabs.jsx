@@ -17,7 +17,7 @@ const personal = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_aut
 const car = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775459174/saving-money-car-trade-car-cash_brhyep.jpg"
 const professional = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465404/latin-confident-professionals-suit-standing-against-isolated-background_j6zwcw.jpg"
 const bussiness = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465421/modern-equipped-computer-lab_1_jumvha.jpg"
-const pid = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775465377/woman-planting-vegetables-smiling-farm-with-equipments_xabt1y.jpg"
+const pid = "src/assets/pexels-rdne-7580643.jpg"
 const lap = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775199734/arranged-mortgage-approved-paper-desk_ckitrl.jpg"
 const home = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775206874/ideas-real-estate-moving-houses-renting-real-estate_becpz9.jpg"
 const ctgmse = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775200048/happy-carpenter-fist-bumping-with-inspector-while-greeting-coronavirus-pandemic_f0ugai.jpg"
@@ -165,7 +165,7 @@ const loanData = [
     id: 5,
     title: "PID",
     titleColor: "#003d7a",
-    tagline: "Empowering Farmers with Reliable Financial Support.",
+    tagline: "Empowering entrepreneurs with Reliable Financial Support.",
     svgName : "PID" , 
     description:
       "Dedicated financing solutions for farmers to invest in equipment, seeds, irrigation, and other agricultural needs.",
@@ -300,19 +300,19 @@ const loanData = [
 
 const tabConfig = [
   { id: 1, label: "Personal Loan", icon: User },
-  { id: 2, label: "Used Car Loan", icon: Car },
   { id: 3, label: "Professional Loan ", icon: BookOpenCheck },
   { id: 4, label: "Business Loan", icon: Briefcase },
-  { id: 5, label: "PID", icon: CreditCard },
   { id: 6, label: "MSME", icon: CreditCard },
+  { id: 2, label: "Used Car Loan", icon: Car },
   { id: 7, label: "LAP", icon: Building2 },
   { id: 8, label: "Home Loan", icon: Home },
+  { id: 5, label: "PID", icon: CreditCard },
   { id: 9, label: "CGTMSE", icon: ShieldCheck },
   { id: 10, label: "CC LIMIT", icon: CreditCard },
 ];
 
 function LoanTabs() {
-  const [activeTab, setActiveTab] = useState(2); // Default to Personal Loan (id: 2)
+  const [activeTab, setActiveTab] = useState(3); // Default to Personal Loan (id: 2)
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const scrollContainerRef = useRef(null);

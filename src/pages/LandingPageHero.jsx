@@ -15,10 +15,7 @@ const heroSlide5 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_a
 const heroSlide6 = "https://res.cloudinary.com/dhb6q9jkt/image/upload/q_auto/f_auto/v1775205933/9650001_7563_rw68zr.png"
 
 
-const HeroSlider = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const heroSlides = [
+const heroSlides = [
     {
       title: "Instant Personal Loans",
       subtitle: "Up to ₹20 Lakhs • No Collateral",
@@ -68,18 +65,37 @@ const HeroSlider = () => {
       stats: ["₹1Cr", "12% Rate", "No Security"],
       form: "/loans/professional/ca"
     }
-  ];
+];
 
+
+const HeroSlider = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+  //   }, 4500);
+  //   return () => clearInterval(timer);
+  // }, []);
+
+  // const slide = heroSlides[activeSlide];
   useEffect(() => {
+    if (isPaused) return;
+
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroSlides.length);
     }, 4500);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const slide = heroSlides[activeSlide];
 
   return (
+
     <section className="relative overflow-hidden bg-linear-to-r from-[#f8df8e] via-[#fdfada] to-yellow-100 
     py-7 md:py-8 lg:py-8 lg:mt-10 md:mt-24 mt-22 lg:h-138">
 
@@ -139,12 +155,16 @@ const HeroSlider = () => {
         </div>
 
         {/* ================= SLIDER DOTS ================= */}
-        <div className="flex justify-center gap-2 -mt-9">
+        <div className="relative z-50 flex justify-center gap-2 -mt-9">
           {heroSlides.map((_, i) => (
             <button
               key={i}
-              onClick={() => setActiveSlide(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${
+              type="button"
+              onClick={() => {
+                setActiveSlide(i);   // show the clicked slide
+                setIsPaused(true);   // stop automatic sliding
+              }}
+              className={`w-3 h-3 rounded-full transition-all cursor-pointer ${
                 i === activeSlide
                   ? "bg-yellow-500 scale-125"
                   : "bg-gray-300 hover:bg-yellow-400"
