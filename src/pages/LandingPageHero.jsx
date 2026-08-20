@@ -159,6 +159,7 @@ const HeroSlider = () => {
           {heroSlides.map((_, i) => (
             <button
               key={i}
+              
               type="button"
               onClick={() => {
                 setActiveSlide(i);   // show the clicked slide
